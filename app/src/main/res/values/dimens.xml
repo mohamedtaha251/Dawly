@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+    <dimen name="_1dp">1dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_65dp">65dp</dimen>
+    <dimen name="_170dp">170dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="_25dp">25dp</dimen>
+
+    <dimen name="_35dp">36dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="card_radius">20</dimen>
+
+    <dimen name="star_size">20dp</dimen>
+    <dimen name="card_height">140dp</dimen>
+    <dimen name="profile_card_radius">5dp</dimen>
+
+    <dimen name="_14sp">14sp</dimen>
+
+    <dimen name="body">17sp</dimen>
+    <dimen name="header">16sp</dimen>
+</resources>

@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "462710032351",
+    "firebase_url": "https://total-4e195.firebaseio.com",
+    "project_id": "total-4e195",
+    "storage_bucket": "total-4e195.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462710032351:android:515c6e212ad5f0cc",
+        "android_client_info": {
+          "package_name": "com.dawly.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462710032351-f0mfme43j69t5br1rojb5m441qlsgf5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRChRGtpK2ILuspEFV8y1tzZHj0YytS24"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462710032351:android:6099cdc0dec35c09",
+        "android_client_info": {
+          "package_name": "com.nilecode.total"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462710032351-ejitdqp27huu0lui90hcpve98ffolmua.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nilecode.total",
+            "certificate_hash": "b3fbe2ecb1a164d8d45603e091512b134d257f1d"
+          }
+        },
+        {
+          "client_id": "462710032351-f0mfme43j69t5br1rojb5m441qlsgf5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRChRGtpK2ILuspEFV8y1tzZHj0YytS24"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462710032351-k009adsp4c1qq86vrrq47qeceoa65bur.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "462710032351-aivcdpomefl33let9pqo6j3q314r9u8s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.socialApp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
