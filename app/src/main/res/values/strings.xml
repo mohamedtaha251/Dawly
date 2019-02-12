@@ -8,4 +8,13 @@
     <string name="continue_with_email">Continue with email</string>
     <string name="sign_in_with_google">Sign in with google</string>
     <string name="eng">ENG</string>
+    <string name="orders">Orders</string>
+    <string name="flights">Flights</string>
+    <string name="add">Add Orders</string>
+    <string name="messages">Messages</string>
+    <string name="menu">Menu</string>
+    <string name="step_1">Step 1</string>
+    <string name="enter_item_link">Enter Item Link or press NEXT to enter details manualy</string>
+    <string name="next">NEXT</string>
+    <string name="step_2">Step 2</string>
 </resources>
