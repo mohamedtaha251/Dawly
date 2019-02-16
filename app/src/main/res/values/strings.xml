@@ -19,9 +19,13 @@
     <string name="step_2">Step 2</string>
     <string name="login">Login</string>
     <string name="sign_in_small">Sign In</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="email">Email</string>
     <string name="forget_pass">Forget the password?</string>
+    <string name="phone_number">Phone Number</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="i_agree">I agree to Dawly\'s terms of \n Service and Privacy Policy</string>
