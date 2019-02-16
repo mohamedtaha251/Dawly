@@ -1,4 +1,4 @@
-package com.dawly.app.screens.auth;
+package com.dawly.app.screens.auth.login;
 
 import com.dawly.app.application.DawlyApp;
 import com.dawly.app.base.BaseModel;
@@ -6,7 +6,6 @@ import com.dawly.app.entities.ResponseEntity;
 import com.dawly.app.entities.User;
 import com.dawly.app.network.AppService;
 import com.dawly.app.utils.Constants;
-import com.google.gson.JsonObject;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -32,11 +31,7 @@ public class LoginModel extends BaseModel {
 
     @Override
     protected void start(Object user) {
-        User userObj = (User) user;
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("Email", userObj.getEmail());
-        jsonObject.addProperty("Password", userObj.getPassword());
-        mDisposable.add(appService.login(Constants.BASE_URL_AUTH+Constants.LOGIN,(User) user)
+        mDisposable.add(appService.login(Constants.LOGIN,(User) user)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::onSuccess, this::onError, this::onComplete));

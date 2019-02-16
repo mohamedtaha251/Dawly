@@ -4,19 +4,19 @@ import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.util.AttributeSet;
 
-public class LuckyTabLayout extends TabLayout {
-    public LuckyTabLayout(Context context) {
+public class DawlyTabLayout extends TabLayout {
+    public DawlyTabLayout(Context context) {
         super(context);
         initFontAndChange(context);
     }
 
-    public LuckyTabLayout(Context context, AttributeSet attrs) {
+    public DawlyTabLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         initFontAndChange(context);
     }
 
-    public LuckyTabLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public DawlyTabLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         initFontAndChange(context);

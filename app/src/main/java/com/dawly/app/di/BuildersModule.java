@@ -1,8 +1,8 @@
 package com.dawly.app.di;
 
-import com.dawly.app.screens.auth.LoginActivity;
-import com.dawly.app.screens.auth.LoginModule;
-import com.dawly.app.screens.auth.LoginViewModule;
+import com.dawly.app.screens.auth.login.LoginActivity;
+import com.dawly.app.screens.auth.login.LoginModule;
+import com.dawly.app.screens.auth.login.LoginViewModule;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 

@@ -4,23 +4,24 @@ import android.content.Context;
 import android.util.AttributeSet;
 import com.dawly.app.utils.Font;
 
-public class LuckyRadioButton extends android.support.v7.widget.AppCompatRadioButton {
-    public LuckyRadioButton(Context context) {
+public class DawlyTextView extends android.support.v7.widget.AppCompatTextView {
+    public DawlyTextView(Context context) {
         super(context);
         initFontAndChange( context);
     }
 
-    public LuckyRadioButton(Context context, AttributeSet attrs) {
+    public DawlyTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
+
         initFontAndChange( context);
     }
 
-    public LuckyRadioButton(Context context, AttributeSet attrs, int defStyleAttr) {
+    public DawlyTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initFontAndChange( context);
 
+        initFontAndChange( context);
     }
-      private void initFontAndChange(Context context) {
+         private void initFontAndChange(Context context) {
         Font font = new Font(context);
         font.changeFont(this);
     }

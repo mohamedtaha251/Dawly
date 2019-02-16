@@ -10,30 +10,30 @@ import com.dawly.app.utils.Font;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LuckyEditText extends android.support.v7.widget.AppCompatEditText {
+public class DawlyEditText extends android.support.v7.widget.AppCompatEditText {
     private Context context;
     Font font;
 
-    public LuckyEditText(Context context) {
+    public DawlyEditText(Context context) {
         super(context);
         this.context = context;
         initFontAndChange( context);
     }
 
-    public LuckyEditText(Context context, AttributeSet attrs) {
+    public DawlyEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         initFontAndChange( context);
     }
 
-    public LuckyEditText(Context context, AttributeSet attrs, int defStyleAttr) {
+    public DawlyEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
         initFontAndChange( context);
     }
 
 
-    public boolean isValid(LuckyTextView warTextView) {
+    public boolean isValid(DawlyTextView warTextView) {
         if (TextUtils.isEmpty(this.getText().toString())) {
             startAnimation();
             showInvalidBorder(true);
@@ -47,7 +47,7 @@ public class LuckyEditText extends android.support.v7.widget.AppCompatEditText {
             return true;
         }
     }
-    public boolean isValid(LuckyTextView warTextView,String message) {
+    public boolean isValid(DawlyTextView warTextView, String message) {
         if (TextUtils.isEmpty(this.getText().toString())) {
             startAnimation();
             showInvalidBorder(true);
@@ -92,7 +92,7 @@ public class LuckyEditText extends android.support.v7.widget.AppCompatEditText {
     }
 
 
-    public boolean isEmailValid(LuckyEditText email) {
+    public boolean isEmailValid(DawlyEditText email) {
         if (android.util.Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
             startAnimation();
             showInvalidBorder(true);

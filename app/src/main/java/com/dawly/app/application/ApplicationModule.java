@@ -23,11 +23,7 @@ public class ApplicationModule {
         return application.getApplicationContext();
     }
 
-//    @Singleton
-//    @Provides
-//    CommonGreetingRepository provideCommonHelloService() {
-//        return new CommonGreetingRepository();
-//    }
+
 
     @Provides
     @ApplicationScope

@@ -5,8 +5,8 @@ import android.support.v4.content.ContextCompat;
 import android.text.InputType;
 import android.view.View;
 import app.dawly.com.dawly.R;
-import com.dawly.app.views.LuckyEditText;
-import com.dawly.app.views.LuckyTextView;
+import com.dawly.app.views.DawlyEditText;
+import com.dawly.app.views.DawlyTextView;
 
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -16,17 +16,17 @@ public class Validation {
 
     public static boolean field = false;
 
-    public static boolean isFieldsEmpty(Context context, HashMap<LuckyEditText, LuckyTextView> signUpHashMap) {
-        for (LuckyEditText luckyEditText : signUpHashMap.keySet()) {
-            if (luckyEditText.getText().toString().isEmpty()) {
-                luckyEditText.setBackground(ContextCompat.getDrawable(context, R.drawable.edit_text_invalid_bg));
-                LuckyTextView luckyTextView = signUpHashMap.get(luckyEditText);
-                luckyTextView.setVisibility(View.VISIBLE);
+    public static boolean isFieldsEmpty(Context context, HashMap<DawlyEditText, DawlyTextView> signUpHashMap) {
+        for (DawlyEditText dawlyEditText : signUpHashMap.keySet()) {
+            if (dawlyEditText.getText().toString().isEmpty()) {
+                dawlyEditText.setBackground(ContextCompat.getDrawable(context, R.drawable.edit_text_invalid_bg));
+                DawlyTextView dawlyTextView = signUpHashMap.get(dawlyEditText);
+                dawlyTextView.setVisibility(View.VISIBLE);
                 field = true;
             } else {
-                luckyEditText.setBackground(ContextCompat.getDrawable(context, R.drawable.edit_text_bg));
-                LuckyTextView luckyTextView = signUpHashMap.get(luckyEditText);
-                luckyTextView.setVisibility(View.GONE);
+                dawlyEditText.setBackground(ContextCompat.getDrawable(context, R.drawable.edit_text_bg));
+                DawlyTextView dawlyTextView = signUpHashMap.get(dawlyEditText);
+                dawlyTextView.setVisibility(View.GONE);
                 field = true;
             }
             return field;
@@ -68,19 +68,19 @@ public class Validation {
     }
 
 
-    public static void changeTypeToVisible(LuckyEditText luckyEditText) {
-        if (isPasswordVisible(luckyEditText)) {
-            luckyEditText.setInputType(InputType.TYPE_CLASS_TEXT |
+    public static void changeTypeToVisible(DawlyEditText dawlyEditText) {
+        if (isPasswordVisible(dawlyEditText)) {
+            dawlyEditText.setInputType(InputType.TYPE_CLASS_TEXT |
                     InputType.TYPE_TEXT_VARIATION_PASSWORD);
         } else {
-            luckyEditText.setInputType(
+            dawlyEditText.setInputType(
                     InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         }
-        luckyEditText.setSelection(luckyEditText.getText().length());
+        dawlyEditText.setSelection(dawlyEditText.getText().length());
     }
 
-    public static boolean isPasswordVisible(LuckyEditText luckyEditText) {
-        if (luckyEditText.getInputType() == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+    public static boolean isPasswordVisible(DawlyEditText dawlyEditText) {
+        if (dawlyEditText.getInputType() == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
             return true;
         else
             return false;

@@ -1,4 +1,4 @@
-package com.dawly.app.screens.auth;
+package com.dawly.app.screens.auth.login;
 
 import com.dawly.app.entities.User;
 import com.dawly.app.entities.ValidationError;

@@ -1,4 +1,4 @@
-package com.dawly.app.screens.auth;
+package com.dawly.app.screens.auth.login;
 
 import android.app.Activity;
 import android.content.Context;

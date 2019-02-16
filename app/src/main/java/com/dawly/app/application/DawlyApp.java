@@ -38,7 +38,7 @@ public class DawlyApp extends Application implements HasActivityInjector, HasFra
     @Override
     public void onCreate() {
         super.onCreate();
-        createLuckyPrefs(this);
+        createDawlyPrefs(this);
 //        FacebookSdk.sdkInitialize(getApplicationContext());
 //        Crashlytics crashlyticsKit = new Crashlytics.Builder()
 //                .core(new CrashlyticsCore.Builder().disabled(BuildConfig.DEBUG).build())
@@ -68,7 +68,7 @@ public class DawlyApp extends Application implements HasActivityInjector, HasFra
     }
 
 
-    private void createLuckyPrefs(Application application) {
+    private void createDawlyPrefs(Application application) {
         DawlyPreferences.getInstance(application);
     }
 

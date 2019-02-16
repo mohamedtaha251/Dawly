@@ -11,12 +11,9 @@ public interface BaseContract {
     }
       interface HomeClickListener {
         void onCategoryClick(View view, int position);
-        void onOfferClick(View view,  int position);
         void onFavouriteClicked(View view, Integer position);
     }
-    interface ScrollToOfferListener{
-        void scrollToOffer(int position);
-    }
+
 
 
 

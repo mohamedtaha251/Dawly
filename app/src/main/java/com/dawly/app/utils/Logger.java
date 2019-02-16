@@ -6,7 +6,7 @@ public class Logger {
 
 
     public static void logError(String message) {
-        Log.e("Lucky::", message);
+        Log.e("Dawly::", message);
     }
 
 

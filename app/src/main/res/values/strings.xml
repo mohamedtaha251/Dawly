@@ -17,4 +17,12 @@
     <string name="enter_item_link">Enter Item Link or press NEXT to enter details manualy</string>
     <string name="next">NEXT</string>
     <string name="step_2">Step 2</string>
+    <string name="login">Login</string>
+    <string name="sign_in_small">Sign In</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="forget_pass">Forget the password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="i_agree">I agree to Dawly\'s terms of \n Service and Privacy Policy</string>
 </resources>
