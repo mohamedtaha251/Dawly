@@ -25,4 +25,16 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="i_agree">I agree to Dawly\'s terms of \n Service and Privacy Policy</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="country">Country</string>
+    <string name="weight">Weight</string>
+    <string name="date">Date</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_link">Item Link</string>
+    <string name="continue_">Continue</string>
+    <string name="name">Name</string>
+    <string name="expires">expires</string>
+    <string name="cvc">CVC</string>
 </resources>

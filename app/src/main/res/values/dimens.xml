@@ -28,5 +28,5 @@
     <dimen name="body">17sp</dimen>
     <dimen name="header">16sp</dimen>
     <dimen name="_80dp">80dp</dimen>
-    <dimen name="_70dp">70</dimen>
+    <dimen name="_70dp">70dp</dimen>
 </resources>

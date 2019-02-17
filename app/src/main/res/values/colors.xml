@@ -16,12 +16,10 @@
     <color name="colorPost">#bff6ff</color>
     <color name="colorHeader">#0d3144</color>
     <color name="colorLogin_1">#f6fdff</color>
-
-
-
-
-
-
+    <color name="colorInactive"> #9b9b9b</color>
+    <color name="colorActive"> #34828c</color>
+    <color name="colorActive1">#56c7c7</color>
+    <color name="color_continue_inactive">#4a4a4a</color>
 
 
 </resources>
