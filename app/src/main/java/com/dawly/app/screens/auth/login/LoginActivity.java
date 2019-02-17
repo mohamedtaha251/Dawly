@@ -1,8 +1,10 @@
 package com.dawly.app.screens.auth.login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
 import app.dawly.com.dawly.R;
@@ -18,43 +20,56 @@ import dagger.android.AndroidInjection;
 import javax.inject.Inject;
 import java.util.List;
 
-public class LoginActivity extends BaseActivity implements LoginContract.LoginInteractor, BaseContract.ClickListener, View.OnClickListener {
+public class LoginActivity extends BaseActivity implements LoginContract.LoginInteractor {
     @Inject
     LoginPresenterImpl loginPresenter;
-    private CallbackManager callbackManager;
-    ActivityLoginBinding activityLoginBinding;
-    DawlyEditText email, password;
+    CallbackManager callbackManager;
+    ActivityLoginBinding loginBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        //init
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
-        activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-        email = activityLoginBinding.signupEmail;
-        password = activityLoginBinding.signupPassword;
-        activityLoginBinding.setClickListener(this);
+        loginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+        //    loginBinding.setClickListener(this);
+
         getSupportActionBar().hide();
 
-        activityLoginBinding.btnSwitchToSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activityLoginBinding.signInFrame.setVisibility(View.VISIBLE);
-                activityLoginBinding.signUpFrame.setVisibility(View.INVISIBLE);
-                activityLoginBinding.signCard.bringToFront();
-            }
-        });
-
-        activityLoginBinding.btnSwitchToSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activityLoginBinding.signInFrame.setVisibility(View.INVISIBLE);
-                activityLoginBinding.signUpFrame.setVisibility(View.VISIBLE);
-            }
-        });
-
+        actions();
 
     }
+
+    private void actions() {
+        loginBinding.btnSwitchToSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginBinding.signInFrame.setVisibility(View.VISIBLE);
+                loginBinding.signUpFrame.setVisibility(View.INVISIBLE);
+                loginBinding.signCard.bringToFront();
+            }
+        });
+
+        loginBinding.btnSwitchToSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginBinding.signInFrame.setVisibility(View.INVISIBLE);
+                loginBinding.signUpFrame.setVisibility(View.VISIBLE);
+            }
+        });
+
+        loginBinding.loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(loginBinding.signInFrame.getVisibility()==View.VISIBLE)
+                {
+
+                }
+            }
+        });
+    }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -78,20 +93,4 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
 
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.loginBtn:
-                Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
-                if (email.isValid(null) && password.isValid(null)) {
-                    User user = new User();
-                    user.setEmail("");
-                    user.setPassword("");
-                    loginPresenter.start(user);
-                }
-                break;
-
-
-        }
-    }
 }

@@ -56,7 +56,7 @@
 
                 <!-- sign in -->
                 <RelativeLayout
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:id="@+id/sign_in_frame"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -76,12 +76,14 @@
                             android:layout_height="wrap_content">
 
                         <RelativeLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
+                                android:gravity="start"
                                 android:layout_height="wrap_content">
 
                             <com.dawly.app.views.DawlyTextViewBold
                                     android:id="@+id/login_header"
                                     android:padding="@dimen/_20dp"
+
                                     android:text="@string/sign_in"
                                     android:textSize="30sp"
                                     android:textAllCaps="true"
@@ -97,7 +99,10 @@
 
                                 <com.dawly.app.views.DawlyEditText
                                         android:id="@+id/login_email"
-                                        android:textAllCaps="true"
+                                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@_.-"
+                                        android:maxLength="30"
+                                        android:maxLines="1"
+                                        android:inputType="textCapCharacters"
                                         android:hint="@string/email"
                                         android:textColor="@color/colorHeader"
                                         android:layout_margin="@dimen/_20dp"
@@ -114,8 +119,8 @@
 
                                 <com.dawly.app.views.DawlyEditText
                                         android:id="@+id/login_password"
-                                        android:textAllCaps="true"
-                                        android:textColor="@color/colorHeader"
+                                        android:inputType="textPassword"
+                                        android:maxLines="1"
                                         android:layout_marginEnd="@dimen/_20dp"
                                         android:layout_marginStart="@dimen/_20dp"
                                         android:textColorHint="@color/colorHeader"
@@ -162,7 +167,7 @@
                 <!-- sign up -->
                 <RelativeLayout
                         android:id="@+id/sign_up_frame"
-                        android:visibility="visible"
+                        android:visibility="invisible"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -216,7 +221,10 @@
 
                                 <com.dawly.app.views.DawlyEditText
                                         android:id="@+id/signup_first_name"
-                                        android:textAllCaps="true"
+                                        android:maxLines="1"
+                                        android:maxLength="50"
+                                        android:digits="غظضذخثتشرقصجفعسنملةىكيطئءؤحزوهدبا abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                        android:inputType="textCapCharacters"
                                         android:hint="@string/firstname"
                                         android:textColor="@color/colorHeader"
                                         android:layout_margin="@dimen/_20dp"
@@ -233,8 +241,10 @@
 
                                 <com.dawly.app.views.DawlyEditText
                                         android:id="@+id/sign_up_last_name_password"
-                                        android:textAllCaps="true"
-                                        android:textColor="@color/colorHeader"
+                                        android:maxLines="1"
+                                        android:maxLength="50"
+                                        android:inputType="textCapCharacters"
+                                        android:digits="غظضذخثتشرقصجفعسنملةىكيطئءؤحزوهدبا abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                                         android:layout_marginEnd="@dimen/_20dp"
                                         android:layout_marginStart="@dimen/_20dp"
                                         android:textColorHint="@color/colorHeader"
@@ -251,8 +261,7 @@
 
                                 <com.dawly.app.views.DawlyEditText
                                         android:id="@+id/signup_password"
-                                        android:textAllCaps="true"
-                                        android:textColor="@color/colorHeader"
+                                        android:inputType="textPassword" android:textColor="@color/colorHeader"
                                         android:layout_marginEnd="@dimen/_20dp"
                                         android:layout_marginStart="@dimen/_20dp"
                                         android:textColorHint="@color/colorHeader"
@@ -269,8 +278,7 @@
 
                                 <com.dawly.app.views.DawlyEditText
                                         android:id="@+id/signup_confirm_password"
-                                        android:textAllCaps="true"
-                                        android:textColor="@color/colorHeader"
+                                        android:inputType="textPassword" android:textColor="@color/colorHeader"
                                         android:layout_marginEnd="@dimen/_20dp"
                                         android:layout_marginStart="@dimen/_20dp"
                                         android:textColorHint="@color/colorHeader"
@@ -287,7 +295,10 @@
 
                                 <com.dawly.app.views.DawlyEditText
                                         android:id="@+id/signup_email"
-                                        android:textAllCaps="true"
+                                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@_.-"
+                                        android:maxLength="30"
+                                        android:maxLines="1"
+                                        android:inputType="textCapCharacters"
                                         android:textColor="@color/colorHeader"
                                         android:layout_marginEnd="@dimen/_20dp"
                                         android:layout_marginStart="@dimen/_20dp"
@@ -297,6 +308,50 @@
                                         android:layout_height="wrap_content"/>
                             </android.support.design.widget.TextInputLayout>
 
+                            <android.support.constraint.ConstraintLayout
+                                    android:id="@+id/constraintLayout"
+                                    android:layout_marginBottom="@dimen/_20dp"
+                                    android:layout_marginStart="@dimen/_20dp"
+                                    android:layout_marginEnd="@dimen/_20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/signup_email_Input"
+                            >
+
+
+                                <com.hbb20.CountryCodePicker
+                                        android:id="@+id/tvCountryCode"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        app:ccp_showArrow="false"
+                                        app:ccp_showFlag="true"
+                                        app:ccp_showNameCode="false"
+                                        app:ccp_textGravity="CENTER"
+                                        app:ccp_textSize="12.42sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"/>
+
+                                <EditText
+                                        android:id="@+id/etPhoneNumber"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="10dp"
+                                        android:gravity="left|center_vertical"
+                                        android:hint="@string/phone_number"
+                                        android:inputType="number"
+                                        android:padding="5dp"
+
+                                        android:textSize="14.42sp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/tvCountryCode"
+                                        app:layout_constraintLeft_toRightOf="@+id/tvCountryCode"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/tvCountryCode"
+                                />
+
+                            </android.support.constraint.ConstraintLayout>
 
 
                         </RelativeLayout>
