@@ -2,6 +2,7 @@ package com.dawly.app.screens.auth.login;
 
 import android.view.View;
 import com.dawly.app.base.BasePresenter;
+import com.dawly.app.entities.LoginResponse;
 import com.dawly.app.entities.User;
 import com.dawly.app.entities.ValidationError;
 
@@ -12,19 +13,24 @@ public class LoginContract {
      * Created by Muhammad on 1/1/2018.
      */
 
-    public  interface LoginInteractor {
-        void showValidationErrors(List<ValidationError> validationErrorList);
+    public interface LoginInteractor {
+        void showValidationErrors(String message);
+
         void loginError(String message);
-        void loginSuccess(User user);
+
+        void loginSuccess(LoginResponse loginResponse);
     }
 
 
-    public  interface LoginPresenter extends BasePresenter {
-        void onLoginSucceed(User responseEntity);
+    public interface LoginPresenter extends BasePresenter {
+        void onLoginSucceed(LoginResponse loginResponse);
+
         void onLoginError(String message);
-        void onLoginValidationError(List<ValidationError> validationErrorList);
+
+        void onLoginValidationError(String message);
     }
-    public  interface ClickListener {
+
+    public interface ClickListener {
         void onClick(View view);
     }
 

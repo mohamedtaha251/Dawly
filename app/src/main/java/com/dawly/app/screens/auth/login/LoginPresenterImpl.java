@@ -1,5 +1,6 @@
 package com.dawly.app.screens.auth.login;
 
+import com.dawly.app.entities.LoginResponse;
 import com.dawly.app.entities.User;
 import com.dawly.app.entities.ValidationError;
 
@@ -21,12 +22,12 @@ public class LoginPresenterImpl implements LoginContract.LoginPresenter {
 
 
     @Override
-    public void onLoginSucceed(User responseEntity) {
-//        String status = responseEntity.getStatus();
+    public void onLoginSucceed(LoginResponse loginResponse) {
+//        String status = responseEntity.getMessage();
 //                int code = responseEntity.getCode().intValue();
 //        switch (status){
 //            case "success":
-        loginInteractor.loginSuccess(responseEntity);
+        loginInteractor.loginSuccess(loginResponse);
 //                break;
 //            case "fail":
 ////                loginInteractor.signUpError(responseEntity.getEntity().getMessage());
@@ -44,8 +45,8 @@ public class LoginPresenterImpl implements LoginContract.LoginPresenter {
     }
 
     @Override
-    public void onLoginValidationError(List<ValidationError> validationErrorList) {
-        loginInteractor.showValidationErrors(validationErrorList);
+    public void onLoginValidationError(String message) {
+        loginInteractor.showValidationErrors(message);
 
     }
 

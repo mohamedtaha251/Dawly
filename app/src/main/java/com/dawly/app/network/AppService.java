@@ -1,6 +1,7 @@
 package com.dawly.app.network;
 
 
+import com.dawly.app.entities.LoginResponse;
 import com.dawly.app.entities.ResponseEntity;
 import com.dawly.app.entities.User;
 import com.dawly.app.utils.Constants;
@@ -20,7 +21,7 @@ public interface AppService {
     //"Content-Type: application/json"})
     //@FormUrlEncoded
     @POST
-    Observable<ResponseEntity<User>> login(@Url String url, @Body User user);
+    Observable<LoginResponse> login(@Url String url, @Body User user);
 
     @POST
     Observable<ResponseEntity<String>> logout(@Url String url, @Header("Authorization") String token, @Query("token") String authToken);

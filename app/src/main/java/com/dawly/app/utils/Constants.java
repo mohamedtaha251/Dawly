@@ -6,9 +6,9 @@ public class Constants {
     //--------------------------------Keys--------------------------------
 
    //Production
-    public static final String BASE_URL = "https://luckycommonapi.dsquares.com/api/";
+    public static final String BASE_URL = "http://dawly.com/api/v1/";
     public static final String BEARER ="bearer ";
-    public static final String LOGIN = "Account/login";
+    public static final String LOGIN = "users/login.php";
 
     //--------------------------------Font Family--------------------------------
     public static final String PROXIMA_REGULAR = "fonts/proxima_regular.ttf";

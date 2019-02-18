@@ -11,6 +11,7 @@ import app.dawly.com.dawly.R;
 import app.dawly.com.dawly.databinding.ActivityLoginBinding;
 import com.dawly.app.base.BaseActivity;
 import com.dawly.app.base.BaseContract;
+import com.dawly.app.entities.LoginResponse;
 import com.dawly.app.entities.User;
 import com.dawly.app.entities.ValidationError;
 import com.dawly.app.views.DawlyEditText;
@@ -62,8 +63,33 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
         loginBinding.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(loginBinding.signInFrame.getVisibility()==View.VISIBLE)
-                {
+                if (loginBinding.signInFrame.getVisibility() == View.VISIBLE) {
+
+                    //collect data from UI
+                    String email = loginBinding.loginEmail.getText().toString();
+                    String password = loginBinding.loginPassword.getText().toString();
+
+                    //create user
+                    User user = new User();
+                    user.setEmail(email);
+                    user.setPassword(password);
+
+                    loginPresenter.start(user);
+                } else {
+                    //collect data from UI
+                    String fname = loginBinding.signupFirstName.getText().toString();
+                    String lname = loginBinding.etSignUpLastName.getText().toString();
+                    String password = loginBinding.signupPassword.getText().toString();
+                    String email = loginBinding.signupEmail.getText().toString();
+                    String phone = loginBinding.etPhoneNumber.getText().toString();
+
+                    //create user
+                    User user = new User();
+                    user.setFisrtName(fname);
+                    user.setLastName(lname);
+                    user.setPassword(password);
+                    user.setEmail(email);
+                    user.setPhone(phone);
 
                 }
             }
@@ -79,17 +105,19 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
     }
 
     @Override
-    public void showValidationErrors(List<ValidationError> validationErrorList) {
-
+    public void showValidationErrors(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void loginError(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
-    public void loginSuccess(User user) {
+    public void loginSuccess(LoginResponse loginResponse) {
+        Toast.makeText(this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
 
     }
 

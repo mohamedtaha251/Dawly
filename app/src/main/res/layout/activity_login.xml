@@ -234,13 +234,13 @@
                             </android.support.design.widget.TextInputLayout>
 
                             <android.support.design.widget.TextInputLayout
-                                    android:id="@+id/last_name_passwordInput"
+                                    android:id="@+id/last_name_Input"
                                     android:layout_width="match_parent"
                                     android:layout_below="@+id/signup_first_name_Input"
                                     android:layout_height="wrap_content">
 
                                 <com.dawly.app.views.DawlyEditText
-                                        android:id="@+id/sign_up_last_name_password"
+                                        android:id="@+id/et_sign_up_last_name"
                                         android:maxLines="1"
                                         android:maxLength="50"
                                         android:inputType="textCapCharacters"
@@ -256,12 +256,13 @@
                             <android.support.design.widget.TextInputLayout
                                     android:id="@+id/signup_passwordInput"
                                     android:layout_width="match_parent"
-                                    android:layout_below="@+id/last_name_passwordInput"
+                                    android:layout_below="@+id/last_name_Input"
                                     android:layout_height="wrap_content">
 
                                 <com.dawly.app.views.DawlyEditText
                                         android:id="@+id/signup_password"
-                                        android:inputType="textPassword" android:textColor="@color/colorHeader"
+                                        android:inputType="textPassword"
+                                        android:textColor="@color/colorHeader"
                                         android:layout_marginEnd="@dimen/_20dp"
                                         android:layout_marginStart="@dimen/_20dp"
                                         android:textColorHint="@color/colorHeader"

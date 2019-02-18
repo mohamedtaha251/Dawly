@@ -2,7 +2,7 @@ package com.dawly.app.screens.auth.login;
 
 import com.dawly.app.application.DawlyApp;
 import com.dawly.app.base.BaseModel;
-import com.dawly.app.entities.ResponseEntity;
+import com.dawly.app.entities.LoginResponse;
 import com.dawly.app.entities.User;
 import com.dawly.app.network.AppService;
 import com.dawly.app.utils.Constants;
@@ -31,7 +31,7 @@ public class LoginModel extends BaseModel {
 
     @Override
     protected void start(Object user) {
-        mDisposable.add(appService.login(Constants.LOGIN,(User) user)
+        mDisposable.add(appService.login(Constants.LOGIN, (User) user)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::onSuccess, this::onError, this::onComplete));
@@ -48,20 +48,19 @@ public class LoginModel extends BaseModel {
 
 
     @Override
-    public void onSuccess(Object user) {
-        ResponseEntity<User> user1 = (ResponseEntity<User>) user;
-        if (user1.getStatus() == 200) {
-            loginPresenter.onLoginSucceed((User) user1.getData());
+    public void onSuccess(Object response) {
+        LoginResponse<String> loginResponse = (LoginResponse<String>) response;
+        if (loginResponse.getMessage() == "Successful login.") {
+            loginPresenter.onLoginSucceed((loginResponse));
         } else {
-            loginPresenter.onLoginError((String) user1.getErrorList().get(0));
+            loginPresenter.onLoginError(loginResponse.getMessage());
         }
-
 
 
     }
 
     @Override
     public void onError(Throwable throwable) {
-        loginPresenter.onLoginError(handleOnError(throwable));
+        loginPresenter.onLoginError(throwable.getMessage());
     }
 }
