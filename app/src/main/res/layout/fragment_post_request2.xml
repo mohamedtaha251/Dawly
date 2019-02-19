@@ -24,14 +24,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <com.dawly.app.views.DawlyTextViewBold
-                    android:id="@+id/step2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/_15dp"
-                    android:textSize="26sp"
-                    android:textColor="@color/colorHeader"
-                    android:text="@string/step_1"/>
+            <ImageView
+                    android:src="@drawable/ic_paypal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/_60dp"
+                    android:layout_height="@dimen/_60dp"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -45,6 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorPost"
+
+            app:cardElevation="@dimen/_20dp"
             app:cardBackgroundColor="@color/colorPost">
 
 
@@ -52,16 +51,100 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/visaLayout"
+                    android:layout_margin="@dimen/_20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorEmail"
+                        android:src="@drawable/ic_visa_1"/>
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_mastercard"/>
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_maestro"/>
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_american_express_logo"/>
+
+            </LinearLayout>
+
+            <com.dawly.app.views.DawlyTextView
+                    android:id="@+id/cardNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+
+                    android:layout_below="@+id/visaLayout"
+                    android:text="@string/card_number"/>
+
+            <LinearLayout
+                    android:id="@+id/cardLayout"
+                    android:layout_below="@+id/cardNumber"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <com.dawly.app.views.DawlyEditText
+                        android:id="@+id/firstSlot"
+                        android:background="@drawable/credit_card_bg"
+                        android:layout_width="@dimen/_60dp"
+                        android:layout_height="wrap_content"/>
+
+                <com.dawly.app.views.DawlyEditText
+                        android:id="@+id/secondSlot"
+                        android:background="@drawable/credit_card_bg"
+                        android:layout_width="@dimen/_60dp"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_height="wrap_content"/>
+
+                <com.dawly.app.views.DawlyEditText
+                        android:id="@+id/thrirdSlot"
+                        android:background="@drawable/credit_card_bg"
+                        android:layout_width="@dimen/_60dp"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_height="wrap_content"/>
+
+                <com.dawly.app.views.DawlyEditText
+                        android:id="@+id/fourthSlot"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:background="@drawable/credit_card_bg"
+                        android:layout_width="@dimen/_60dp"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
             <com.dawly.app.views.DawlyEditText
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_toStartOf="@+id/itemImg"
+                    android:layout_below="@+id/cardLayout"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
-                    android:layout_marginTop="@dimen/_20dp"
                     android:layout_centerHorizontal="true"
                     android:textColor="@color/colorHeader"/>
 

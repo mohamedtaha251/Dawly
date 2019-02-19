@@ -20,6 +20,7 @@
     <color name="colorActive"> #34828c</color>
     <color name="colorActive1">#56c7c7</color>
     <color name="color_continue_inactive">#4a4a4a</color>
+    <color name="colorPick">#657b8e</color>
 
 
 </resources>

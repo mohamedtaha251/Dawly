@@ -63,7 +63,7 @@
                 <com.makeramen.roundedimageview.RoundedImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="#657b8e"
+                        android:src="@color/colorPick"
 
                         app:riv_corner_radius_top_right="@dimen/_15dp"
                         app:riv_corner_radius_bottom_left="@dimen/_15dp"

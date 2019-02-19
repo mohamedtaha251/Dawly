@@ -35,6 +35,14 @@
     <string name="item_link">Item Link</string>
     <string name="continue_">Continue</string>
     <string name="name">Name</string>
-    <string name="expires">expires</string>
+    <string name="expires">Expires</string>
     <string name="cvc">CVC</string>
+    <string name="card_number">Card Number</string>
+    <string name="preview">Preview</string>
+    <string name="payment">Payment</string>
+    <string name="location">Location:</string>
+    <string name="weight_">Weight:</string>
+    <string name="date_">Date:</string>
+    <string name="item_name_">Item Name:</string>
+    <string name="item_link_">Item Link:</string>
 </resources>
