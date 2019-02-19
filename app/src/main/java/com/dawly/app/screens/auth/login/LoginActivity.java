@@ -30,8 +30,8 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
         activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-        email = activityLoginBinding.email;
-        password = activityLoginBinding.password;
+        email = activityLoginBinding.loginEmail;
+        password = activityLoginBinding.loginPassword;
         activityLoginBinding.setClickListener(this);
         getSupportActionBar().hide();
     }
