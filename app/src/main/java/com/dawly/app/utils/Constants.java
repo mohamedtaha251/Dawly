@@ -9,6 +9,7 @@ public class Constants {
     public static final String BASE_URL = "http://dawly.com/api/v1/";
     public static final String BEARER ="bearer ";
     public static final String LOGIN = "users/login.php";
+    public static final String CREATE_USER = "users/create_user.php";
 
     //--------------------------------Font Family--------------------------------
     public static final String PROXIMA_REGULAR = "fonts/proxima_regular.ttf";

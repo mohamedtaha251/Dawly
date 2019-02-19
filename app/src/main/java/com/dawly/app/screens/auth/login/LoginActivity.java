@@ -1,25 +1,20 @@
 package com.dawly.app.screens.auth.login;
 
-import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
 import app.dawly.com.dawly.R;
 import app.dawly.com.dawly.databinding.ActivityLoginBinding;
 import com.dawly.app.base.BaseActivity;
-import com.dawly.app.base.BaseContract;
-import com.dawly.app.entities.LoginResponse;
+import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.User;
-import com.dawly.app.entities.ValidationError;
-import com.dawly.app.views.DawlyEditText;
+import com.dawly.app.entities.response.SignUpResponse;
 import com.facebook.CallbackManager;
 import dagger.android.AndroidInjection;
 
 import javax.inject.Inject;
-import java.util.List;
 
 public class LoginActivity extends BaseActivity implements LoginContract.LoginInteractor {
     @Inject
@@ -35,7 +30,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
         super.onCreate(savedInstanceState);
         loginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         //    loginBinding.setClickListener(this);
-
+        loginBinding.signCard.bringToFront();
         getSupportActionBar().hide();
 
         actions();
@@ -48,7 +43,8 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
             public void onClick(View v) {
                 loginBinding.signInFrame.setVisibility(View.VISIBLE);
                 loginBinding.signUpFrame.setVisibility(View.INVISIBLE);
-                loginBinding.signCard.bringToFront();
+                loginBinding.loginBtn.setText(R.string.sign_in);
+
             }
         });
 
@@ -57,6 +53,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
             public void onClick(View v) {
                 loginBinding.signInFrame.setVisibility(View.INVISIBLE);
                 loginBinding.signUpFrame.setVisibility(View.VISIBLE);
+                loginBinding.loginBtn.setText(R.string.sign_up);
             }
         });
 
@@ -91,6 +88,9 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
                     user.setEmail(email);
                     user.setPhone(phone);
 
+                    loginPresenter.signUp(user);
+
+
                 }
             }
         });
@@ -113,6 +113,16 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
     public void loginError(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 
+    }
+
+    @Override
+    public void signUpError(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void signUpSuccess(SignUpResponse signUpResponse) {
+        Toast.makeText(this, signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

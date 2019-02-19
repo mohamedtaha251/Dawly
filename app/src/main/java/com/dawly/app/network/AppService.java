@@ -1,9 +1,10 @@
 package com.dawly.app.network;
 
 
-import com.dawly.app.entities.LoginResponse;
+import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.ResponseEntity;
 import com.dawly.app.entities.User;
+import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.utils.Constants;
 import io.reactivex.Observable;
 import retrofit2.http.*;
@@ -22,6 +23,9 @@ public interface AppService {
     //@FormUrlEncoded
     @POST
     Observable<LoginResponse> login(@Url String url, @Body User user);
+
+    @POST
+    Observable<SignUpResponse> signUp(@Url String url, @Body User user);
 
     @POST
     Observable<ResponseEntity<String>> logout(@Url String url, @Header("Authorization") String token, @Query("token") String authToken);
