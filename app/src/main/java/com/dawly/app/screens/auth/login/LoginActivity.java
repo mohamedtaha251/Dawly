@@ -71,7 +71,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
                     user.setEmail(email);
                     user.setPassword(password);
 
-                    loginPresenter.start(user);
+                    loginPresenter.loginWithFacebook(user);
                 } else {
                     //collect data from UI
                     String fname = loginBinding.signupFirstName.getText().toString();
