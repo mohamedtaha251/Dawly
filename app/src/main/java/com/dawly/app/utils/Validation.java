@@ -34,7 +34,7 @@ public class Validation {
         return field;
     }
 
-    public boolean isValidPassword(String password) {
+    public static boolean isValidPassword(String password) {
 
         String pattern = "^((?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{5,}).+$";
         Pattern p = Pattern.compile(pattern);//. represents single character
@@ -84,5 +84,29 @@ public class Validation {
             return true;
         else
             return false;
+    }
+
+    public static boolean isContainLowerCase(final String password) {
+
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN =  "(?=.*[a-z]).+";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+
+        return matcher.matches();
+
+    }
+
+    public static boolean isContainUpperCase(final String password) {
+
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN =  "(?=.*[A-Z]).+";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+
+        return matcher.matches();
+
     }
 }
