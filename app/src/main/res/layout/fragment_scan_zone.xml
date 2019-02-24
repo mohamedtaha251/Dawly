@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="-150dp"
+            android:src="@drawable/ic_wave_light"
+            />
+
+    <ImageView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
+            android:layout_marginStart="-150dp"
+            android:src="@drawable/ic_wave_semi_light"
+            />
+
+    <com.dawly.app.views.DawlyTextView
+            android:id="@+id/header"
+            android:textColor="@color/colorEmail"
+            android:textSize="18sp"
+            android:padding="@dimen/_20dp"
+            android:text="@string/for_successfull_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_20dp"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250dp"
+                android:src="@drawable/ic_scan_zone"
+                android:scaleType="fitXY"
+                />
+
+        <com.dawly.app.views.DawlyTextViewBold
+                android:textSize="25sp"
+                android:textColor="@color/colorEmail"
+                android:layout_centerInParent="true"
+                android:text="@string/scan_zone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+    <com.dawly.app.views.DawlyButtonBold
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:background="@drawable/scan_gradient_bg"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/startScanBtn"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:text="@string/start_scanning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

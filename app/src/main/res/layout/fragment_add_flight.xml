@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:attrs="http://schemas.android.com/tools"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200dp"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="-150dp"
+            android:src="@mipmap/wave_reversed"
+            android:layout_marginTop="2dp"/>
+
+    <ImageView
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_250dp"
+            android:scaleType="fitXY"
+            android:layout_marginStart="-150dp"
+            android:src="@mipmap/wave_reversed"
+            />
+
+    <android.support.v7.widget.CardView
+            app:cardCornerRadius="@dimen/_15dp"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_40dp"
+            android:layout_marginBottom="@dimen/_30dp"
+            android:layout_above="@+id/pageIndicatorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPost"
+
+            app:cardElevation="@dimen/_20dp"
+            app:cardBackgroundColor="@color/colorPost">
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                    android:id="@+id/cardLayout"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:id="@+id/planeLayout"
+                            android:layout_marginTop="@dimen/_20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:layout_height="wrap_content">
+
+
+                    <ImageView
+                            android:id="@+id/plane"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_plane_arrival"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_width="@dimen/_30dp"
+                            android:layout_height="@dimen/_30dp"/>
+                    <View
+                            android:id="@+id/separator"
+                            android:layout_width="2dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/colorEmail"
+                            android:layout_height="@dimen/_80dp"/>
+                    </RelativeLayout>
+
+                    <com.dawly.app.views.DawlyEditText
+                            android:id="@+id/from"
+                            android:layout_toEndOf="@+id/planeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/from"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/colorHeader"/>
+
+                    <com.dawly.app.views.DawlyEditText
+                            android:id="@+id/to"
+                            android:layout_toEndOf="@+id/planeLayout"
+                            android:layout_below="@+id/from"
+                            android:hint="@string/to"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <com.dawly.app.views.DawlyEditText
+                        android:id="@+id/date"
+                        android:layout_below="@+id/expires"
+                        android:hint="@string/date"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:drawablePadding="@dimen/_20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/itemImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <com.dawly.app.views.DawlyTextView
+                        android:id="@+id/weightAvailable"
+                        android:layout_below="@+id/expires"
+                        android:hint="@string/the_weight_available"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/itemImg"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <ProgressBar
+                        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <com.dawly.app.views.DawlyEditText
+                        android:id="@+id/itemsUnableToCarry"
+                        android:layout_below="@+id/expires"
+                        android:hint="@string/items_unable_to_carry"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/itemImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <com.rd.PageIndicatorView
+            android:id="@+id/pageIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_10dp"
+            app:piv_animationType="worm"
+            app:piv_dynamicCount="true"
+            app:piv_select="1"
+            android:layout_above="@+id/nextBtn"
+            app:piv_interactiveAnimation="true"
+            app:piv_selectedColor="#35a6b7"
+            app:piv_unselectedColor="#bfcefa"
+            attrs:piv_padding="10dp"
+            attrs:piv_radius="5dp"/>
+
+
+    <com.dawly.app.views.DawlyButtonBold
+            android:id="@+id/nextBtn"
+            android:text="@string/next"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_10dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/continue_gradient_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

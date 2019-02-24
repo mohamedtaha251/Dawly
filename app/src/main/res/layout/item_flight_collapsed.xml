@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_15dp"
+        app:cardCornerRadius="@dimen/_20dp"
+        app:cardElevation="@dimen/_20dp"
+        app:cardBackgroundColor="@color/colorCard"
+        android:layout_height="@dimen/_350dp">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:background="@color/colorCardSide1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_65dp">
+
+            <com.dawly.app.views.DawlyButtonBold
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:text="@string/close"
+                    android:textAllCaps="false"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            <View
+                    android:id="@+id/cardCenterLayout"
+                    android:layout_width="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="1dp"/>
+
+            <ImageView
+                    android:id="@+id/oval1"
+                    android:src="@drawable/ic_oval_copy_2"
+                    android:layout_above="@+id/oval2"
+                    android:layout_toEndOf="@+id/oval2"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_width="@dimen/_10dp"
+                    android:layout_height="@dimen/_10dp"/>
+
+            <ImageView
+                    android:id="@+id/oval2"
+                    android:src="@drawable/ic_oval_copy_2"
+                    android:layout_above="@+id/oval3"
+                    android:layout_toStartOf="@+id/oval3"
+                    android:layout_marginEnd="-10dp"
+                    android:layout_width="@dimen/_15dp"
+                    android:layout_height="@dimen/_15dp"/>
+
+            <ImageView
+                    android:id="@+id/oval3"
+                    android:src="@drawable/ic_oval_copy_2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/cardCenterLayout"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <View
+                    android:layout_width="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/sendRequest"
+                    android:background="@color/colorSeparator"
+                    android:layout_margin="@dimen/_10dp"
+                    android:layout_height="match_parent"/>
+
+
+            <com.dawly.app.views.DawlyTextView
+                    android:id="@+id/fromTitle"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/from"
+                    android:maxLines="1"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:textColor="@color/colorFromTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/toTitle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/flightDestination"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:text="@string/to"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:textColor="@color/colorFromTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/from"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/fromTitle"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="Cairo"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:textColor="@color/colorExpandedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/to"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/toTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:text="London"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:textColor="@color/colorExpandedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/flightDateTitle"
+                    android:layout_below="@+id/from"
+                    android:text="@string/date_"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:textSize="17sp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:textColor="@color/colorExpandedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/weightAvailableTitle"
+                    android:layout_below="@+id/flightDateTitle"
+                    android:text="@string/weight_available"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:textSize="17sp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:textColor="@color/colorExpandedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/flightDate"
+                    android:layout_below="@+id/to"
+                    android:text="18 Jan 2018"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:textSize="17sp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:textColor="@color/colorExpandedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/flightWeight"
+                    android:layout_below="@+id/flightDate"
+                    android:text="18 lbs"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:textSize="17sp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:textColor="@color/colorExpandedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/flightUnableItemsTitle"
+                    android:layout_below="@+id/flightWeight"
+                    android:text="@string/items_unable"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:textSize="17sp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:textColor="@color/colorExpandedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:id="@+id/flightUnableItems"
+                    android:layout_below="@+id/flightWeight"
+                    android:text="Item1  Item2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:textSize="17sp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:textColor="@color/colorExpandedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            <com.dawly.app.views.DawlyButtonBold
+                    android:id="@+id/sendRequest"
+                    android:background="@drawable/send_redquest_gradient_bg"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/_20dp"
+                    android:text="@string/send_request"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
