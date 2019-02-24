@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Dawly</string>
+    <string name="facebook_app_id">397168864377979</string>
+    <string name="fb_login_protocol_scheme">fb397168864377979</string>
+
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
