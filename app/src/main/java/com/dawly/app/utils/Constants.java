@@ -22,6 +22,15 @@ public class Constants {
     public static final String CAIRO_BOLD = "fonts/cairo_bold.ttf";
     public static final String CAIRO_THIN = "fonts/cairo_light.ttf";
 
+    public static final String ROBOTO_REGULAR = "fonts/roboto_regular.ttf";
+    public static final String ROBOTO_MEDIUM = "fonts/roboto_medium.ttf";
+    public static final String ROBOTO_BOLD = "fonts/roboto_bold.ttf";
+    public static final String MONTSERRAT_MEDIUM = "fonts/montserrat_alternates_medium.otf";
+
+
+
+
+
     public static final int ARABIC = 1;
  public static final String ARABIC_KEY = "ar";
  public static final int ENGLISH = 2;

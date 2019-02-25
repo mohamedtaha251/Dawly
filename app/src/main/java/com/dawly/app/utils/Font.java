@@ -29,12 +29,12 @@ public class Font {
         if (view instanceof DawlyEditText) {
             DawlyEditText dawlyEditText = (DawlyEditText) view;
             dawlyEditText.setTextColor(getColor());
-            dawlyEditText.setTypeface(checkLanguage(REGULAR));
+            dawlyEditText.setTypeface(checkLanguage(REGULAR,false));
         }
         if (view instanceof DawlyTextView) {
             DawlyTextView dawlyTextView = (DawlyTextView) view;
 //              luckyTextView.setTextColor(getColor());
-            dawlyTextView.setTypeface(checkLanguage(REGULAR));
+            dawlyTextView.setTypeface(checkLanguage(REGULAR,false));
             if (DawlyStorage.getLanguage() == Constants.ARABIC) {
                 float sp = dawlyTextView.getTextSize() / context.getResources().getDisplayMetrics().scaledDensity;
                 dawlyTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, sp - 2.0f);
@@ -42,13 +42,13 @@ public class Font {
         }
         if (view instanceof DawlyRadioButton) {
             DawlyRadioButton luckyTextView = (DawlyRadioButton) view;
-            luckyTextView.setTypeface(checkLanguage(REGULAR));
+            luckyTextView.setTypeface(checkLanguage(REGULAR,false));
         }
 
         if (view instanceof DawlyTextViewBold) {
             DawlyTextViewBold luckyTextView = (DawlyTextViewBold) view;
 //            luckyTextView.setTextColor(getColor());
-            luckyTextView.setTypeface(checkLanguage(Constants.FontType.BOLD));
+            luckyTextView.setTypeface(checkLanguage(Constants.FontType.BOLD,false));
             if (DawlyStorage.getLanguage() == Constants.ARABIC) {
                 float sp = luckyTextView.getTextSize() / context.getResources().getDisplayMetrics().scaledDensity;
                 luckyTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, sp - 2.5f);
@@ -57,7 +57,7 @@ public class Font {
         if (view instanceof DawlyTextViewSemiBold) {
             DawlyTextViewSemiBold luckyTextView = (DawlyTextViewSemiBold) view;
 //            luckyTextView.setTextColor(getColor());
-            luckyTextView.setTypeface(checkLanguage(Constants.FontType.SEMI_BOLD));
+            luckyTextView.setTypeface(checkLanguage(Constants.FontType.SEMI_BOLD,false));
             if (DawlyStorage.getLanguage() == Constants.ARABIC) {
                 float sp = luckyTextView.getTextSize() / context.getResources().getDisplayMetrics().scaledDensity;
                 luckyTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, sp - 2.0f);
@@ -67,7 +67,7 @@ public class Font {
         if (view instanceof DawlyButton) {
             DawlyButton dawlyButton = (DawlyButton) view;
 //            luckyEditText.setTextColor(getColor());
-            dawlyButton.setTypeface(checkLanguage(REGULAR));
+            dawlyButton.setTypeface(checkLanguage(REGULAR,true));
             if (DawlyStorage.getLanguage() == Constants.ARABIC) {
                 float sp = dawlyButton.getTextSize() / context.getResources().getDisplayMetrics().scaledDensity;
                 dawlyButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, sp - 1.0f);
@@ -76,7 +76,7 @@ public class Font {
         if (view instanceof DawlyButtonBold) {
             DawlyButtonBold dawlyButtonBold = (DawlyButtonBold) view;
 //            luckyEditText.setTextColor(getColor());
-            dawlyButtonBold.setTypeface(checkLanguage(Constants.FontType.BOLD));
+            dawlyButtonBold.setTypeface(checkLanguage(Constants.FontType.BOLD,true));
             if (DawlyStorage.getLanguage() == Constants.ARABIC) {
                 float sp = dawlyButtonBold.getTextSize() / context.getResources().getDisplayMetrics().scaledDensity;
                 dawlyButtonBold.setTextSize(TypedValue.COMPLEX_UNIT_SP, sp - 1.0f);
@@ -95,34 +95,47 @@ public class Font {
 
     }
 
-
-    private Typeface checkLanguage(Constants.FontType type) {
-        if (DawlyStorage.getLanguage() == Constants.ARABIC) {
-            switch (type) {
-                case REGULAR:
-                    return Typeface.createFromAsset(context.getAssets(), CAIRO_REGULAR);
-                case THIN:
-                    return Typeface.createFromAsset(context.getAssets(), CAIRO_THIN);
-                case SEMI_BOLD:
-                    return Typeface.createFromAsset(context.getAssets(), CAIRO_SEMI_BOLD);
-                case BOLD:
-                    return Typeface.createFromAsset(context.getAssets(), CAIRO_BOLD);
+    private Typeface checkLanguage(Constants.FontType type, boolean isBtn) {
+        if (!isBtn) {
+            if (DawlyStorage.getLanguage() == Constants.ARABIC) {
+                switch (type) {
+                    case REGULAR:
+                        return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
+                    case THIN:
+                        return Typeface.createFromAsset(context.getAssets(), CAIRO_THIN);
+                    case SEMI_BOLD:
+                        return Typeface.createFromAsset(context.getAssets(), CAIRO_SEMI_BOLD);
+                    case BOLD:
+                        return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
+                }
+            } else {
+                switch (type) {
+                    case REGULAR:
+                        return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
+                    case THIN:
+                        return Typeface.createFromAsset(context.getAssets(), PROXIMA_THIN);
+                    case SEMI_BOLD:
+                        return Typeface.createFromAsset(context.getAssets(), PROXIMA_SEMI_BOLD);
+                    case BOLD:
+                        return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
+                }
             }
+
         } else {
             switch (type) {
                 case REGULAR:
-                    return Typeface.createFromAsset(context.getAssets(), PROXIMA_REGULAR);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
                 case THIN:
-                    return Typeface.createFromAsset(context.getAssets(), PROXIMA_THIN);
+                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
                 case SEMI_BOLD:
-                    return Typeface.createFromAsset(context.getAssets(), PROXIMA_SEMI_BOLD);
+                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
                 case BOLD:
-                    return Typeface.createFromAsset(context.getAssets(), PROXIMA_BOLD);
+                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
             }
         }
-
         return Typeface.createFromAsset(context.getAssets(), CAIRO_REGULAR);
     }
+
 
     private int getColor() {
         return ContextCompat.getColor(context, R.color.colorPrimary);
