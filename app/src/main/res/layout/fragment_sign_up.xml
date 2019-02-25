@@ -14,7 +14,7 @@
             android:visibility="visible"
             android:layout_width="match_parent"
             android:id="@+id/signUpLayout"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
         <com.dawly.app.views.DawlyButtonBold
                 android:id="@+id/btn_switch_to_sign_in"
@@ -36,10 +36,9 @@
                 android:visibility="visible"
                 app:cardCornerRadius="@dimen/_15dp"
                 android:layout_below="@id/btn_switch_to_sign_in"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_marginEnd="@dimen/_20dp"
-                android:layout_marginTop="-20dp"
+                android:layout_marginTop="-50dp"
                 app:cardElevation="@dimen/_20dp"
+                app:cardUseCompatPadding="true"
                 android:id="@+id/signupcard"
                 app:cardBackgroundColor="@color/cardBackground"
                 android:layout_width="match_parent"

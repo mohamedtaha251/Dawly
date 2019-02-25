@@ -191,13 +191,13 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
                 signUp();
                 break;
             case R.id.btn_switch_to_sign_up:
-                loginBinding.signInFrame.setVisibility(View.INVISIBLE);
+                loginBinding.signInFrame.setVisibility(View.GONE);
                 loginBinding.signUpFrame.signUpLayout.setVisibility(View.VISIBLE);
                 loginBinding.loginBtn.setText(R.string.sign_up);
                 break;
             case R.id.btn_switch_to_sign_in:
                 loginBinding.signInFrame.setVisibility(View.VISIBLE);
-                loginBinding.signUpFrame.signUpLayout.setVisibility(View.INVISIBLE);
+                loginBinding.signUpFrame.signUpLayout.setVisibility(View.GONE);
                 loginBinding.loginBtn.setText(R.string.sign_in);
                 break;
         }
