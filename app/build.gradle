@@ -126,6 +126,9 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-core:16.0.1'
 
+    //google sign in
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
     //country code selector
     implementation 'com.hbb20:ccp:2.2.4'
 }

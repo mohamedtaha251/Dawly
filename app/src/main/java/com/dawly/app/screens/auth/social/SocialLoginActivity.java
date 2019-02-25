@@ -2,6 +2,7 @@ package com.dawly.app.screens.auth.social;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import app.dawly.com.dawly.R;
@@ -10,14 +11,19 @@ import com.dawly.app.entities.SocialUser;
 import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.screens.auth.login.LoginActivity;
+import com.dawly.app.utils.GoogleHelper;
 import com.dawly.app.views.DawlyButtonBold;
 import com.facebook.*;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
 import dagger.android.AndroidInjection;
 import com.facebook.FacebookSdk;
 
 import javax.inject.Inject;
+
+import static com.dawly.app.utils.GoogleHelper.RC_SIGN_IN;
 
 public class SocialLoginActivity extends BaseActivity implements SocialLoginContract.SocialLoginInteractor, SocialLoginPresenterImpl.FacebookLoginListener {
     @Inject
@@ -61,7 +67,9 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
         btnGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.loginWithGoogle();
+                GoogleHelper.logOutGoogle(SocialLoginActivity.this);
+                GoogleHelper.loginGoogle(SocialLoginActivity.this);
+
             }
         });
 
@@ -77,8 +85,19 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-        presenter.callbackManager.onActivityResult(requestCode, resultCode, data);
+
+
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                startActivity(new Intent(SocialLoginActivity.this, LoginActivity.class));
+            } catch (ApiException e) {
+            }
+        } else {
+            presenter.callbackManager.onActivityResult(requestCode, resultCode, data);
+            callbackManager.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
 
