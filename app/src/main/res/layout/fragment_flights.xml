@@ -1,49 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
+<layout>
 
-    <com.dawly.app.views.DawlyTabLayout
-            android:id="@+id/flightsTabLayout"
-            app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/colorWhite"
-            android:background="@drawable/tab_gradient_bg"
-            app:tabIndicatorColor="@color/colorTabSelectedIndicator"
-            app:tabIndicatorHeight="@dimen/_5dp"
-            app:tabIndicatorAnimationDuration="500"
-            app:tabTextColor="@color/colorTabTextUnSelectedIndicator"
+    <data>
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    </data>
 
-        <android.support.design.widget.TabItem
-                android:text="@string/flights"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        <android.support.design.widget.TabItem
-                android:text="@string/my_flights"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-    </com.dawly.app.views.DawlyTabLayout>
-
-    <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/flightsSwipeRefresh"
-            android:layout_below="@+id/flightsTabLayout"
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <android.support.v7.widget.RecyclerView
-                android:id="@+id/flightsRecycler"
+
+        <com.dawly.app.views.DawlyTabLayout
+                android:id="@+id/flightsTabLayout"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorWhite"
+                android:background="@drawable/tab_gradient_bg"
+                app:tabIndicatorColor="@color/colorTabSelectedIndicator"
+                app:tabIndicatorHeight="@dimen/_5dp"
+                app:tabIndicatorAnimationDuration="500"
+                app:tabTextColor="@color/colorTabTextUnSelectedIndicator"
+
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content">
+
+            <android.support.design.widget.TabItem
+                    android:text="@string/flights"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <android.support.design.widget.TabItem
+                    android:text="@string/my_flights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </com.dawly.app.views.DawlyTabLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/flightsSwipeRefresh"
+                android:layout_below="@+id/flightsTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/flightsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

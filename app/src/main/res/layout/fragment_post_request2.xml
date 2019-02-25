@@ -109,28 +109,28 @@
                         android:id="@+id/firstSlot"
                         android:background="@drawable/credit_card_bg"
                         android:layout_width="@dimen/_60dp"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="@dimen/_30dp"/>
 
                 <com.dawly.app.views.DawlyEditText
                         android:id="@+id/secondSlot"
                         android:background="@drawable/credit_card_bg"
                         android:layout_width="@dimen/_60dp"
                         android:layout_marginStart="@dimen/_10dp"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="@dimen/_30dp"/>
 
                 <com.dawly.app.views.DawlyEditText
                         android:id="@+id/thrirdSlot"
                         android:background="@drawable/credit_card_bg"
                         android:layout_width="@dimen/_60dp"
                         android:layout_marginStart="@dimen/_10dp"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="@dimen/_30dp"/>
 
                 <com.dawly.app.views.DawlyEditText
                         android:id="@+id/fourthSlot"
                         android:layout_marginStart="@dimen/_10dp"
                         android:background="@drawable/credit_card_bg"
                         android:layout_width="@dimen/_60dp"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="@dimen/_30dp"/>
 
 
             </LinearLayout>
@@ -139,7 +139,8 @@
             <com.dawly.app.views.DawlyEditText
                     android:id="@+id/name"
                     android:layout_width="match_parent"
-                    android:layout_alignParentStart="true"
+
+               android:layout_marginTop="@dimen/_10dp" android:layout_alignParentStart="true"
                     android:layout_below="@+id/cardLayout"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
@@ -152,7 +153,7 @@
                     android:id="@+id/expires"
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@+id/itemImg"
-                    android:layout_below="@+id/name"
+                    android:layout_marginTop="@dimen/_10dp" android:layout_below="@+id/name"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
                     android:hint="@string/expires"
@@ -166,7 +167,7 @@
                     android:layout_marginEnd="@dimen/_20dp"
                     android:hint="@string/cvc"
                     android:layout_alignParentStart="true"
-                    android:layout_toStartOf="@+id/itemImg"
+                    android:layout_marginTop="@dimen/_10dp" android:layout_toStartOf="@+id/itemImg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 

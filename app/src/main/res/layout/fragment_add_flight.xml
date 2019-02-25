@@ -164,7 +164,7 @@
             android:id="@+id/nextBtn"
             android:text="@string/next"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/_20dp"
+            android:layout_margin="@dimen/_20dp"
             android:textAllCaps="false"
             android:layout_weight="1"
             android:layout_marginStart="@dimen/_10dp"
