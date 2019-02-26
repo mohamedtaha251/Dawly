@@ -29,7 +29,6 @@ public class FlightsFragment extends BaseFragment {
         flightsRecycler = fragmentFlightsBinding.flightsRecycler;
         return fragmentFlightsBinding.getRoot();
     }
-
     @Override
     public void onStart() {
         super.onStart();
