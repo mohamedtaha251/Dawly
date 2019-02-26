@@ -102,9 +102,9 @@ public class Font {
                     case REGULAR:
                         return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                     case THIN:
-                        return Typeface.createFromAsset(context.getAssets(), CAIRO_THIN);
+                        return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                     case SEMI_BOLD:
-                        return Typeface.createFromAsset(context.getAssets(), CAIRO_SEMI_BOLD);
+                        return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                     case BOLD:
                         return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
                 }
@@ -113,9 +113,9 @@ public class Font {
                     case REGULAR:
                         return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                     case THIN:
-                        return Typeface.createFromAsset(context.getAssets(), PROXIMA_THIN);
+                        return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                     case SEMI_BOLD:
-                        return Typeface.createFromAsset(context.getAssets(), PROXIMA_SEMI_BOLD);
+                        return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                     case BOLD:
                         return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
                 }
@@ -124,13 +124,13 @@ public class Font {
         } else {
             switch (type) {
                 case REGULAR:
-                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                 case THIN:
-                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                 case SEMI_BOLD:
-                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                 case BOLD:
-                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
             }
         }
         return Typeface.createFromAsset(context.getAssets(), CAIRO_REGULAR);
@@ -138,7 +138,7 @@ public class Font {
 
 
     private int getColor() {
-        return ContextCompat.getColor(context, R.color.colorPrimary);
+        return ContextCompat.getColor(context, R.color.colorEmail);
     }
 
 

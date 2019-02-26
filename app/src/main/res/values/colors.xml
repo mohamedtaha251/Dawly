@@ -14,6 +14,8 @@
     <color name="colorSeparator">#8c9ac6</color>
 
     <color name="colorFromTo">#4c73ee</color>
+    <color name="colorVerifyDone">#b42d518c</color>
+
 
     <color name="colorTabSelectedIndicator">#00e1ff</color>
     <color name="colorTabTextUnSelectedIndicator">#d8d8d8</color>
@@ -34,6 +36,9 @@
     <color name="colorInactive"> #9b9b9b</color>
     <color name="colorActive"> #34828c</color>
     <color name="colorActive1">#56c7c7</color>
+
+    <color name="colorVerify"> #298992</color>
+    <color name="colorVerify1">#09685a</color>
 
     <color name="colorVerificationStart">#298992</color>
     <color name="colorVerificationEnd">#09685a</color>

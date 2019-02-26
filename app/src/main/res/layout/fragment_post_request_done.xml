@@ -21,7 +21,7 @@
 
         <com.dawly.app.views.DawlyTextViewBold
                 android:text="@string/your_flight_"
-                android:textSize="20sp"
+                android:textSize="30sp"
                 android:layout_below="@+id/flightImg"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/_20dp"
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"/>
 
         <ImageView
-                android:src="@drawable/ic_close"
+                android:src="@drawable/ic_exit_icon"
                 android:layout_alignParentEnd="true"
                 android:padding="@dimen/_15dp"
                 android:layout_margin="@dimen/_20dp"

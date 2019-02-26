@@ -14,6 +14,9 @@ public abstract class BuildersModule {
 
     @ContributesAndroidInjector(modules = {LoginViewModule.class, LoginModule.class})
     abstract LoginActivity bindLoginActivity();
+//    @ContributesAndroidInjector(modules = {LoginViewModule.class, LoginModule.class})
+//    abstract LoginActivity bindLoginActivity();
+
 //    @ContributesAndroidInjector(modules = {SignUpViewModule.class, SignUpModule.class})
 //    abstract SignUpActivity bindSignUpActivity();
 //    @ContributesAndroidInjector(modules = {ConfirmEmailViewModule.class, ConfirmEmailModule.class})

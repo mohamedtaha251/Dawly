@@ -12,7 +12,7 @@ public class CustomProgressDialog {
     public ProgressDialog showDialog(Context context) {
         progressDialog = ProgressDialog.show(context, "", context.getString(R.string.loading));
         progressDialog.setProgressStyle(R.style.DialogCustomTheme);
-        progressDialog.setContentView(R.layout.activity_main);
+        progressDialog.setContentView(R.layout.activity_home);
         progressDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         ColorDrawable colorDrawable = new ColorDrawable(context.getResources().getColor(R.color.colorWhite));
         colorDrawable.setAlpha(100);

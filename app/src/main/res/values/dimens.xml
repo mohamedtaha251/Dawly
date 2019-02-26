@@ -40,4 +40,8 @@
     <dimen name="_250dp">250dp</dimen>
     <dimen name="_90dp">90dp</dimen>
     <dimen name="_350dp">350dp</dimen>
+    <dimen name="_190dp">190dp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_15sp">15sp</dimen>
+    <dimen name="_16sp">16sp</dimen>
 </resources>
