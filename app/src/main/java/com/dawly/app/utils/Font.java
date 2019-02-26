@@ -40,6 +40,11 @@ public class Font {
                 dawlyTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, sp - 2.0f);
             }
         }
+
+
+
+
+
         if (view instanceof DawlyRadioButton) {
             DawlyRadioButton luckyTextView = (DawlyRadioButton) view;
             luckyTextView.setTypeface(checkLanguage(REGULAR,false));
@@ -124,13 +129,13 @@ public class Font {
         } else {
             switch (type) {
                 case REGULAR:
-                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                 case THIN:
-                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                 case SEMI_BOLD:
-                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
                 case BOLD:
-                    return Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM);
+                    return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
             }
         }
         return Typeface.createFromAsset(context.getAssets(), CAIRO_REGULAR);

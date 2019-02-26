@@ -7,7 +7,7 @@
         android:background="@color/ice_blue"
         android:layout_height="match_parent">
 
-    <TextView
+    <com.dawly.app.views.DawlyTextView
             android:id="@+id/tv_change_lang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,6 +22,7 @@
             android:letterSpacing="0.02"
             android:text="ENG"
     />
+
 
     <ImageView
             android:id="@+id/iv_social_headerLogo"
@@ -52,7 +53,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:src="@drawable/ic_wave_light"/>
 
-    <com.dawly.app.views.DawlyButtonBold
+    <com.dawly.app.views.DawlyButtonMontserratBold
             android:id="@+id/btn_login_facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,7 +71,7 @@
             app:layout_constraintTop_toBottomOf="@+id/iv_social_headerLogo"
     />
 
-    <com.dawly.app.views.DawlyButtonBold
+    <com.dawly.app.views.DawlyButtonMontserratBold
             android:id="@+id/btn_login_google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -89,7 +90,7 @@
     />
 
 
-    <com.dawly.app.views.DawlyButtonBold
+    <com.dawly.app.views.DawlyButtonMontserratBold
             android:id="@+id/btn_continue_with_email"
             android:layout_width="0dp"
             android:text="@string/continue_with_email"
@@ -108,8 +109,6 @@
             android:text="@string/i_agree"
             android:layout_centerHorizontal="true"
             android:maxLines="2"
-            android:layout_marginTop="@dimen/_40dp"
-            android:layout_marginBottom="@dimen/_20dp"
             android:fontFamily="sans-serif"
             android:textStyle="normal"
             android:textColor="#172f5e"
@@ -119,6 +118,6 @@
             app:layout_constraintEnd_toEndOf="@id/btn_login_facebook"
             app:layout_constraintTop_toBottomOf="@id/btn_continue_with_email"
 
-    />
+            app:layout_constraintHorizontal_bias="0.495" android:layout_marginTop="44dp"/>
 
 </android.support.constraint.ConstraintLayout>

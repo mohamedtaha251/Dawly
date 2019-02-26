@@ -2,7 +2,6 @@ package com.dawly.app.screens.auth.social;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import app.dawly.com.dawly.R;
@@ -12,14 +11,15 @@ import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.screens.auth.login.LoginActivity;
 import com.dawly.app.utils.GoogleHelper;
-import com.dawly.app.views.DawlyButtonBold;
-import com.facebook.*;
+import com.dawly.app.views.DawlyButtonMontserratBold;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import dagger.android.AndroidInjection;
-import com.facebook.FacebookSdk;
 
 import javax.inject.Inject;
 
@@ -30,9 +30,9 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
     SocialLoginPresenterImpl presenter;
     CallbackManager callbackManager;
     SocialMediaPresenter socialMediaPresenter;
-    DawlyButtonBold btnFacebook;
-    DawlyButtonBold btnGoogle;
-    DawlyButtonBold btnEmail;
+    DawlyButtonMontserratBold btnFacebook;
+    DawlyButtonMontserratBold btnGoogle;
+    DawlyButtonMontserratBold btnEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
