@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Toast;
 import app.dawly.com.dawly.R;
 import app.dawly.com.dawly.databinding.ActivityLoginBinding;
 import com.dawly.app.base.BaseActivity;
@@ -14,6 +13,7 @@ import com.dawly.app.base.BaseContract;
 import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.User;
 import com.dawly.app.entities.response.SignUpResponse;
+import com.dawly.app.utils.Toaster;
 import com.dawly.app.utils.Validation;
 import com.dawly.app.views.DawlyEditText;
 import com.facebook.CallbackManager;
@@ -65,17 +65,17 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
 
     private boolean validateLogin() {
         if (loginBinding.loginEmail.getText().toString().equals("")) {
-            loginBinding.loginEmail.setError("email is required");
+            loginBinding.loginEmail.setError(getString(R.string.email_is_required));
             return false;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(loginBinding.loginEmail.getText().toString()).matches()) {
-            loginBinding.loginEmail.setError("invalid email");
+            loginBinding.loginEmail.setError(getString(R.string.invalid_email));
             return false;
         }
 
         if (loginBinding.loginPassword.getText().toString().equals("")) {
-            loginBinding.loginPassword.setError("password is required");
+            loginBinding.loginPassword.setError(getString(R.string.password_is_required));
             return false;
         }
 
@@ -84,67 +84,67 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
 
     private boolean validateSignup() {
         if (etSignUpFirstName.getText().toString().equals("")) {
-            etSignUpFirstName.setError("First name is required");
+            etSignUpFirstName.setError(getString(R.string.first_name_is_required));
             return false;
         }
 
         if (etSignUpFirstName.getText().toString().length() < 3) {
-            etSignUpFirstName.setError("First name is too short");
+            etSignUpFirstName.setError(getString(R.string.first_name_is_too_short));
             return false;
         }
 
         if (etSignUpLastName.getText().toString().equals("")) {
-            etSignUpLastName.setError("Last name is required");
+            etSignUpLastName.setError(getString(R.string.last_name_is_required));
             return false;
         }
 
         if (etSignUpLastName.getText().toString().length() < 3) {
-            etSignUpLastName.setError("Last name is too short");
+            etSignUpLastName.setError(getString(R.string.last_name_is_too_short));
             return false;
         }
 
         if (etSignUpPassword.getText().toString().equals("")) {
-            etSignUpPassword.setError("password is required");
+            etSignUpPassword.setError(getString(R.string.password_is_required));
             return false;
         }
 
         if (etSignUpPassword.getText().toString().length() < 6) {
-            etSignUpPassword.setError("at least 6 digit");
+            etSignUpPassword.setError(getString(R.string.at_least_6_digit));
             return false;
         }
 
         if (!Validation.isContainLowerCase(etSignUpPassword.getText().toString())) {
-            etSignUpPassword.setError("at least one lower case letter");
+            etSignUpPassword.setError(getString(R.string.at_least_one_lower_case_letter));
             return false;
         }
 
         if (!Validation.isContainUpperCase(etSignUpPassword.getText().toString())) {
-            etSignUpPassword.setError("at least one upper case letter");
+            etSignUpPassword.setError(getString(R.string.at_least_one_upper_case_letter));
             return false;
         }
 
         if (!etSignUpPassword.getText().toString().equals(etSignUpConfirmPassword.getText().toString())) {
-            etSignUpConfirmPassword.setError("Password is not matched");
+            etSignUpConfirmPassword.setError(getString(R.string.password_is_not_matched));
             return false;
         }
 
         if (etSignUpEmail.getText().toString().equals("")) {
-            etSignUpEmail.setError("email is required");
+            etSignUpEmail.setError(getString(R.string.email_is_required));
             return false;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(etSignUpEmail.getText().toString()).matches()) {
-            etSignUpEmail.setError("invalid email");
+            etSignUpEmail.setError(getString(R.string.invalid_email));
             return false;
         }
 
         if (etPhoneNumber.getText().toString().equals("")) {
-            etPhoneNumber.setError("phone is required");
+            etPhoneNumber.setError(getString(R.string.phone_is_required));
             return false;
         }
 
         if (etPhoneNumber.getText().toString().length() < 10) {
-            etPhoneNumber.setError("invalid phone");
+            etPhoneNumber.setError(getString(R.string.invalid_phone));
             return false;
         }
         return true;
@@ -160,27 +160,28 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
 
     @Override
     public void showValidationErrors(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        Toaster.showShort(getBaseContext(), message);
     }
 
     @Override
     public void loginError(String message) {
-        Toast.makeText(this, "User not Found", Toast.LENGTH_SHORT).show();
+        Toaster.showShort(getBaseContext(), getString(R.string.user_not_Found));
     }
 
     @Override
     public void signUpError(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        Toaster.showShort(getBaseContext(), message);
     }
 
     @Override
     public void signUpSuccess(SignUpResponse signUpResponse) {
-        Toast.makeText(this, signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
+        Toaster.showShort(getBaseContext(), signUpResponse.getMessage());
+
     }
 
     @Override
     public void loginSuccess(LoginResponse loginResponse) {
-        Toast.makeText(this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
+        Toaster.showShort(getBaseContext(), loginResponse.getMessage());
 
     }
 

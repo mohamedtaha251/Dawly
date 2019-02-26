@@ -32,4 +32,21 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="i_agree">I agree to Dawly\'s terms of \n Service and Privacy Policy</string>
+    <string name="email_is_required">email is required</string>
+    <string name="invalid_email">invalid email</string>
+    <string name="password_is_required">password is required</string>
+    <string name="first_name_is_required">First name is required</string>
+    <string name="last_name_is_required">Last name is required</string>
+    <string name="first_name_is_too_short">First name is too short</string>
+    <string name="last_name_is_too_short">Last name is too short</string>
+    <string name="at_least_6_digit">at least 6 digit</string>
+    <string name="at_least_one_lower_case_letter">at least one lower case letter</string>
+    <string name="at_least_one_upper_case_letter">at least one uppear case letter</string>
+    <string name="password_is_not_matched">Password is not matched</string>
+    <string name="phone_is_required">phone is required</string>
+    <string name="invalid_phone">phone is required</string>
+    <string name="user_not_Found">User not Found</string>
+    <string name="loged_in_with_facebook_succefully">loged in with facebook successfully</string>
+
+
 </resources>

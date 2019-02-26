@@ -72,8 +72,8 @@
                             android:inputType="textCapCharacters"
                             android:hint="@string/firstname"
                             android:textColor="@color/colorHeader"
-                            android:layout_margin="@dimen/_20dp"
-                            android:textColorHint="@color/colorHeader"
+                            android:layout_marginEnd="@dimen/_20dp"
+                            android:layout_marginStart="@dimen/_20dp"                            android:textColorHint="@color/colorHeader"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                 </android.support.design.widget.TextInputLayout>

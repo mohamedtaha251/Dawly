@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.Toast;
 import app.dawly.com.dawly.R;
 import com.dawly.app.base.BaseActivity;
+import com.dawly.app.base.BaseContract;
 import com.dawly.app.entities.SocialUser;
 import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.screens.auth.login.LoginActivity;
 import com.dawly.app.utils.GoogleHelper;
+import com.dawly.app.utils.Toaster;
 import com.dawly.app.views.DawlyButtonMontserratBold;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookException;
@@ -29,7 +31,6 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
     @Inject
     SocialLoginPresenterImpl presenter;
     CallbackManager callbackManager;
-    SocialMediaPresenter socialMediaPresenter;
     DawlyButtonMontserratBold btnFacebook;
     DawlyButtonMontserratBold btnGoogle;
     DawlyButtonMontserratBold btnEmail;
@@ -44,7 +45,7 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
         setContentView(R.layout.activity_login_social);
         getSupportActionBar().hide();
 
-        //inii
+        //init
         btnFacebook = findViewById(R.id.btn_login_facebook);
         btnGoogle = findViewById(R.id.btn_login_google);
         btnEmail = findViewById(R.id.btn_continue_with_email);
@@ -103,7 +104,8 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
 
     @Override
     public void loginFacebookError(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        Toaster.showShort(getBaseContext(),message);
+
 
     }
 
@@ -114,7 +116,8 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
 
     @Override
     public void loginGoogleSuccess(SignUpResponse signUpResponse) {
-        Toast.makeText(this, signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
+        Toaster.showShort(getBaseContext(),signUpResponse.getMessage());
+
     }
 
     @Override
@@ -125,7 +128,7 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
 
     @Override
     public void facebookLoginSuccess(SocialUser socialLogin, String email) {
-        Toast.makeText(this, "loged in with facebook succefully", Toast.LENGTH_SHORT).show();
+        Toaster.showShort(getBaseContext(),getString(R.string.loged_in_with_facebook_succefully));
         startActivity(new Intent(SocialLoginActivity.this, LoginActivity.class));
 
 
@@ -135,4 +138,5 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
     public void facebookLoginError(FacebookException exception) {
 
     }
+
 }
