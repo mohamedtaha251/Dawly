@@ -33,6 +33,7 @@
     <dimen name="_300dp">300dp</dimen>
     <dimen name="_200dp">200dp</dimen>
     <dimen name="_150dp">150dp</dimen>
+    <dimen name="cardHeight">150dp</dimen>
     <dimen name="_180dp">180dp</dimen>
     <dimen name="_3dp">3dp</dimen>
     <dimen name="_220dp">220dp</dimen>

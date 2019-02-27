@@ -29,6 +29,7 @@ public class Font {
         if (view instanceof DawlyEditText) {
             DawlyEditText dawlyEditText = (DawlyEditText) view;
             dawlyEditText.setTextColor(getColor());
+            dawlyEditText.setHintTextColor(getHintColor());
             dawlyEditText.setTypeface(checkLanguage(REGULAR,false));
         }
         if (view instanceof DawlyTextView) {
@@ -133,12 +134,15 @@ public class Font {
                     return Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
             }
         }
-        return Typeface.createFromAsset(context.getAssets(), CAIRO_REGULAR);
+        return Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
     }
 
 
     private int getColor() {
         return ContextCompat.getColor(context, R.color.colorEmail);
+    }
+    private int getHintColor() {
+        return ContextCompat.getColor(context, R.color.colorInactive);
     }
 
 

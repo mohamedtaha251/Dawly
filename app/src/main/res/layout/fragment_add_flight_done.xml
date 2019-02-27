@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+    </data>
+
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/colorDone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/flightImg"
+                android:src="@drawable/ic_suitcase"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:layout_width="100dp"
+                android:layout_height="150dp"/>
+
+        <com.dawly.app.views.DawlyTextViewBold
+                android:text="@string/your_flight_"
+                android:textSize="30sp"
+                android:layout_below="@+id/flightImg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20dp"
+                android:textColor="@color/colorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:src="@drawable/ic_exit_icon"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_15dp"
+                android:layout_margin="@dimen/_20dp"
+                android:layout_width="@dimen/_50dp"
+                android:layout_height="@dimen/_50dp"/>
+
+
+    </RelativeLayout>
+</layout>

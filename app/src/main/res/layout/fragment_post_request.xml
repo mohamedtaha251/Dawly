@@ -93,6 +93,8 @@
                     android:layout_below="@+id/desc"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
+                    android:paddingBottom="@dimen/_20dp"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 

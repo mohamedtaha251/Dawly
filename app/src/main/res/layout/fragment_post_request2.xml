@@ -139,8 +139,10 @@
             <com.dawly.app.views.DawlyEditText
                     android:id="@+id/name"
                     android:layout_width="match_parent"
-
-               android:layout_marginTop="@dimen/_10dp" android:layout_alignParentStart="true"
+                    android:textColorHint="@color/colorInactive"
+                    android:paddingBottom="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_alignParentStart="true"
                     android:layout_below="@+id/cardLayout"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
@@ -153,9 +155,12 @@
                     android:id="@+id/expires"
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@+id/itemImg"
-                    android:layout_marginTop="@dimen/_10dp" android:layout_below="@+id/name"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_below="@+id/name"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
+                    android:textColorHint="@color/colorInactive"
+                    android:paddingBottom="@dimen/_20dp"
                     android:hint="@string/expires"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -166,8 +171,11 @@
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
                     android:hint="@string/cvc"
+                    android:textColorHint="@color/colorInactive"
+                    android:paddingBottom="@dimen/_20dp"
                     android:layout_alignParentStart="true"
-                    android:layout_marginTop="@dimen/_10dp" android:layout_toStartOf="@+id/itemImg"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_toStartOf="@+id/itemImg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
@@ -191,7 +199,7 @@
             app:piv_selectedColor="#35a6b7"
             app:piv_unselectedColor="#bfcefa"
             attrs:piv_padding="10dp"
-            attrs:piv_radius="5dp"/>
+            attrs:piv_radius="4dp"/>
 
     <com.dawly.app.views.DawlyButtonBold
             android:id="@+id/continueBtn"

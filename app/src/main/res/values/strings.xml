@@ -65,6 +65,8 @@
     <string name="skip_for_now">Skip for now</string>
     <string name="from">From</string>
     <string name="to">To</string>
+    <string name="from_">From:</string>
+    <string name="to_">To:</string>
     <string name="the_weight_available">The Weight Available</string>
     <string name="items_unable_to_carry">Items unable to carry</string>
     <string name="date">Date</string>
@@ -74,4 +76,5 @@
     <string name="items_unable">Items Unable \n to carry</string>
     <string name="done">Done</string>
     <string name="congratulation">Congratulation.</string>
+    <string name="payout_to">Payout to:</string>
 </resources>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:attrs="http://schemas.android.com/tools"
+
+        android:background="@color/colorBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+
+            layout="@layout/layout_wave_reversed_short"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flightInfoLayout"
+            android:layout_marginStart="@dimen/_20dp"
+            android:orientation="vertical">
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="@string/from_"
+                android:textSize="17sp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:textColor="@color/colorInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="Egypt"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textSize="22sp"
+                android:textColor="@color/colorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="@string/to_"
+                android:textColor="@color/colorInactive"
+
+                android:textSize="17sp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="Ukranie"
+                android:textColor="@color/colorEmail"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="@string/weight_"
+                android:textColor="@color/colorInactive"
+
+                android:textSize="17sp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="100 lbs"
+                android:textColor="@color/colorEmail"
+                android:textSize="22sp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="@string/date_"
+                android:layout_marginTop="@dimen/_10dp"
+
+                android:textSize="17sp"
+                android:textColor="@color/colorInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="25.01.2019"
+                android:textSize="22sp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textColor="@color/colorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_below="@+id/flightInfoLayout"
+            android:orientation="vertical"
+            >
+
+        <com.dawly.app.views.DawlyTextView
+                android:textSize="17sp"
+                android:text="@string/unable_to_carry"
+                android:textColor="@color/colorInactive"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="Item 1"
+                android:textColor="@color/colorEmail"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="Item 2"
+                android:textSize="22sp"
+                android:textColor="@color/colorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/flightInfoLayout"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_alignParentEnd="true"
+            >
+
+        <com.dawly.app.views.DawlyTextView
+                android:text="@string/payout_to"
+
+                android:textSize="17sp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textColor="@color/colorInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        <ImageView
+                android:src="@drawable/ic_paypal"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_100dp"/>
+
+    </LinearLayout>
+</RelativeLayout>

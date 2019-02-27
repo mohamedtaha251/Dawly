@@ -7,25 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageView
-            android:layout_alignParentTop="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:layout_marginBottom="@dimen/_70dp"
-            android:layout_marginEnd="-150dp"
-            android:src="@mipmap/wave_reversed"
-            android:layout_marginTop="0dp"/>
-
-    <ImageView
-            android:layout_alignParentTop="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/_90dp"
-            android:scaleType="fitXY"
-            android:layout_marginStart="-150dp"
-            android:src="@mipmap/wave_reversed"
-            />
+    <include layout="@layout/layout_reversed"/>
     <android.support.v7.widget.CardView
             android:id="@+id/step2Card"
             app:cardCornerRadius="@dimen/_15dp"
@@ -45,7 +27,7 @@
 
             <ImageView
                     android:src="@drawable/ic_paypal"
-
+                    android:layout_marginStart="@dimen/_20dp"
                     android:layout_width="@dimen/_100dp"
                     android:layout_height="@dimen/_70dp"/>
         </RelativeLayout>
@@ -109,6 +91,7 @@
                         android:layout_width="match_parent"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/cardLayout"
+                        android:paddingBottom="@dimen/_20dp"
                         android:layout_height="wrap_content"
                         android:hint="@string/bank_account_country"
                         android:layout_centerHorizontal="true"
@@ -120,6 +103,7 @@
                         android:layout_toStartOf="@+id/itemImg"
                         android:layout_below="@+id/name"
                         android:hint="@string/name_of_bank"
+                        android:paddingBottom="@dimen/_20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
@@ -127,6 +111,8 @@
                         android:id="@+id/cvc"
                         android:layout_below="@+id/expires"
                         android:hint="@string/beneficiary_name"
+                        android:paddingBottom="@dimen/_20dp"
+                        android:textColorHint="@color/colorInactive"
                         android:layout_alignParentStart="true"
                         android:layout_toStartOf="@+id/itemImg"
                         android:layout_width="match_parent"
@@ -138,6 +124,8 @@
                         android:hint="@string/account_number_iban_number"
                         android:layout_alignParentStart="true"
                         android:layout_toStartOf="@+id/itemImg"
+                        android:textColorHint="@color/colorInactive"
+                        android:paddingBottom="@dimen/_20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
@@ -147,6 +135,8 @@
                         android:hint="@string/routing_number"
                         android:layout_alignParentStart="true"
                         android:layout_toStartOf="@+id/itemImg"
+                        android:textColorHint="@color/colorInactive"
+                        android:paddingBottom="@dimen/_20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
@@ -154,6 +144,8 @@
                         android:id="@+id/swiftCode"
                         android:layout_below="@+id/expires"
                         android:hint="@string/swift_code"
+                        android:textColorHint="@color/colorInactive"
+                        android:paddingBottom="@dimen/_20dp"
                         android:layout_alignParentStart="true"
                         android:layout_toStartOf="@+id/itemImg"
                         android:layout_width="match_parent"
