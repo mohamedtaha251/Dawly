@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <com.dawly.app.views.DawlyTabLayout
+                android:id="@+id/flightsTabLayout"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorWhite"
+                android:background="@drawable/tab_gradient_bg"
+                app:tabIndicatorColor="@color/colorTabSelectedIndicator"
+                app:tabIndicatorHeight="@dimen/_5dp"
+                app:tabIndicatorAnimationDuration="500"
+                app:tabTextColor="@color/colorTabTextUnSelectedIndicator"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.design.widget.TabItem
+                    android:text="@string/orders"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <android.support.design.widget.TabItem
+                    android:text="@string/my_orders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </com.dawly.app.views.DawlyTabLayout>
+
+
+        <LinearLayout
+                android:id="@+id/infoLayout"
+                android:layout_below="@+id/flightsTabLayout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80dp">
+
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                <com.dawly.app.views.DawlyTextViewBold
+                        android:id="@+id/totalOrdersCount"
+                        android:textColor="@color/colorOrders"
+                        android:text="20"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:textSize="30sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <com.dawly.app.views.DawlyTextViewBold
+                        android:textColor="@color/colorOrders"
+                        android:text="@string/total_orders"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="17sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <View
+                        android:layout_width="1dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:background="@color/colorOrders"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_height="match_parent"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                <com.dawly.app.views.DawlyTextViewBold
+                        android:id="@+id/activeOrdersCount"
+                        android:textColor="@color/colorOrders"
+                        android:text="20"
+                        android:textSize="30sp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <com.dawly.app.views.DawlyTextViewBold
+                        android:textColor="@color/colorOrders"
+                        android:text="@string/active_orders"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="17sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <View
+                        android:layout_width="1dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@color/colorOrders"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_height="match_parent"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                <com.dawly.app.views.DawlyTextViewBold
+                        android:id="@+id/pendingOrdersCount"
+                        android:textColor="@color/colorOrders"
+                        android:text="20"
+                        android:textSize="30sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <com.dawly.app.views.DawlyTextViewBold
+                        android:textColor="@color/colorOrders"
+                        android:text="@string/pending_orders"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/flightsSwipeRefresh"
+                android:layout_below="@+id/infoLayout"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/flightsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+</layout>
