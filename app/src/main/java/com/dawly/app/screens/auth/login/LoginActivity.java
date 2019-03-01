@@ -13,6 +13,7 @@ import com.dawly.app.base.BaseContract;
 import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.User;
 import com.dawly.app.entities.response.SignUpResponse;
+import com.dawly.app.screens.tutorial.TutorialActivity;
 import com.dawly.app.utils.Toaster;
 import com.dawly.app.utils.Validation;
 import com.dawly.app.views.DawlyEditText;
@@ -176,12 +177,14 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
     @Override
     public void signUpSuccess(SignUpResponse signUpResponse) {
         Toaster.showShort(getBaseContext(), signUpResponse.getMessage());
+        startActivity(new Intent(this, TutorialActivity.class));
 
     }
 
     @Override
     public void loginSuccess(LoginResponse loginResponse) {
         Toaster.showShort(getBaseContext(), loginResponse.getMessage());
+        startActivity(new Intent(this, TutorialActivity.class));
 
     }
 
@@ -240,5 +243,6 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
             }
         }
     }
+
 
 }

@@ -6,11 +6,11 @@ import android.view.View;
 import android.widget.Toast;
 import app.dawly.com.dawly.R;
 import com.dawly.app.base.BaseActivity;
-import com.dawly.app.base.BaseContract;
 import com.dawly.app.entities.SocialUser;
 import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.screens.auth.login.LoginActivity;
+import com.dawly.app.screens.tutorial.TutorialActivity;
 import com.dawly.app.utils.GoogleHelper;
 import com.dawly.app.utils.Toaster;
 import com.dawly.app.views.DawlyButtonMontserratBold;
@@ -122,14 +122,14 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
 
     @Override
     public void loginFacebookSuccess(LoginResponse loginResponse) {
-        startActivity(new Intent(SocialLoginActivity.this, LoginActivity.class));
+        startActivity(new Intent(this, TutorialActivity.class));
 
     }
 
     @Override
     public void facebookLoginSuccess(SocialUser socialLogin, String email) {
         Toaster.showShort(getBaseContext(),getString(R.string.loged_in_with_facebook_succefully));
-        startActivity(new Intent(SocialLoginActivity.this, LoginActivity.class));
+        startActivity(new Intent(this, TutorialActivity.class));
 
 
     }
