@@ -79,7 +79,9 @@ public class SocialLoginPresenterImpl implements SocialLoginContract.SocialLogin
                         Log.e("Success facebook ", loginResult.getAccessToken().toString());
                         // App code
 
-                        requestData(loginResult, facebookLoginListener);
+                        //requestData(loginResult, facebookLoginListener);
+                        interactor.loginFacebookSuccess(null);
+
                     }
 
                     @Override

@@ -92,11 +92,10 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                startActivity(new Intent(SocialLoginActivity.this, LoginActivity.class));
+                startActivity(new Intent(SocialLoginActivity.this, TutorialActivity.class));
             } catch (ApiException e) {
             }
         } else {
-            presenter.callbackManager.onActivityResult(requestCode, resultCode, data);
             callbackManager.onActivityResult(requestCode, resultCode, data);
         }
     }
@@ -116,8 +115,6 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
 
     @Override
     public void loginGoogleSuccess(SignUpResponse signUpResponse) {
-        Toaster.showShort(getBaseContext(),signUpResponse.getMessage());
-
     }
 
     @Override
@@ -128,10 +125,6 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
 
     @Override
     public void facebookLoginSuccess(SocialUser socialLogin, String email) {
-        Toaster.showShort(getBaseContext(),getString(R.string.loged_in_with_facebook_succefully));
-        startActivity(new Intent(this, TutorialActivity.class));
-
-
     }
 
     @Override
