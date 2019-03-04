@@ -54,9 +54,17 @@
         could be earning up to 4x your trip cost.
     </string>
     <string name="tutorial_2_header">Shop with Dawly and save money.</string>
-    <string name="tutorial_2_body">Shopping with Dawly doesnt only bring the world to you, It also allows you to save money on various fees like Shipping, Taxes, Customs, Duties, Brokerage fees, etc..</string>
+    <string name="tutorial_2_body">Shopping with Dawly doesnt only bring the world to you, It also allows you to save
+        money on various fees like Shipping, Taxes, Customs, Duties, Brokerage fees, etc..
+    </string>
     <string name="tutorial_3_header">Travel with Dawly and make money.</string>
-    <string name="tutorial_3_body">Traveling with Dawly gives you the opportunity of making money while traveling, By earning a flat fee for each pound of free weight in your luggage you not only could be traveling for FREE, You could be earning up to 4x your trip cost.</string>
+    <string name="tutorial_3_body">Traveling with Dawly gives you the opportunity of making money while traveling, By
+        earning a flat fee for each pound of free weight in your luggage you not only could be traveling for FREE, You
+        could be earning up to 4x your trip cost.
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

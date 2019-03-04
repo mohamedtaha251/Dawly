@@ -54,6 +54,8 @@
         </activity>
         <activity android:name="com.dawly.app.screens.tutorial.TutorialActivity">
         </activity>
+        <activity android:name="com.dawly.app.screens.myaccount.myAccount.MyAccountActivity">
+        </activity>
     </application>
 
 </manifest>
