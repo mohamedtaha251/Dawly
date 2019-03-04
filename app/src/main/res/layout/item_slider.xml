@@ -18,7 +18,7 @@
             android:layout_marginStart="@dimen/_20dp"
             android:layout_marginEnd="@dimen/_20dp"
             android:src="@mipmap/tutorial_1"
-           />
+    />
 
     <TextView
             android:id="@+id/tv_tutorial_header"
@@ -53,6 +53,6 @@
             android:textStyle="normal"
             android:lineSpacingExtra="2sp"
             android:gravity="center_horizontal"
-       />
+    />
 
 </android.support.constraint.ConstraintLayout>
