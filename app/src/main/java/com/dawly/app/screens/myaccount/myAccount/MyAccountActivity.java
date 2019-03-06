@@ -10,5 +10,9 @@ public class MyAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_account);
+
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.myaccount_background));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.my_account);
     }
 }

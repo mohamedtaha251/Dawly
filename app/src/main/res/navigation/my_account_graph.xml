@@ -2,8 +2,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/my_account_graph"
-            app:startDestination="@id/accountInfoFragment">
+            app:startDestination="@id/myAccountFragment">
 
     <fragment android:id="@+id/accountInfoFragment" android:name="com.dawly.app.screens.myaccount.accountInfo.AccountInfoFragment"
               android:label="fragment_account_info" tools:layout="@layout/fragment_account_info"/>
+    <fragment android:id="@+id/myAccountFragment" android:name="com.dawly.app.MyAccountFragment"
+              android:label="fragment_my_account" tools:layout="@layout/fragment_my_account"/>
 </navigation>

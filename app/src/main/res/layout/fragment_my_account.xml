@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+
+    <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout_my_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myaccount_background"
+            android:elevation="6dp"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_my_account_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout_my_account"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+</android.support.constraint.ConstraintLayout>
