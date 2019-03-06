@@ -1,4 +1,4 @@
-package com.dawly.app.screens.myaccount.myAccount;
+package com.dawly.app.screens.myaccount.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

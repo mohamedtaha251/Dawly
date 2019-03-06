@@ -6,6 +6,8 @@
 
     <fragment android:id="@+id/accountInfoFragment" android:name="com.dawly.app.screens.myaccount.accountInfo.AccountInfoFragment"
               android:label="fragment_account_info" tools:layout="@layout/fragment_account_info"/>
-    <fragment android:id="@+id/myAccountFragment" android:name="com.dawly.app.MyAccountFragment"
+    <fragment android:id="@+id/myAccountFragment" android:name="com.dawly.app.screens.myaccount.myAccount.MyAccountFragment"
               android:label="fragment_my_account" tools:layout="@layout/fragment_my_account"/>
+    <fragment android:id="@+id/balanceInfoFragment" android:name="com.dawly.app.BalanceInfoFragment"
+              android:label="fragment_balance_info" tools:layout="@layout/fragment_balance_info"/>
 </navigation>

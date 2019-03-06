@@ -1,4 +1,4 @@
-package com.dawly.app.screens.myaccount.accountInfo;
+package com.dawly.app;
 
 
 import android.os.Bundle;
@@ -12,14 +12,13 @@ import app.dawly.com.dawly.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AccountInfoFragment extends Fragment {
-
+public class BalanceInfoFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account_info, container, false);
+        return inflater.inflate(R.layout.fragment_balance_info, container, false);
     }
 
 }

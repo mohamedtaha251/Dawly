@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import app.dawly.com.dawly.R;
-import com.dawly.app.screens.myaccount.myAccount.MyAccountActivity;
+import com.dawly.app.screens.myaccount.activity.MyAccountActivity;
 
 public class TutorialActivity extends AppCompatActivity {
     ViewPager viewPager;

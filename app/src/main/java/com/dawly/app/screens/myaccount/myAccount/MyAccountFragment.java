@@ -1,4 +1,4 @@
-package com.dawly.app;
+package com.dawly.app.screens.myaccount.myAccount;
 
 
 import android.os.Bundle;
@@ -20,18 +20,20 @@ public class MyAccountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_my_account, container, false);
-        TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tab_layout_my_account);
+        TabLayout tabLayout = rootView.findViewById(R.id.tab_layout_my_account);
+        mViewPager = rootView.findViewById(R.id.viewpager_my_account_container);
+
         tabLayout.addTab(tabLayout.newTab().setText(R.string.account_info));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.balance_info));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.account_settings));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //set adapter
-        adapter = new MyAccountViewPagerAdapter(getActivity().getSupportFragmentManager());
-        mViewPager = rootView.findViewById(R.id.viewpager_my_account_container);
+        adapter = new MyAccountViewPagerAdapter(getActivity().getSupportFragmentManager(), getContext());
         mViewPager.setAdapter(adapter);
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setupWithViewPager(mViewPager);
 
         return rootView;
     }
