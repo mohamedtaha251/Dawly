@@ -8,6 +8,13 @@
               android:label="fragment_account_info" tools:layout="@layout/fragment_account_info"/>
     <fragment android:id="@+id/myAccountFragment" android:name="com.dawly.app.screens.myaccount.myAccount.MyAccountFragment"
               android:label="fragment_my_account" tools:layout="@layout/fragment_my_account"/>
-    <fragment android:id="@+id/balanceInfoFragment" android:name="com.dawly.app.BalanceInfoFragment"
+    <fragment android:id="@+id/balanceInfoFragment" android:name="com.dawly.app.screens.myaccount.balanceInfo.BalanceInfoFragment"
               android:label="fragment_balance_info" tools:layout="@layout/fragment_balance_info"/>
+    <fragment android:id="@+id/accountSettingsFragment" android:name="com.dawly.app.screens.myaccount.accountSettings.AccountSettingsFragment"
+              android:label="fragment_account_settings" tools:layout="@layout/fragment_account_settings"/>
+    <fragment android:id="@+id/ordersCompletedFragments" android:name="com.dawly.app.screens.myaccount.ordersCompleted.OrdersCompletedFragments"
+              android:label="fragment_orders_completed_fragments"
+              tools:layout="@layout/fragment_orders_completed"/>
+    <fragment android:id="@+id/shipmentsCarriedFragment" android:name="com.dawly.app.screens.myaccount.shipmentsCarried.shipmentsCarriedFragment"
+              android:label="fragment_shipments_carried" tools:layout="@layout/fragment_shipments_carried"/>
 </navigation>

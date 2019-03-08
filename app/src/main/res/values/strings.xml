@@ -69,6 +69,14 @@
     <string name="balance_info">Balance Info</string>
     <string name="account_settings">Account Settings</string>
     <string name="my_account">My Account</string>
+    <string name="marco_rossini">Marco Rossini</string>
+    <string name="orders_completed">Orders Complated</string>
+    <string name="shipments_carried">Shipments Carried</string>
+    <string name="jan_10_hanbag_laptop">JAN 10 - Hanbag, Laptop</string>
+    <string name="shopping_with_dawly_doesn_apos_t_only_bring_the_world_to_you_it_also_allows_you_to_save_money_on_various_fees_like_shipping">
+        Shopping with Dawly doesn\'t only bring the world to you, It also allows you to save money on various fees like
+        Shipping
+    </string>
 
 
 </resources>

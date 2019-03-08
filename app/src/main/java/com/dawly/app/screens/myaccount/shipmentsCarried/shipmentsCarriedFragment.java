@@ -1,4 +1,4 @@
-package com.dawly.app;
+package com.dawly.app.screens.myaccount.shipmentsCarried;
 
 
 import android.os.Bundle;
@@ -12,13 +12,13 @@ import app.dawly.com.dawly.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BalanceInfoFragment extends Fragment {
+public class shipmentsCarriedFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_balance_info, container, false);
+        return inflater.inflate(R.layout.fragment_shipments_carried, container, false);
     }
 
 }
