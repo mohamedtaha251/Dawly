@@ -1,58 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:cardElevation="@dimen/_10dp"
-        app:cardUseCompatPadding="true"
-        app:cardCornerRadius="@dimen/_15dp"
-        android:id="@+id/cardview_item_order_completed"
->
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="match_parent">
+    <android.support.v7.widget.CardView
 
-    <android.support.constraint.ConstraintLayout
-            android:id="@+id/cl_frame_order_completed"
             android:layout_width="match_parent"
-            android:background="@color/colorPost"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="@dimen/_5dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/cardview_item_order_completed"
+    >
 
-        <ImageView
-                android:id="@+id/iv_oder_image_oder_completed_item"
-                android:layout_width="100dp"
-                android:src="@drawable/ic_icon_facebook"
-                android:layout_height="match_parent"/>
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_frame_order_completed"
+                android:layout_width="match_parent"
+                android:background="@color/colorPost"
+                android:layout_height="wrap_content">
 
-        <TextView
-                android:id="@+id/tv_item_order_completed_header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10dp"
-                android:textSize="15sp"
-                android:fontFamily="sans-serif"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:letterSpacing="0.06"
-                android:text="@string/jan_10_hanbag_laptop"
-                android:lineSpacingExtra="2sp"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="@dimen/_10dp"
-                app:layout_constraintStart_toEndOf="@id/iv_oder_image_oder_completed_item"/>
+            <ImageView
+                    android:id="@+id/iv_oder_image_oder_completed_item"
+                    android:layout_width="100dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_icon_facebook"
+                    android:layout_height="100dp"/>
 
-        <TextView
-                android:id="@+id/tv_item_order_completed_body"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginEnd="@dimen/_10dp"
-                android:textSize="10sp"
-                android:fontFamily="sans-serif"
-                android:textStyle="normal"
-                android:textColor="@color/dark_slate_blue"
-                android:lineSpacingExtra="1sp"
-                android:text="@string/shopping_with_dawly_doesn_apos_t_only_bring_the_world_to_you_it_also_allows_you_to_save_money_on_various_fees_like_shipping"
-                app:layout_constraintTop_toBottomOf="@id/tv_item_order_completed_header"
-                android:layout_marginTop="@dimen/_10dp"
-                app:layout_constraintStart_toEndOf="@id/iv_oder_image_oder_completed_item"
-                app:layout_constraintEnd_toEndOf="parent"/>
-    </android.support.constraint.ConstraintLayout>
-</android.support.v7.widget.CardView>
+            <TextView
+                    android:id="@+id/tv_item_order_completed_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:letterSpacing="0.06"
+                    android:text="@string/jan_10_hanbag_laptop"
+                    android:lineSpacingExtra="2sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/_10dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_oder_image_oder_completed_item"/>
+
+            <TextView
+                    android:id="@+id/tv_item_order_completed_body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:textSize="10sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal"
+                    android:textColor="@color/dark_slate_blue"
+                    android:lineSpacingExtra="1sp"
+                    android:text="@string/shopping_with_dawly_doesn_apos_t_only_bring_the_world_to_you_it_also_allows_you_to_save_money_on_various_fees_like_shipping"
+                    app:layout_constraintTop_toBottomOf="@id/tv_item_order_completed_header"
+                    android:layout_marginTop="@dimen/_10dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_oder_image_oder_completed_item"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

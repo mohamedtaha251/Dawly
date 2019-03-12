@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@drawable/bubble_background_color"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="400dp"
+            android:src="@drawable/simple_circe"
+            android:layout_height="400dp"
+            android:layout_marginStart="500dp"
+            android:layout_marginTop="@dimen/_60dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    />
+
+    <ImageView
+            android:layout_width="300dp"
+            android:src="@drawable/simple_circe"
+            android:layout_height="300dp"
+            android:layout_marginStart="650dp"
+            android:layout_marginTop="700dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <ImageView
+            android:layout_width="200dp"
+            android:src="@drawable/simple_circe"
+            android:layout_height="300dp"
+            android:layout_marginStart="500dp"
+            android:layout_marginTop="500dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <ImageView
+            android:layout_width="300dp"
+            android:src="@drawable/simple_circe"
+            android:layout_height="300dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="450dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+    <ImageView
+            android:layout_width="300dp"
+            android:src="@drawable/simple_circe"
+            android:layout_height="300dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="600dp"
+            android:layout_marginEnd="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <ImageView
+            android:layout_width="300dp"
+            android:src="@drawable/simple_circe"
+            android:layout_height="300dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="900dp"
+            android:layout_marginEnd="650dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
 
 </android.support.constraint.ConstraintLayout>

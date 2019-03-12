@@ -20,14 +20,9 @@
     <color name="ice_blue">#e4faff</color>
     <color name="bright_teal">#00ffc6</color>
     <color name="tab_layout_color">#00e1ff</color>
-
-
-
-
-
-
-
-
+    <color name="seperator_color">#d8d8d8</color>
+    <color name="header_black">#1d1e1f</color>
+    <color name="body_blue">#008491</color>
 
 
 </resources>

@@ -77,6 +77,9 @@
         Shopping with Dawly doesn\'t only bring the world to you, It also allows you to save money on various fees like
         Shipping
     </string>
+    <string name="orders_in_progress">Orders in progress</string>
+    <string name="_50dolar">$50</string>
+    <string name="jan_10_hanbag_laptop_capital">JAN 10 - Hanbag, Laptop</string>
 
 
 </resources>

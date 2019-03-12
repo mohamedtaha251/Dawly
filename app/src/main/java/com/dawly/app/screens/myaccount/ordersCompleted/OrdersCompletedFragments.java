@@ -24,7 +24,7 @@ public class OrdersCompletedFragments extends Fragment implements RecyclerViewAd
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_orders_completed, container, false);
-        
+
 
         // set up the RecyclerView
         RecyclerView recyclerView = rootView.findViewById(R.id.rv_orders_completed);
