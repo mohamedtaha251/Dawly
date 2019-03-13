@@ -81,4 +81,5 @@
     <string name="total_orders">Total Orders</string>
     <string name="active_orders">Active Orders</string>
     <string name="pending_orders">Pending Orders</string>
+    <string name="current_status">Current Status:</string>
 </resources>
