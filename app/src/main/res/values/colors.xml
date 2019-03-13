@@ -23,6 +23,8 @@
     <color name="colorTabSelectedIndicator">#00e1ff</color>
     <color name="colorTabTextUnSelectedIndicator">#d8d8d8</color>
     <color name="colorCard">#d6f9ff</color>
+    <color name="colorCardSettings">#9cf1ff</color>
+
     <color name="colorCardSide1">#02677c</color>
     <color name="colorCardSide2">#7730b7</color>
     <color name="colorCardSide3">#175fb3</color>
@@ -52,6 +54,11 @@
     <color name="colorPaymentBG">#13b1cb</color>
 
     <color name="color_continue_inactive">#4a4a4a</color>
+    <color name="color_verify">#35a5b7</color>
+    <color name="color_verify1">#2968a1</color>
+
+    <color name="color_verify_next">#c5faff</color>
+    <color name="color_verify_next1">#66ddcb</color>
 
 
 

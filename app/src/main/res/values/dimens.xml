@@ -18,7 +18,7 @@
     <dimen name="_35dp">36dp</dimen>
     <dimen name="_20dp">20dp</dimen>
     <dimen name="card_radius">20</dimen>
-
+    <dimen name="card_corner_radius">10dp</dimen>
     <dimen name="star_size">20dp</dimen>
     <dimen name="card_height">140dp</dimen>
     <dimen name="profile_card_radius">5dp</dimen>
