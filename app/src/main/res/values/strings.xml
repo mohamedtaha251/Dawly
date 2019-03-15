@@ -84,4 +84,59 @@
     <string name="current_status">Current Status:</string>
     <string name="my_account">My Account</string>
     <string name="contact_support">Contact Support</string>
+    <string name="confirm">Confirm</string>
+    <string name="license_key">eyJzY29wZSI6WyJBTEwiXSwicGxhdGZvcm0iOlsiaU9TIiwiQW5kcm9pZCIsIldpbmRvd3MiXSwidmFsaWQiOiIyMDE5LTA0LTE0IiwibWFqb3JWZXJzaW9uIjozLCJtYXhEYXlzTm90UmVwb3J0ZWQiOjUsInNob3dXYXRlcm1hcmsiOnRydWUsInBpbmdSZXBvcnRpbmciOnRydWUsImRlYnVnUmVwb3J0aW5nIjoib3B0LW91dCIsInRvbGVyYW5jZURheXMiOjUsInNob3dQb3BVcEFmdGVyRXhwaXJ5Ijp0cnVlLCJpb3NJZGVudGlmaWVyIjpbImNvbS5kYXdseS5hcHAiXSwiYW5kcm9pZElkZW50aWZpZXIiOlsiY29tLmRhd2x5LmFwcCJdLCJ3aW5kb3dzSWRlbnRpZmllciI6WyJjb20uZGF3bHkuYXBwIl19CmZhaGZoTFV4bHZ5K0M4RXhiTi9ON0t5TDNVMVBNQUtwaU0wbmxHaGh1eVlueUMrMUJvUG9ReXlpVnd4WUZxV0JmbmZYZUsvTjhObGN4dmZCT3dqTFMybUx0aUJuUUhLT2JwMVZMSUtlMENMU2FDbEhRM2hlZDBOclRpOFRvUGRLT2VOUG1abm1COS9pb1N3ZHhOMUpvRVYveUozWkRSTmZIdjR6R005eWZZTmV4MkJISkJqRFBzWXJTakFxbzZMZUdFTzNQcTVkYjhFNXp0Z25VaEVzWTI1c1VvTkxXeDkxaTNkdkM0ZkR6Zm1YMUdFK3pUd2VGZS9HNldhME91MnRPdjU4Y1FSQ21hdGlQWFFyTTlXT0hZSlo2Q1owSzExSVlnZk1KQWpObklYWllIZTdsQzV6NmVRWFU0WFFKU0E5Y21Dclp5a2ZsUkxjdTV3UHJXOWMxUT09</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="document">Document</string>
+    <string name="document_advanced_outline_detection">Advanced Outline Detection</string>
+    <string name="document_fast_outline_detection">Fast Outline Detection</string>
+    <string name="document_error_not_sharp">Document is not sharp. Please hold the camera steadily and ensure the document is in focus</string>
+    <string name="document_error_skew_too_high">Document is skewed. Place the camera directly above the document</string>
+    <string name="document_error_outline_not_found">Could not detect document outline</string>
+    <string name="document_error_glare_detected">Please remove the glare</string>
+    <string name="document_error_too_dark">The image is too dark. Please ensure there is enough light</string>
+    <string name="document_error_unknown">Unknown Failure</string>
+    <string name="document_picture_error">Error scanning full document:\n</string>
+    <string name="document_preview_success">Scanning full document. Please hold still</string>
+    <string name="document_picture_success">Document scanned successfully</string>
+    <string name="document_using_fast_mode">Switched to fast detection mode</string>
+    <string name="document_using_advanced_mode">Switched to advanced detection mode</string>
+    <string name="document_processing_picture">Processing the Picture. Please wait</string>
+    <string name="document_processing_picture_header">Processing</string>
+    <string name="document_image_saved_to">Image saved to</string>
+    <string name="title_mrz">MRZ</string>
+    <!-- MRZ result Screen Keys -->
+    <string name="mrz_given_names">Given Name</string>
+    <string name="mrz_sur_names">Surname</string>
+    <string name="mrz_document_type">Document Type</string>
+    <string name="mrz_sex">Sex</string>
+    <string name="mrz_country_code">Nationality</string>
+    <string name="mrz_document_number">Document Number</string>
+    <string name="mrz_expiration_date">Expiration Date</string>
+    <string name="mrz_date_of_birthday">Date of Birth</string>
+    <string name="not_available">Not Available</string>
+    <string name="not_valid">Not Valid</string>
+    <string name="mrz_address">Address</string>
+    <string name="issue_date">Issuing Date</string>
+    <string name="personal_number">Personal Number</string>
+
+
+    <!-- Driving License result Screen Keys -->
+    <string name="driving_license_given_names">First Name</string>
+    <string name="driving_license_sur_names">Last Name</string>
+    <string name="driving_license_DOB">Date of Birth</string>
+    <string name="driving_license_document_code">Document Number</string>
+    <string name="driving_license_authority">Authority</string>
+    <string name="driving_license_POB">Place of Birth</string>
+    <string name="driving_license_categories">Categories</string>
+    <string name="driving_license_issuing_date">Issuing Date</string>
+    <string name="driving_license_expiring_date">Expiration Date</string>
+
+    <string name="title_driving_license">AUT/GER Driving License</string>
+    <string name="category_energy">Meter Reading</string>
+    <string name="reading_result">Reading result</string>
+
+    <string name="barcode">Barcode / QR-Code</string>
 </resources>

@@ -3,6 +3,8 @@
           package="app.dawly.com.dawly">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
             android:name="com.dawly.app.application.DawlyApp"
@@ -16,11 +18,16 @@
                 android:name="com.dawly.app.screens.auth.login.LoginActivity"
                 android:label="@string/app_name"
                 android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity android:name="com.dawly.app.screens.scan.mrz.ScanMrzActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.dawly.app.screens.scan.scanviewresult.ScanViewResultActivity"/>
     </application>
 
 </manifest>
