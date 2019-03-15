@@ -23,6 +23,9 @@
     <color name="seperator_color">#d8d8d8</color>
     <color name="header_black">#1d1e1f</color>
     <color name="body_blue">#008491</color>
+    <color name="dark_blue_grey">#142747</color>
+    <color name="dark_mint">#5dcb6b</color>
+    <color name="very_light_blue">#d6f9ff</color>
 
 
 </resources>

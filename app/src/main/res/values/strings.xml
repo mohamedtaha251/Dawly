@@ -82,6 +82,10 @@
     <string name="jan_10_hanbag_laptop_capital">JAN 10 - Hanbag, Laptop</string>
     <string name="withdraw">WITHDRAW</string>
     <string name="total_balance">Total Balance</string>
+    <string name="view_more"><![CDATA[VIEW MORE >]]></string>
+    <string name="_125">+$125</string>
+    <string name="payment_history">Payment History</string>
+    <string name="pending_orders">Pending Orders</string>
 
 
 </resources>

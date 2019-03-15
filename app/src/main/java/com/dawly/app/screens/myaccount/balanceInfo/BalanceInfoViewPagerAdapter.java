@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import app.dawly.com.dawly.R;
-import com.dawly.app.screens.myaccount.ordersCompleted.OrdersCompletedFragments;
-import com.dawly.app.screens.myaccount.shipmentsCarried.shipmentsCarriedFragment;
+import com.dawly.app.screens.myaccount.paymentHistory.PaymentHistoryFragment;
+import com.dawly.app.screens.myaccount.pendingsOrders.PendingsOrdersFragment;
 
 public class BalanceInfoViewPagerAdapter extends FragmentStatePagerAdapter {
     public static final int NUM_FRAGMENTS = 2;
@@ -22,9 +22,9 @@ public class BalanceInfoViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new OrdersCompletedFragments();
+                return new PaymentHistoryFragment();
             case 1:
-                return new shipmentsCarriedFragment();
+                return new PendingsOrdersFragment();
             default:
                 return null;
 
@@ -40,9 +40,9 @@ public class BalanceInfoViewPagerAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return context.getString(R.string.orders_completed);
+                return context.getString(R.string.payment_history);
             case 1:
-                return context.getString(R.string.shipments_carried);
+                return context.getString(R.string.pending_orders);
             default:
                 return null;
         }

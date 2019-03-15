@@ -31,8 +31,8 @@ public class BalanceInfoFragment extends Fragment {
         TabLayout tabLayout = rootView.findViewById(R.id.tab_layout_balance_info);
         mViewPager = rootView.findViewById(R.id.viewpager_balance_info);
 
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.orders_completed));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.shipments_carried));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.payment_history));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.pending_orders));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //set adapter

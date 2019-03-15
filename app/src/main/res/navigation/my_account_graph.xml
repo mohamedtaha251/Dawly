@@ -17,4 +17,8 @@
               tools:layout="@layout/fragment_orders_completed"/>
     <fragment android:id="@+id/shipmentsCarriedFragment" android:name="com.dawly.app.screens.myaccount.shipmentsCarried.shipmentsCarriedFragment"
               android:label="fragment_shipments_carried" tools:layout="@layout/fragment_shipments_carried"/>
+    <fragment android:id="@+id/paymentHistoryFragment" android:name="com.dawly.app.screens.myaccount.paymentHistory.PaymentHistoryFragment"
+              android:label="fragment_payment_history" tools:layout="@layout/fragment_payment_history"/>
+    <fragment android:id="@+id/pendingsOrdersFragment" android:name="com.dawly.app.screens.myaccount.pendingsOrders.PendingsOrdersFragment"
+              android:label="fragment_pendings_orders" tools:layout="@layout/fragment_pendings_orders"/>
 </navigation>
