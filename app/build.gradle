@@ -132,9 +132,8 @@ dependencies {
     //country code selector
     implementation 'com.hbb20:ccp:2.2.4'
 
-    //Navigation
-    def nav_version = "1.0.0-alpha09"
-    implementation "android.arch.navigation:navigation-fragment:$nav_version" // use -ktx for Kotlin
-    implementation "android.arch.navigation:navigation-ui:$nav_version" // use -ktx for Kotlin
+    // Navigation
+    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha01'
+    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha01'
 }
 apply plugin: 'com.google.gms.google-services'

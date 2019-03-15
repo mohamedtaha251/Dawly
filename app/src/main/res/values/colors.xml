@@ -26,6 +26,8 @@
     <color name="dark_blue_grey">#142747</color>
     <color name="dark_mint">#5dcb6b</color>
     <color name="very_light_blue">#d6f9ff</color>
+    <color name="ice_blue_two">#f6fdff</color>
+    <color name="bright_aqua_two">#00f3e2</color>
 
 
 </resources>
