@@ -8,7 +8,7 @@
 >
 
     <android.support.constraint.ConstraintLayout
-            android:id="@+id/cl_account_info_frame"
+            android:id="@+id/cl_balance_info_frame"
             android:layout_width="match_parent"
             android:background="@drawable/bubble_background_color"
             android:layout_height="300dp">
@@ -48,7 +48,7 @@
             android:id="@+id/viewpager_account_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/cl_account_info_frame"
+            app:layout_constraintTop_toBottomOf="@id/cl_balance_info_frame"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
 </android.support.constraint.ConstraintLayout>
