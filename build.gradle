@@ -4,6 +4,7 @@ buildscript {
     ext.kotlin_version = '1.2.71'
     repositories {
         maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://anylinesdk.blob.core.windows.net/maven/'}
         google()
         jcenter()
     }
