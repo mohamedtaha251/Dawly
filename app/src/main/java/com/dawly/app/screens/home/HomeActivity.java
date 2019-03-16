@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import app.dawly.com.dawly.R;
 import app.dawly.com.dawly.databinding.ActivityHomeBinding;
 import app.dawly.com.dawly.databinding.AppBarBinding;
+import com.dawly.app.screens.post.PostRequestFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
 //        appBarLayout = activityMainBinding.appBar;
 //        setSupportActionBar(appBarLayout.customToolbar);
         getSupportActionBar().hide();
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new FlightsFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new PostRequestFragment()).commit();
 
     }
 

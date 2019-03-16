@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -192,7 +193,7 @@
             app:piv_dynamicCount="true"
             app:piv_select="3"
             android:visibility="visible"
-            android:layout_above="@+id/continueBtn"
+            android:layout_above="@+id/doneBtn"
             app:piv_interactiveAnimation="true"
             app:piv_selectedColor="#35a6b7"
             app:piv_unselectedColor="#bfcefa"
@@ -200,7 +201,7 @@
             attrs:piv_radius="5dp"/>
 
     <com.dawly.app.views.DawlyButtonBold
-            android:id="@+id/continueBtn"
+            android:id="@+id/doneBtn"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="@dimen/_20dp"
             android:layout_marginEnd="@dimen/_20dp"
@@ -213,3 +214,4 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 </RelativeLayout>
+</layout>

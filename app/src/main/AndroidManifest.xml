@@ -22,6 +22,9 @@
         </activity>
 
         <activity android:name="com.dawly.app.screens.scan.mrz.ScanMrzActivity">
+
+        </activity>
+        <activity android:name="com.dawly.app.screens.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

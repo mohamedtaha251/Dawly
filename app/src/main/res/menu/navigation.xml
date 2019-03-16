@@ -13,7 +13,7 @@
 
     <item
             android:id="@+id/navigation_add_orders"
-            android:icon="@drawable/ic_add_orders"
+            android:icon="@drawable/ic_add_order"
             android:title="@string/add"/>
     <item
             android:id="@+id/navigation_messages"
@@ -22,5 +22,5 @@
     <item
             android:id="@+id/navigation_menu"
             android:icon="@drawable/ic_icon_menu"
-            android:title="@string/title_notifications"/>
+            android:title="@string/menu"/>
 </menu>
