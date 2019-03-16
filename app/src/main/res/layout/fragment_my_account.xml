@@ -22,8 +22,9 @@
     <android.support.v4.view.ViewPager
             android:id="@+id/viewpager_my_account_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@id/tab_layout_my_account"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
 </android.support.constraint.ConstraintLayout>

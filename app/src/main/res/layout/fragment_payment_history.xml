@@ -10,7 +10,9 @@
             android:id="@+id/rv_payment_history"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15dp"
+            app:layout_constrainedHeight="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginTop="@dimen/_10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
