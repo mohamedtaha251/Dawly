@@ -8,28 +8,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import app.dawly.com.dawly.R;
-import app.dawly.com.dawly.databinding.FragmentAddFlightBinding;
+import app.dawly.com.dawly.databinding.FragmentAddFlightPaymentBinding;
 import com.dawly.app.base.BaseFragment;
 import com.dawly.app.views.DawlyButtonBold;
 
-public class AddFlightFragment extends BaseFragment implements View.OnClickListener {
-    private FragmentAddFlightBinding fragmentAddFlightBinding;
-    DawlyButtonBold nextBtn;
+public class AddFlightPaymentFragment extends BaseFragment implements View.OnClickListener {
+    private FragmentAddFlightPaymentBinding fragmentAddFlightBinding;
+    DawlyButtonBold submitBtn;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        fragmentAddFlightBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_flight, container, false);
-        nextBtn = fragmentAddFlightBinding.nextBtn;
-        nextBtn.setOnClickListener(this);
+        fragmentAddFlightBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_flight_payment, container, false);
+        submitBtn = fragmentAddFlightBinding.submitBtn;
+        submitBtn.setOnClickListener(this);
         return fragmentAddFlightBinding.getRoot();
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.nextBtn:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new AddFlightPaymentFragment()).commit();
+            case R.id.submitBtn:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new AddFlightPaypalFragment()).commit();
                 break;
         }
     }

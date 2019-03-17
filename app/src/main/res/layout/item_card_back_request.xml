@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:background="@color/colorCard"
-        app:cardCornerRadius="@dimen/_15dp"
+        app:cardCornerRadius="@dimen/card_corner_radius"
         app:cardElevation="@dimen/_20dp"
         app:cardBackgroundColor="@color/colorCard"
         android:layout_width="match_parent"
@@ -13,28 +13,36 @@
         android:layout_height="@dimen/_150dp">
 
 
-    <LinearLayout
+    <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
         <ImageView
-                android:src="@drawable/ic_suitcase"
-                android:layout_width="0dp"
+                android:id="@+id/boxImg"
+                android:src="@drawable/ic_box"
+                android:layout_width="80dp"
                 android:layout_weight="1"
-                android:layout_height="match_parent"/>
+                android:scaleType="fitCenter"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"
+                android:layout_centerVertical="true"
+                android:layout_height="80dp"/>
 
-        <RelativeLayout
+        <LinearLayout
                 android:layout_weight="1.4"
-                android:layout_width="0dp"
+                android:id="@+id/infoLayout"
+                android:layout_toEndOf="@+id/boxImg"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
             <com.dawly.app.views.DawlyTextViewBold
                     android:id="@+id/itemName"
-                    android:textSize="18sp"
-                    android:text="JAN 01 - MacBook Pro"
+                    android:textSize="22sp"
+                    android:text="Order #1"
                     android:layout_marginTop="@dimen/_20dp"
-                    android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
                     android:maxLines="2"
                     android:textColor="@color/colorEmail"
@@ -43,22 +51,28 @@
 
             <com.dawly.app.views.DawlyTextViewBold
                     android:id="@+id/itemDescription"
-                    android:textSize="15sp"
-                    android:layout_below="@+id/itemName"
-                    android:text="Retina Macbook pro retina display 2018 with touch bar 32 GB ram core i9 4 gb nvidia 1 TB SSD "
-                    android:layout_marginTop="@dimen/_20dp"
-                    android:layout_marginStart="@dimen/_20dp"
+                    android:textSize="13sp"
+                    android:text="@string/current_status"
                     android:layout_marginEnd="@dimen/_20dp"
                     android:maxLines="4"
+                    android:textColor="#d8d8d8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <com.dawly.app.views.DawlyTextViewBold
+                    android:textSize="22sp"
+                    android:text="Placed"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:maxLines="2"
                     android:textColor="@color/colorEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </android.support.v7.widget.CardView>

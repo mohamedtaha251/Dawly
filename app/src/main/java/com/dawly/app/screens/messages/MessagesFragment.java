@@ -1,28 +1,28 @@
-package com.dawly.app.screens.flights;
+package com.dawly.app.screens.messages;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import app.dawly.com.dawly.R;
-import app.dawly.com.dawly.databinding.FragmentAddFlightBinding;
+import app.dawly.com.dawly.databinding.FragmentFlightOrdersBinding;
 import com.dawly.app.base.BaseFragment;
-import com.dawly.app.views.DawlyButtonBold;
+import com.dawly.app.screens.flights.AddFlightPaymentFragment;
 
-public class AddFlightFragment extends BaseFragment implements View.OnClickListener {
-    private FragmentAddFlightBinding fragmentAddFlightBinding;
-    DawlyButtonBold nextBtn;
+public class MessagesFragment extends BaseFragment implements View.OnClickListener {
+    private FragmentFlightOrdersBinding fragmentFlightOrdersBinding;
+    RecyclerView  flightsOrdersRecycler;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        fragmentAddFlightBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_flight, container, false);
-        nextBtn = fragmentAddFlightBinding.nextBtn;
-        nextBtn.setOnClickListener(this);
-        return fragmentAddFlightBinding.getRoot();
+        fragmentFlightOrdersBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_flight_orders, container, false);
+        flightsOrdersRecycler = fragmentFlightOrdersBinding.flightsRecycler;
+        return fragmentFlightOrdersBinding.getRoot();
     }
 
     @Override

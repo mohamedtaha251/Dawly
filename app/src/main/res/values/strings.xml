@@ -83,12 +83,17 @@
     <string name="pending_orders">Pending Orders</string>
     <string name="current_status">Current Status:</string>
     <string name="my_account">My Account</string>
+    <string name="terms">Terms of Service</string>
+    <string name="help_center">Help Center</string>
+    <string name="safety">Trust &amp; Safety</string>
+
     <string name="contact_support">Contact Support</string>
     <string name="confirm">Confirm</string>
     <string name="license_key">eyJzY29wZSI6WyJBTEwiXSwicGxhdGZvcm0iOlsiaU9TIiwiQW5kcm9pZCIsIldpbmRvd3MiXSwidmFsaWQiOiIyMDE5LTA0LTE0IiwibWFqb3JWZXJzaW9uIjozLCJtYXhEYXlzTm90UmVwb3J0ZWQiOjUsInNob3dXYXRlcm1hcmsiOnRydWUsInBpbmdSZXBvcnRpbmciOnRydWUsImRlYnVnUmVwb3J0aW5nIjoib3B0LW91dCIsInRvbGVyYW5jZURheXMiOjUsInNob3dQb3BVcEFmdGVyRXhwaXJ5Ijp0cnVlLCJpb3NJZGVudGlmaWVyIjpbImNvbS5kYXdseS5hcHAiXSwiYW5kcm9pZElkZW50aWZpZXIiOlsiY29tLmRhd2x5LmFwcCJdLCJ3aW5kb3dzSWRlbnRpZmllciI6WyJjb20uZGF3bHkuYXBwIl19CmZhaGZoTFV4bHZ5K0M4RXhiTi9ON0t5TDNVMVBNQUtwaU0wbmxHaGh1eVlueUMrMUJvUG9ReXlpVnd4WUZxV0JmbmZYZUsvTjhObGN4dmZCT3dqTFMybUx0aUJuUUhLT2JwMVZMSUtlMENMU2FDbEhRM2hlZDBOclRpOFRvUGRLT2VOUG1abm1COS9pb1N3ZHhOMUpvRVYveUozWkRSTmZIdjR6R005eWZZTmV4MkJISkJqRFBzWXJTakFxbzZMZUdFTzNQcTVkYjhFNXp0Z25VaEVzWTI1c1VvTkxXeDkxaTNkdkM0ZkR6Zm1YMUdFK3pUd2VGZS9HNldhME91MnRPdjU4Y1FSQ21hdGlQWFFyTTlXT0hZSlo2Q1owSzExSVlnZk1KQWpObklYWllIZTdsQzV6NmVRWFU0WFFKU0E5Y21Dclp5a2ZsUkxjdTV3UHJXOWMxUT09</string>
 
 
     <string name="action_settings">Settings</string>
+    <string name="policy">Privacy Policy</string>
     <string name="document">Document</string>
     <string name="document_advanced_outline_detection">Advanced Outline Detection</string>
     <string name="document_fast_outline_detection">Fast Outline Detection</string>
@@ -139,4 +144,6 @@
     <string name="reading_result">Reading result</string>
 
     <string name="barcode">Barcode / QR-Code</string>
+    <string name="add_flight">Add Flight</string>
+    <string name="add_order">Add Order</string>
 </resources>

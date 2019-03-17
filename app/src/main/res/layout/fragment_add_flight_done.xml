@@ -31,6 +31,7 @@
                 android:layout_height="wrap_content"/>
 
         <ImageView
+                android:id="@+id/closeBtn"
                 android:src="@drawable/ic_exit_icon"
                 android:layout_alignParentEnd="true"
                 android:padding="@dimen/_15dp"

@@ -30,6 +30,7 @@ public class Font {
             DawlyEditText dawlyEditText = (DawlyEditText) view;
             dawlyEditText.setTextColor(getColor());
             dawlyEditText.setHintTextColor(getHintColor());
+            dawlyEditText.setTextSize(14);
             dawlyEditText.setTypeface(checkLanguage(REGULAR,false));
         }
         if (view instanceof DawlyTextView) {

@@ -30,7 +30,7 @@ public class PostRequestFragmentStep4 extends BaseFragment implements View.OnCli
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.doneBtn:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new PostRequestFragmentStep4()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FlightProcessedFragment()).commit();
                 break;
         }
     }

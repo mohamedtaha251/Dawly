@@ -20,17 +20,19 @@
         <include
                 android:id="@+id/appBar"
                 layout="@layout/app_bar"
+                android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
         <FrameLayout
                 android:background="@color/colorWhite"
                 android:id="@+id/container"
+                android:layout_below="@+id/appBar"
                 android:layout_above="@+id/navigation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
-        <android.support.design.widget.BottomNavigationView
+        <com.dawly.app.views.BottomNavigation
                 android:id="@+id/navigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

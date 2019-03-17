@@ -57,17 +57,19 @@
                         android:text="20"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/_10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+
                 <com.dawly.app.views.DawlyTextViewBold
                         android:textColor="@color/colorOrders"
                         android:text="@string/total_orders"
                         android:layout_alignParentBottom="true"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+
                 <View
                         android:layout_width="1dp"
                         android:layout_alignParentEnd="true"
@@ -78,6 +80,7 @@
 
 
             </RelativeLayout>
+
             <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -87,19 +90,21 @@
                         android:id="@+id/activeOrdersCount"
                         android:textColor="@color/colorOrders"
                         android:text="20"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:layout_marginTop="@dimen/_10dp"
                         android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+
                 <com.dawly.app.views.DawlyTextViewBold
                         android:textColor="@color/colorOrders"
                         android:text="@string/active_orders"
                         android:layout_alignParentBottom="true"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+
                 <View
                         android:layout_width="1dp"
                         android:layout_marginTop="@dimen/_10dp"
@@ -120,17 +125,18 @@
                         android:id="@+id/pendingOrdersCount"
                         android:textColor="@color/colorOrders"
                         android:text="20"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/_10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+
                 <com.dawly.app.views.DawlyTextViewBold
                         android:textColor="@color/colorOrders"
                         android:text="@string/pending_orders"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -140,10 +146,18 @@
 
         </LinearLayout>
 
+        <include android:layout_below="@+id/infoLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_150dp"
+                 android:id="@+id/cardFlipped"
+                 android:layout_marginStart="@dimen/_10dp"
+                 android:layout_marginEnd="@dimen/_10dp"
+                 android:layout_marginTop="@dimen/_15dp"
+                 layout="@layout/item_card_back_request"/>
 
         <android.support.v4.widget.SwipeRefreshLayout
                 android:id="@+id/flightsSwipeRefresh"
-                android:layout_below="@+id/infoLayout"
+                android:layout_below="@+id/cardFlipped"
                 android:layout_marginTop="@dimen/_20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">

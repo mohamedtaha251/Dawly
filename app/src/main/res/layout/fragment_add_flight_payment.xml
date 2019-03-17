@@ -1,212 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:attrs="http://schemas.android.com/tools"
-        android:background="@color/colorWhite"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<layout>
 
-    <include layout="@layout/layout_reversed"/>
-    <android.support.v7.widget.CardView
-            android:id="@+id/step2Card"
-            app:cardCornerRadius="@dimen/_15dp"
-            android:layout_marginStart="@dimen/_40dp"
-            android:layout_marginEnd="@dimen/_40dp"
-            android:layout_marginTop="@dimen/_20dp"
-            android:layout_marginBottom="@dimen/_30dp"
-            android:layout_above="@+id/pageIndicatorView"
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:attrs="http://schemas.android.com/tools"
+            android:background="@color/colorWhite"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPost"
-            app:cardBackgroundColor="@color/colorLogin">
+            android:layout_height="match_parent">
 
-        <RelativeLayout
+        <include layout="@layout/layout_reversed"/>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/step2Card"
+                app:cardCornerRadius="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_40dp"
+                android:layout_marginEnd="@dimen/_40dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_30dp"
+                android:layout_above="@+id/pageIndicatorView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/colorPost"
+                app:cardBackgroundColor="@color/colorLogin">
 
-            <ImageView
-                    android:src="@drawable/ic_paypal"
-                    android:layout_marginStart="@dimen/_20dp"
-                    android:layout_width="@dimen/_100dp"
-                    android:layout_height="@dimen/_70dp"/>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-            app:cardCornerRadius="@dimen/_15dp"
-            android:layout_marginStart="@dimen/_20dp"
-            android:layout_marginEnd="@dimen/_20dp"
-            android:layout_marginTop="@dimen/_70dp"
-            android:layout_marginBottom="@dimen/_30dp"
-            android:layout_above="@+id/pageIndicatorView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPost"
-
-            app:cardElevation="@dimen/_20dp"
-            app:cardBackgroundColor="@color/colorPost">
-
-
-        <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:id="@+id/visaLayout"
-                    android:layout_margin="@dimen/_20dp"
+            <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
 
                 <ImageView
-                        android:src="@drawable/ic_bank"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-                <com.dawly.app.views.DawlyTextViewBold
-                        android:text="@string/bank_account"
-                        android:textSize="30sp"
-                        android:textColor="@color/colorEmail"
+                        android:src="@drawable/ic_paypal"
                         android:layout_marginStart="@dimen/_20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="@dimen/_100dp"
+                        android:layout_height="@dimen/_70dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
 
-            </LinearLayout>
+        <android.support.v7.widget.CardView
+                app:cardCornerRadius="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_70dp"
+                android:layout_marginBottom="@dimen/_15dp"
+                android:layout_above="@+id/pageIndicatorView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPost"
 
-            <LinearLayout
-                    android:id="@+id/cardLayout"
-                    android:layout_below="@+id/visaLayout"
-                    android:orientation="vertical"
-                    android:layout_marginEnd="@dimen/_20dp"
-                    android:layout_marginStart="@dimen/_20dp"
-                    android:layout_marginTop="@dimen/_10dp"
+                app:cardElevation="@dimen/_20dp"
+                app:cardBackgroundColor="@color/colorPost">
+
+            <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
 
-
-                <com.dawly.app.views.DawlyEditText
-                        android:id="@+id/name"
+                <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_alignParentStart="true"
-                        android:layout_below="@+id/cardLayout"
-                        android:paddingBottom="@dimen/_20dp"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/bank_account_country"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/colorHeader"/>
+                        android:layout_height="match_parent">
 
-                <com.dawly.app.views.DawlyEditText
-                        android:id="@+id/expires"
-                        android:layout_alignParentStart="true"
-                        android:layout_toStartOf="@+id/itemImg"
-                        android:layout_below="@+id/name"
-                        android:hint="@string/name_of_bank"
-                        android:paddingBottom="@dimen/_20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:id="@+id/visaLayout"
+                            android:layout_margin="@dimen/_20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                <com.dawly.app.views.DawlyEditText
-                        android:id="@+id/cvc"
-                        android:layout_below="@+id/expires"
-                        android:hint="@string/beneficiary_name"
-                        android:paddingBottom="@dimen/_20dp"
-                        android:textColorHint="@color/colorInactive"
-                        android:layout_alignParentStart="true"
-                        android:layout_toStartOf="@+id/itemImg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        <ImageView
+                                android:src="@drawable/ic_bank"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
-                <com.dawly.app.views.DawlyEditText
-                        android:id="@+id/ibanNumber"
-                        android:layout_below="@+id/expires"
-                        android:hint="@string/account_number_iban_number"
-                        android:layout_alignParentStart="true"
-                        android:layout_toStartOf="@+id/itemImg"
-                        android:textColorHint="@color/colorInactive"
-                        android:paddingBottom="@dimen/_20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        <com.dawly.app.views.DawlyTextViewBold
+                                android:text="@string/bank_account"
+                                android:textSize="30sp"
+                                android:textColor="@color/colorEmail"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
-                <com.dawly.app.views.DawlyEditText
-                        android:id="@+id/routingNumber"
-                        android:layout_below="@+id/expires"
-                        android:hint="@string/routing_number"
-                        android:layout_alignParentStart="true"
-                        android:layout_toStartOf="@+id/itemImg"
-                        android:textColorHint="@color/colorInactive"
-                        android:paddingBottom="@dimen/_20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                    </LinearLayout>
 
-                <com.dawly.app.views.DawlyEditText
-                        android:id="@+id/swiftCode"
-                        android:layout_below="@+id/expires"
-                        android:hint="@string/swift_code"
-                        android:textColorHint="@color/colorInactive"
-                        android:paddingBottom="@dimen/_20dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_toStartOf="@+id/itemImg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                            android:id="@+id/cardLayout"
+                            android:layout_below="@+id/visaLayout"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="@dimen/_20dp"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
 
-            </LinearLayout>
-        </RelativeLayout>
+                        <com.dawly.app.views.DawlyEditText
+                                android:id="@+id/name"
+                                android:layout_width="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/cardLayout"
+                                android:paddingBottom="@dimen/_20dp"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/bank_account_country"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/colorHeader"/>
+
+                        <com.dawly.app.views.DawlyEditText
+                                android:id="@+id/expires"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/itemImg"
+                                android:layout_below="@+id/name"
+                                android:hint="@string/name_of_bank"
+                                android:paddingBottom="@dimen/_20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <com.dawly.app.views.DawlyEditText
+                                android:id="@+id/cvc"
+                                android:layout_below="@+id/expires"
+                                android:hint="@string/beneficiary_name"
+                                android:paddingBottom="@dimen/_20dp"
+                                android:textColorHint="@color/colorInactive"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/itemImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <com.dawly.app.views.DawlyEditText
+                                android:id="@+id/ibanNumber"
+                                android:layout_below="@+id/expires"
+                                android:hint="@string/account_number_iban_number"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/itemImg"
+                                android:textColorHint="@color/colorInactive"
+                                android:paddingBottom="@dimen/_20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <com.dawly.app.views.DawlyEditText
+                                android:id="@+id/routingNumber"
+                                android:layout_below="@+id/expires"
+                                android:hint="@string/routing_number"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/itemImg"
+                                android:textColorHint="@color/colorInactive"
+                                android:paddingBottom="@dimen/_20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <com.dawly.app.views.DawlyEditText
+                                android:id="@+id/swiftCode"
+                                android:layout_below="@+id/expires"
+                                android:hint="@string/swift_code"
+                                android:textColorHint="@color/colorInactive"
+                                android:paddingBottom="@dimen/_20dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/itemImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
 
 
-    </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
 
-    <com.rd.PageIndicatorView
-            android:id="@+id/pageIndicatorView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="@dimen/_10dp"
-            app:piv_animationType="worm"
-            app:piv_dynamicCount="true"
-            app:piv_select="1"
-            android:layout_above="@+id/submitLayout"
-            app:piv_interactiveAnimation="true"
-            app:piv_selectedColor="#35a6b7"
-            app:piv_unselectedColor="#bfcefa"
-            attrs:piv_padding="10dp"
-            attrs:piv_radius="5dp"/>
+        </android.support.v7.widget.CardView>
+
+        <com.rd.PageIndicatorView
+                android:id="@+id/pageIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_10dp"
+                app:piv_animationType="worm"
+                app:piv_dynamicCount="true"
+                app:piv_select="1"
+                android:layout_above="@+id/submitLayout"
+                app:piv_interactiveAnimation="true"
+                app:piv_selectedColor="#35a6b7"
+                app:piv_unselectedColor="#bfcefa"
+                attrs:piv_padding="10dp"
+                attrs:piv_radius="5dp"/>
 
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:id="@+id/submitLayout"
-            android:layout_marginStart="@dimen/_20dp"
-            android:layout_marginEnd="@dimen/_20dp"
-            android:layout_marginBottom="@dimen/_20dp"
-            android:layout_alignParentBottom="true"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        <com.dawly.app.views.DawlyButtonBold
-                android:id="@+id/skipBtn"
-                android:text="@string/skip_for_now"
-                android:textAllCaps="false"
-                android:layout_weight="1"
-                android:textColor="@color/colorWhite"
-                android:background="@drawable/continue_gradient_bg"
+        <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:id="@+id/submitLayout"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.dawly.app.views.DawlyButtonBold
+                    android:id="@+id/skipBtn"
+                    android:text="@string/skip_for_now"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/continue_gradient_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
 
-        <com.dawly.app.views.DawlyButtonBold
-                android:id="@+id/submitBtn"
-                android:text="@string/submit"
-                android:textAllCaps="false"
-                android:layout_weight="1"
-                android:layout_marginStart="@dimen/_10dp"
-                android:textColor="@color/colorWhite"
-                android:background="@drawable/continue_gradient_bg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-    </LinearLayout>
+            <com.dawly.app.views.DawlyButtonBold
+                    android:id="@+id/submitBtn"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/continue_gradient_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

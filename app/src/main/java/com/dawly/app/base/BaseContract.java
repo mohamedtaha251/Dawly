@@ -15,6 +15,10 @@ public interface BaseContract {
     }
 
 
+    interface AddClickListener {
+        void onAddFlightClick(View view);
+        void onAddOrderClick(View view);
+    }
 
 
 

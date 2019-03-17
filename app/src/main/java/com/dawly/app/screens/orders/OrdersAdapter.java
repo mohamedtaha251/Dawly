@@ -1,4 +1,4 @@
-package com.dawly.app.screens.home;
+package com.dawly.app.screens.orders;
 
 import android.arch.paging.PagedListAdapter;
 import android.content.Context;
@@ -11,10 +11,10 @@ import android.widget.RelativeLayout;
 import app.dawly.com.dawly.R;
 import com.dawly.app.entities.Flight;
 
-public class FlightsAdapter extends PagedListAdapter<Flight, FlightsAdapter.FlightsViewHolder> {
+public class OrdersAdapter extends PagedListAdapter<Flight, OrdersAdapter.FlightsViewHolder> {
 private Context context;
 
-    protected FlightsAdapter(Context context) {
+    public OrdersAdapter(Context context) {
         super(Flight.DIFF_CALLBACK);
         this.context = context;
     }
@@ -22,18 +22,14 @@ private Context context;
     @NonNull
     @Override
     public FlightsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_flight, viewGroup, false);
+        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_order, viewGroup, false);
         return new FlightsViewHolder(itemView);
 
     }
 
     @Override
     public void onBindViewHolder(@NonNull FlightsViewHolder viewHolder, int position) {
-        if (position%2 == 0){
-            viewHolder.cardSide.setBackgroundColor(context.getResources().getColor(R.color.colorCardSide1));
-        }else{
-            viewHolder.cardSide.setBackgroundColor(context.getResources().getColor(R.color.colorCardSide2));
-        }
+
 
     }
 
@@ -46,7 +42,6 @@ private Context context;
         RelativeLayout cardSide;
         public FlightsViewHolder(@NonNull View itemView) {
             super(itemView);
-            cardSide = itemView.findViewById(R.id.cardSideLayout);
         }
     }
 }
