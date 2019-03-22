@@ -89,6 +89,11 @@
     <string name="pending_orders">Pending Orders</string>
     <string name="withdraw_to_bank_account">Withdraw To Bank Account</string>
     <string name="withdraw_to_paypal_account">Withdraw To PayPal Account</string>
+    <string name="amount_and_currency">Amount and currency</string>
+    <string name="bank_account_country">Bank Account Country</string>
+    <string name="bank_account_info">Bank Account Info</string>
+    <string name="enter_amount_what_you_want_to_withdraw">Enter Amount What You Want To Withdraw</string>
+    <string name="done">Done</string>
 
 
 </resources>

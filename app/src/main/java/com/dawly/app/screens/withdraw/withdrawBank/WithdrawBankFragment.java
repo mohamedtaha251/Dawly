@@ -33,7 +33,7 @@ public class WithdrawBankFragment extends Fragment {
         fragmentManager = getActivity().getSupportFragmentManager();
 
 
-        viewPager.setAdapter(new WithdrawSliderAdapter(fragmentManager,getContext()));
+        viewPager.setAdapter(new WithdrawSliderAdapter(fragmentManager, getContext()));
         indicator.setupWithViewPager(viewPager, true);
 
         return rootView;

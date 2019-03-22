@@ -1,4 +1,4 @@
-package com.dawly.app;
+package com.dawly.app.screens.withdraw.BankAccountInfo;
 
 
 import android.os.Bundle;

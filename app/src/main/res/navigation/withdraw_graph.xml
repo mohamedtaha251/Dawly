@@ -11,8 +11,8 @@
               android:label="fragment_withdraw_bank" tools:layout="@layout/fragment_withdraw_bank"/>
     <fragment android:id="@+id/withdrawPaypal" android:name="com.dawly.app.screens.withdraw.withdrawPaypal.WithdrawPaypal"
               android:label="fragment_withdraw_paypal" tools:layout="@layout/fragment_withdraw_paypal"/>
-    <fragment android:id="@+id/bankAmountCurrencyFragment" android:name="com.dawly.app.BankAmountCurrencyFragment"
+    <fragment android:id="@+id/bankAmountCurrencyFragment" android:name="com.dawly.app.screens.withdraw.BankAmountCurrency.BankAmountCurrencyFragment"
               android:label="fragment_bank_amount_currency" tools:layout="@layout/fragment_bank_amount_currency"/>
-    <fragment android:id="@+id/bankAccountInfoFragment" android:name="com.dawly.app.BankAccountInfoFragment"
+    <fragment android:id="@+id/bankAccountInfoFragment" android:name="com.dawly.app.screens.withdraw.BankAccountInfo.BankAccountInfoFragment"
               android:label="fragment_bank_account_info" tools:layout="@layout/fragment_bank_account_info"/>
 </navigation>

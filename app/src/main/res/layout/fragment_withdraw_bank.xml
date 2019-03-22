@@ -19,11 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_5dp"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="@dimen/_80dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:tabBackground="@drawable/indicator_selector"
             app:tabGravity="center"
+            app:tabIndicatorColor="@color/seperator_color"
+            app:tabSelectedTextColor="@color/dark_blue_grey"
+            app:tabTextColor="@color/dark_blue_grey"
             app:tabIndicatorHeight="0dp"/>
 
 </android.support.constraint.ConstraintLayout>

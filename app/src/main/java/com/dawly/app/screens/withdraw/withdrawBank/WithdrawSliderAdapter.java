@@ -4,8 +4,8 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import com.dawly.app.BankAccountInfoFragment;
-import com.dawly.app.BankAmountCurrencyFragment;
+import com.dawly.app.screens.withdraw.BankAccountInfo.BankAccountInfoFragment;
+import com.dawly.app.screens.withdraw.BankAmountCurrency.BankAmountCurrencyFragment;
 
 public class WithdrawSliderAdapter extends FragmentStatePagerAdapter {
     public static final int NUM_FRAGMENTS = 2;
