@@ -12,7 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import app.dawly.com.dawly.R;
-import com.dawly.app.screens.myaccount.withdrawOption.WithdrawOptionFragment;
+import com.dawly.app.screens.withdraw.withdraw.WithdrawFragment;
 import com.dawly.app.views.DawlyButtonBold;
 
 
@@ -54,7 +54,7 @@ public class BalanceInfoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Create new fragment and transaction
-                Fragment newFragment = new WithdrawOptionFragment();
+                Fragment newFragment = new WithdrawFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.nav_host_fragment_my_account, newFragment);
                 transaction.addToBackStack(null);

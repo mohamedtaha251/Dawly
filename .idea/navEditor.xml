@@ -48,11 +48,6 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_balanceInfoFragment_to_withdrawOptionFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -87,8 +82,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-917" />
-                            <option name="y" value="389" />
+                            <option name="x" value="-873" />
+                            <option name="y" value="393" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -99,8 +94,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-700" />
-                            <option name="y" value="396" />
+                            <option name="x" value="-636" />
+                            <option name="y" value="400" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -118,13 +113,71 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                </map>
+              </option>
+            </LayoutPositions>
+          </value>
+        </entry>
+        <entry key="withdraw_graph.xml">
+          <value>
+            <LayoutPositions>
+              <option name="myPositions">
+                <map>
+                  <entry key="bankAccountInfoFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-50" />
+                            <option name="y" value="543" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="bankAmountCurrencyFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-108" />
+                            <option name="y" value="170" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="withdrawBankFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-283" />
+                            <option name="y" value="528" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="withdrawOptionFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-475" />
-                            <option name="y" value="388" />
+                            <option name="x" value="119" />
+                            <option name="y" value="-156" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="withdrawPaypal">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="321" />
+                            <option name="y" value="214" />
                           </Point>
                         </option>
                       </LayoutPositions>

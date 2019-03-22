@@ -1,4 +1,4 @@
-package com.dawly.app.screens.myaccount.withdrawOption;
+package com.dawly.app;
 
 
 import android.os.Bundle;
@@ -9,18 +9,17 @@ import android.view.ViewGroup;
 import app.dawly.com.dawly.R;
 
 
-public class WithdrawOptionFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class BankAccountInfoFragment extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_withdraw_option, container, false);
+        return inflater.inflate(R.layout.fragment_bank_account_info, container, false);
     }
 
-
-   
 }

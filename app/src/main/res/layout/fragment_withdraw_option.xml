@@ -7,43 +7,9 @@
         android:background="@drawable/myaccount_background"
 >
 
-    <TextView
-            android:id="@+id/tv_value_of_total_balance_balance_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="35sp"
-            android:layout_marginTop="@dimen/_65dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textColor="@color/colorWhite"
-            android:lineSpacingExtra="1.5sp"
-            android:gravity="center_horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="$ 1, 893.45"
-    />
 
-    <TextView
-            android:id="@+id/tv_total_balance_balance_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textColor="@color/colorWhite"
-            android:lineSpacingExtra="1.5sp"
-            android:gravity="center_horizontal"
-            android:text="@string/total_balance"
-            android:layout_marginTop="@dimen/_10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_value_of_total_balance_balance_info"
-
-    />
 
     <android.support.constraint.ConstraintLayout
-            android:layout_marginTop="200dp"
             android:background="@color/ice_blue_two"
             android:id="@+id/cl_withdraw_options_frame"
             android:layout_width="match_parent"

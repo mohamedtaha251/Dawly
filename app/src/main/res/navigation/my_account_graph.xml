@@ -10,8 +10,6 @@
               android:label="fragment_my_account" tools:layout="@layout/fragment_my_account"/>
     <fragment android:id="@+id/balanceInfoFragment" android:name="com.dawly.app.screens.myaccount.balanceInfo.BalanceInfoFragment"
               android:label="fragment_balance_info" tools:layout="@layout/fragment_balance_info">
-        <action android:id="@+id/action_balanceInfoFragment_to_withdrawOptionFragment"
-                app:destination="@id/withdrawOptionFragment"/>
         <action android:id="@+id/action_balanceInfoFragment_to_accountSettingsFragment"
                 app:destination="@id/accountSettingsFragment"/>
     </fragment>
@@ -26,6 +24,4 @@
               android:label="fragment_payment_history" tools:layout="@layout/fragment_payment_history"/>
     <fragment android:id="@+id/pendingsOrdersFragment" android:name="com.dawly.app.screens.myaccount.pendingsOrders.PendingsOrdersFragment"
               android:label="fragment_pendings_orders" tools:layout="@layout/fragment_pendings_orders"/>
-    <fragment android:id="@+id/withdrawOptionFragment" android:name="com.dawly.app.screens.myaccount.withdrawOption.WithdrawOptionFragment"
-              android:label="fragment_withdraw_option" tools:layout="@layout/fragment_withdraw_option"/>
 </navigation>
