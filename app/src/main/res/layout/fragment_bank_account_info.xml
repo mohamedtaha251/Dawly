@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:text="@string/bank_account_info"
             android:gravity="center"
-            android:paddingTop="@dimen/_20dp"
+            android:paddingTop="@dimen/_15dp"
             android:paddingBottom="@dimen/_20dp"
             android:textSize="20sp"
             android:textStyle="bold"

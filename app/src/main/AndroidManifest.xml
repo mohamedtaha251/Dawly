@@ -55,7 +55,7 @@
         <activity android:name="com.dawly.app.screens.tutorial.TutorialActivity">
         </activity>
         <activity android:name="com.dawly.app.screens.myaccount.activity.MyAccountActivity"
-                  android:windowSoftInputMode="stateHidden">
+                  android:windowSoftInputMode="adjustPan">
         </activity>
     </application>
 

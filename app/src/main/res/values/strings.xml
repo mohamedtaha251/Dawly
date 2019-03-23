@@ -94,6 +94,11 @@
     <string name="bank_account_info">Bank Account Info</string>
     <string name="enter_amount_what_you_want_to_withdraw">Enter Amount What You Want To Withdraw</string>
     <string name="done">Done</string>
+    <string name="name_of_bank">Name of Bank</string>
+    <string name="beneficiary_name">Beneficiary Name</string>
+    <string name="iban_number">Account Number/ IBAN Number</string>
+    <string name="routing_number">Routing Number</string>
+    <string name="swift_code_bin">Swift Code / BIN</string>
 
 
 </resources>
