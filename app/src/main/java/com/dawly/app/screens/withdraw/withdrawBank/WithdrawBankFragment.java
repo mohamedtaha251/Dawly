@@ -18,8 +18,8 @@ import app.dawly.com.dawly.R;
 public class WithdrawBankFragment extends Fragment {
 
     private FragmentManager fragmentManager;
-    ViewPager viewPager;
-    TabLayout indicator;
+    private ViewPager viewPager;
+    private TabLayout indicator;
 
 
     @Override

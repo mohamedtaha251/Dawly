@@ -2,7 +2,10 @@ package com.dawly.app.screens.withdraw.withdrawPaypal;
 
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,17 +17,26 @@ import app.dawly.com.dawly.R;
  */
 public class WithdrawPaypal extends Fragment {
 
-
-    public WithdrawPaypal() {
-        // Required empty public constructor
-    }
-
+    private FragmentManager fragmentManager;
+    private ViewPager viewPager;
+    private TabLayout indicator;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_withdraw_paypal, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_withdraw_paypal, container, false);
+
+        viewPager = rootView.findViewById(R.id.viewPager_withdraw_paypal);
+        indicator = rootView.findViewById(R.id.indicator_withdraw_paypal);
+
+        fragmentManager = getActivity().getSupportFragmentManager();
+
+
+        viewPager.setAdapter(new PaypalSliderAdapter(fragmentManager, getContext()));
+        indicator.setupWithViewPager(viewPager, true);
+
+        return rootView;
+
     }
 
 }
