@@ -13,6 +13,7 @@ import com.dawly.app.base.BaseContract;
 import com.dawly.app.screens.flights.AddFlightFragment;
 import com.dawly.app.screens.flights.FlightsFragment;
 import com.dawly.app.screens.menu.MenuFragment;
+import com.dawly.app.screens.orders.AnimationtestFragment;
 import com.dawly.app.screens.orders.FlightOrdersFragment;
 import com.dawly.app.screens.post.PostRequestFragment;
 import com.dawly.app.views.BottomNavigation;
@@ -36,7 +37,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         setSupportActionBar(toolbar);
         bottomNavigation = findViewById(R.id.navigation);
 //        getSupportActionBar().hide();
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new FlightOrdersFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new AnimationtestFragment()).commit();
         bottomNavigation.setOnNavigationItemSelectedListener(this);
     }
 

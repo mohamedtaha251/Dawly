@@ -46,4 +46,7 @@
     <dimen name="_15sp">15sp</dimen>
     <dimen name="_16sp">16sp</dimen>
     <dimen name="_8dp">8dp</dimen>
+    <dimen name="_400dp">400dp</dimen>
+    <dimen name="_18sp">18sp</dimen>
+    <dimen name="_22sp">22sp</dimen>
 </resources>

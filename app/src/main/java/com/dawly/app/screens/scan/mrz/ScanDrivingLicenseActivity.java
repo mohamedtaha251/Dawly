@@ -22,6 +22,7 @@ import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.id.*;
 import io.anyline.view.ScanView;
+import io.anyline.view.ScanViewPluginConfig;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -53,7 +54,7 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
 		//init the scanViewPlugin config
 		drivingLicenseScanView.setScanConfig("driving_license_view_config.json");
-		//ScanViewPluginConfig config = new ScanViewPluginConfig(getApplicationContext(), "driving_license_view_config_new.json");
+		ScanViewPluginConfig config = new ScanViewPluginConfig(getApplicationContext(), "driving_license_view_config_new.json");
 		//init the scan view
 		IdScanPlugin scanPlugin = new IdScanPlugin(getApplicationContext(), "driving_license", getString(R.string.license_key), new DrivingLicenseConfig());
 		IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), scanPlugin, drivingLicenseScanView.getScanViewPluginConfig());
@@ -63,8 +64,8 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 			public void onResult(ScanResult<ID> idScanResult) {
 
 				DrivingLicenseResult resultString = (DrivingLicenseResult) idScanResult.getResult();
-				String path = setupImagePath(idScanResult.getCutoutImage());
-				startScanResultIntent(getResources().getString(R.string.title_driving_license), getDrivingLicenseResult(resultString), path);
+//				String path = setupImagePath(idScanResult.getCutoutImage());
+//				startScanResultIntent(getResources().getString(R.string.title_driving_license), getDrivingLicenseResult(resultString), path);
 
 				setupScanProcessView(ScanDrivingLicenseActivity.this, idScanResult, getScanModule());
 			}
@@ -92,8 +93,8 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 		super.onPause();
 		//stop the scanning
 		drivingLicenseScanView.stop();
-		//release the camera (must be called in onPause, because there are situations where
-		// it cannot be auto-detected that the camera should be released)
+//		//release the camera (must be called in onPause, because there are situations where
+//		// it cannot be auto-detected that the camera should be released)
 		drivingLicenseScanView.releaseCameraInBackground();
 	}
 

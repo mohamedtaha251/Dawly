@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 import java.util.UUID;
 
-import static at.nineyards.anyline.reporter.ReportingService.PREFS_NAME;
+//import static at.nineyards.anyline.reporter.ReportingService.PREFS_NAME;
 
 /**
  * Simple {@link SharedPreferences} manager
@@ -22,6 +22,7 @@ public class Preferences {
     private static final String PREFS_ONBOARDING_INCOMPLETE_a = "onboarding_completee";
     private static final String PREF_UUID = "uuid";
     private static final String PREF_INTERCOM_USER_ID = "uuid_intercom_user_id";
+    private static final String PREFS_NAME ="prefs";
 
     private static Preferences instance;
 

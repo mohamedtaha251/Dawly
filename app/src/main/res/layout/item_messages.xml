@@ -2,17 +2,19 @@
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_150dp">
+        android:layout_height="@dimen/_150dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/profileImg"
             android:layout_marginTop="@dimen/_20dp"
             android:layout_marginStart="@dimen/_20dp"
-            android:src="@drawable/ic_add_order"
+            android:src="@drawable/kamal"
             android:layout_centerVertical="true"
-            android:layout_width="@dimen/_50dp"
-            android:layout_height="@dimen/_50dp"/>
+            app:riv_oval="true"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"/>
 
 
     <com.dawly.app.views.DawlyTextViewBold
@@ -20,6 +22,7 @@
             android:text="Muhammad"
             android:layout_toEndOf="@+id/profileImg"
             android:layout_marginStart="@dimen/_20dp"
+            android:textColor="@color/colorUserName"
             android:layout_alignTop="@+id/profileImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -30,6 +33,7 @@
             android:layout_below="@+id/userName"
             android:layout_toEndOf="@+id/profileImg"
             android:layout_marginStart="@dimen/_20dp"
+            android:textColor="@color/colorUserStatus"
             android:layout_marginTop="@dimen/_5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -41,6 +45,7 @@
             android:layout_toEndOf="@+id/profileImg"
             android:layout_marginStart="@dimen/_20dp"
             android:textSize="12sp"
+            android:textColor="@color/colorEmail"
             android:layout_marginTop="@dimen/_5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -65,8 +70,10 @@
     <View
             android:layout_width="match_parent"
             android:layout_below="@+id/profileImg"
-            android:layout_margin="@dimen/_20dp"
-            android:background="@color/color_verify"
+            android:background="@color/colorMessagesSeparator"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
             android:layout_height="1dp"/>
 
 

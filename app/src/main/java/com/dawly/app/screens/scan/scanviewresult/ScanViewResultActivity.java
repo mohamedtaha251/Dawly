@@ -20,6 +20,8 @@ import com.dawly.app.utils.Constant;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
+//import at.nineyards.anyline.modules.AnylineBaseModuleView;
+
 /**
  * Scan Vew Result Activity for the Result Screen
  */
@@ -46,7 +48,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
         imageView = (ImageView) findViewById(R.id.controll_image);
         confirmationButton = (TextView) findViewById(R.id.confirmation_button);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (savedInstanceState == null) {
             Intent intent = getIntent();
@@ -55,7 +57,6 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             Bundle extras = getIntent().getExtras();
             if (extras != null) {
                 scanModule = extras.getString(Constant.SCAN_MODULE, "").trim();
-
                 Bitmap bmp =  BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FULL_PICTURE_PATH));
                 imageView.setImageBitmap(bmp);
             }
@@ -72,7 +73,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
             }
         });
-        setupScanResult();
+//        setupScanResult();
     }
 
     @Override

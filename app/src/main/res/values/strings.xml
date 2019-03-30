@@ -146,4 +146,10 @@
     <string name="barcode">Barcode / QR-Code</string>
     <string name="add_flight">Add Flight</string>
     <string name="add_order">Add Order</string>
+    <string name="new_request_notification">New request notification</string>
+    <string name="new_order_notification">New order notification</string>
+    <string name="dawly_notification">Dawly Notification</string>
+    <string name="new_message_notification">New Message Notification</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="logout">Logout</string>
 </resources>

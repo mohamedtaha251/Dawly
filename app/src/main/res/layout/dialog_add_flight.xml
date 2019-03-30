@@ -14,7 +14,7 @@
             android:layout_marginBottom="3dp"
             android:background="@drawable/add_flight_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="80dp"/>
 
     <com.dawly.app.views.DawlyButtonMontserratBold
             android:id="@+id/addOrder"
@@ -25,7 +25,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="@dimen/_60dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="80dp"/>
 
 
 </RelativeLayout>

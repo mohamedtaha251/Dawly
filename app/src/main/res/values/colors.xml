@@ -11,6 +11,13 @@
     <color name="colorEmail">#1c3661</color>
     <color name="colorExpandedText">#353b50</color>
     <color name="colorOrders">#339eb0</color>
+    <color name="colorSettings">#009bab</color>
+    <color name="colorMessagesCount">#00cce0</color>
+    <color name="colorUserName">#0b9af5</color>
+    <color name="colorUserStatus">#2aa799</color>
+
+    <color name="colorMessagesSeparator">#94979797</color>
+
 
 
 

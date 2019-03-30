@@ -1,61 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <RelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        <include
-
-                android:id="@+id/headerCard"
-                layout="@layout/item_card_back_request"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
 
-        <android.support.v7.widget.CardView
-                android:layout_below="@+id/headerCard"
-                android:layout_width="match_parent"
-                android:id="@+id/contactCard"
-                app:cardElevation="@dimen/_20dp"
-                app:cardBackgroundColor="@color/colorCard"
-                app:cardCornerRadius="@dimen/card_corner_radius"
-                android:layout_marginEnd="@dimen/_10dp"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginTop="@dimen/_20dp"
-                android:layout_height="@dimen/_80dp">
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/request_notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"/>
 
-            <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                <com.dawly.app.views.DawlyTextView
-                        android:text="@string/contact_support"
-                        android:layout_centerInParent="true"
-                        android:gravity="center"
-                        android:textSize="18sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-
-        <android.support.v7.widget.RecyclerView
-                android:layout_below="@+id/contactCard"
-                android:layout_marginTop="@dimen/_20dp"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginEnd="@dimen/_10dp"
-                android:layout_marginBottom="@dimen/_20dp"
-                android:id="@+id/menuRecycler"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-        </android.support.v7.widget.RecyclerView>
-
-
+        <com.dawly.app.views.DawlyTextViewBold
+                android:text="@string/new_request_notification"
+                android:textSize="@dimen/_22sp"
+                android:textColor="@color/colorSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
     </RelativeLayout>
-</layout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:orientation="horizontal">
+
+
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/order_notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextViewBold
+                android:text="@string/new_order_notification"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/_22sp"
+                android:textColor="@color/colorSettings"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/dawly_notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextViewBold
+                android:textSize="@dimen/_22sp"
+                android:textColor="@color/colorSettings"
+                android:text="@string/dawly_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:orientation="horizontal">
+
+
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/new_messsage_notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextViewBold
+                android:textSize="@dimen/_22sp"
+                android:textColor="@color/colorSettings"
+                android:text="@string/new_message_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:orientation="horizontal">
+
+
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/light_theme_switch"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"/>
+
+        <com.dawly.app.views.DawlyTextViewBold
+                android:text="@string/light_theme"
+                android:textSize="@dimen/_22sp"
+                android:textColor="@color/colorSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <com.dawly.app.views.DawlyButtonBold
+                android:text="@string/logout"
+                android:gravity="start"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_22sp"
+                android:textColor="@color/colorSettings"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -24,7 +24,7 @@ public class MenuFragment extends BaseFragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        fragmentSettingsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_settings, container, false);
+        fragmentSettingsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu, container, false);
         menuRecycler = fragmentSettingsBinding.menuRecycler;
 
         return fragmentSettingsBinding.getRoot();

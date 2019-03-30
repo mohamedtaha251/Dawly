@@ -3,18 +3,11 @@ package com.dawly.app.screens.scan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.WindowManager;
-import android.widget.RelativeLayout;
 import app.dawly.com.dawly.R;
-import at.nineyards.anyline.models.AnylineImage;
 import com.dawly.app.screens.scan.scanviewresult.ScanViewResultActivity;
 import com.dawly.app.utils.Constant;
-import io.anyline.view.ScanView;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 
 
@@ -47,7 +40,7 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
         setContentView(R.layout.activity_scan);
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -99,40 +92,40 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
 
     }
 
-    protected void createFeedbackView(final ScanView scanView) {
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-
-//        feedbackView = new FeedbackView(ScanActivity.this);
-        RelativeLayout mainLayout;
-
-//        if (scanView.getScanViewPlugin() instanceof LicensePlateScanViewPlugin) {
-//            mainLayout = (RelativeLayout) findViewById(R.id.license_plate_main_layout);
-//        } else {
-            mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
-        //}
-
-//        mainLayout.addView(feedbackView, params);
-
-        // adapt y position of feedbackView relative to cutout and watermark view
-        // notice that you get both view positions only after the ScanView is drawn, therefore use postDelayed
-        scanView.getViewTreeObserver().addOnGlobalLayoutListener(
-                new ViewTreeObserver.OnGlobalLayoutListener() {
-                    @Override
-                    public void onGlobalLayout() {
-
-                        if (scanView == null || scanView.getMeasuredHeight() == 0 || scanView.getMeasuredWidth() == 0) {
-                            setFeedbackViewActive(false);
-                        } else {
-//                            int yPos = feedbackView.calculateYPosition(scanView.getScanViewPlugin().getCutoutImageOnSurface(), scanView.getWatermarkRect(),
-//                                    scanView
-//                                            .getMeasuredHeight());
-//                            feedbackView.setY(yPos);
-                            setFeedbackViewActive(true);
-                        }
-                    }
-                });
-    }
+//    protected void createFeedbackView(final ScanView scanView) {
+//        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+//                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//
+////        feedbackView = new FeedbackView(ScanActivity.this);
+//        RelativeLayout mainLayout;
+//
+////        if (scanView.getScanViewPlugin() instanceof LicensePlateScanViewPlugin) {
+////            mainLayout = (RelativeLayout) findViewById(R.id.license_plate_main_layout);
+////        } else {
+//            mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
+//        //}
+//
+////        mainLayout.addView(feedbackView, params);
+//
+//        // adapt y position of feedbackView relative to cutout and watermark view
+//        // notice that you get both view positions only after the ScanView is drawn, therefore use postDelayed
+//        scanView.getViewTreeObserver().addOnGlobalLayoutListener(
+//                new ViewTreeObserver.OnGlobalLayoutListener() {
+//                    @Override
+//                    public void onGlobalLayout() {
+//
+//                        if (scanView == null || scanView.getMeasuredHeight() == 0 || scanView.getMeasuredWidth() == 0) {
+//                            setFeedbackViewActive(false);
+//                        } else {
+////                            int yPos = feedbackView.calculateYPosition(scanView.getScanViewPlugin().getCutoutImageOnSurface(), scanView.getWatermarkRect(),
+////                                    scanView
+////                                            .getMeasuredHeight());
+////                            feedbackView.setY(yPos);
+//                            setFeedbackViewActive(true);
+//                        }
+//                    }
+//                });
+//    }
 
     protected void setFeedbackViewActive(boolean active) {
 //        if (feedbackView == null) {
@@ -155,33 +148,33 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
 //        }
 //    }
 
-    protected String setupImagePath(AnylineImage image){
-        String imagePath = "";
-        try {
-            if(this.getExternalFilesDir(null) != null) {
-
-                imagePath = this
-                        .getExternalFilesDir(null)
-                        .toString() + "/results/" + "mrz_image";
-
-            }else if(this.getFilesDir() != null){
-
-                imagePath = this
-                        .getFilesDir()
-                        .toString() + "/results/" + "mrz_image";
-
-            }
-            File fullFile = new File(imagePath);
-            //create the directory
-            fullFile.mkdirs();
-            image.save(fullFile, 100);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
-        return imagePath;
-    }
+//    protected String setupImagePath(AnylineImage image){
+//        String imagePath = "";
+//        try {
+//            if(this.getExternalFilesDir(null) != null) {
+//
+//                imagePath = this
+//                        .getExternalFilesDir(null)
+//                        .toString() + "/results/" + "mrz_image";
+//
+//            }else if(this.getFilesDir() != null){
+//
+//                imagePath = this
+//                        .getFilesDir()
+//                        .toString() + "/results/" + "mrz_image";
+//
+//            }
+//            File fullFile = new File(imagePath);
+//            //create the directory
+//            fullFile.mkdirs();
+//            image.save(fullFile, 100);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (Exception ex){
+//            ex.printStackTrace();
+//        }
+//        return imagePath;
+//    }
 
     protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String path){
 //        String path = setupImagePath(anylineOcrResult.getCutoutImage());
