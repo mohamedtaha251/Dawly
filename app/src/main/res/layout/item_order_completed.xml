@@ -13,7 +13,7 @@
             app:cardUseCompatPadding="true"
             app:cardElevation="@dimen/_5dp"
             app:cardPreventCornerOverlap="false"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="@dimen/_10dp"
             android:id="@+id/cardview_item_order_completed"
     >
 
@@ -25,10 +25,10 @@
 
             <ImageView
                     android:id="@+id/iv_oder_image_oder_completed_item"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_icon_facebook"
-                    android:layout_height="100dp"/>
+                    android:layout_height="120dp"/>
 
             <TextView
                     android:id="@+id/tv_item_order_completed_header"
@@ -52,10 +52,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10dp"
                     android:layout_marginEnd="@dimen/_10dp"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:fontFamily="sans-serif"
                     android:textStyle="normal"
-                    android:textColor="@color/dark_slate_blue"
+                    android:textColor="@color/dark_slate_blue2"
                     android:lineSpacingExtra="1sp"
                     android:text="@string/shopping_with_dawly_doesn_apos_t_only_bring_the_world_to_you_it_also_allows_you_to_save_money_on_various_fees_like_shipping"
                     app:layout_constraintTop_toBottomOf="@id/tv_item_order_completed_header"

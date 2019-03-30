@@ -11,7 +11,7 @@
             android:id="@+id/cl_balance_info_frame"
             android:layout_width="match_parent"
             android:background="@drawable/bubble_background_color"
-            android:layout_height="270dp">
+            android:layout_height="250dp">
 
         <ImageView
                 android:id="@+id/iv_user_vip_icon_account_info"
@@ -27,7 +27,7 @@
                 android:id="@+id/tv_user_name_account_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/marco_rossini"
+                android:text="@string/marco_rossini_vip"
                 android:textColor="@color/colorWhite"
                 android:textSize="25sp"
                 android:layout_marginTop="@dimen/_10dp"

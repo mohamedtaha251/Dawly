@@ -14,5 +14,7 @@ public class MyAccountActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.myaccount_background));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.my_account);
+        getSupportActionBar().setElevation(0);
+
     }
 }

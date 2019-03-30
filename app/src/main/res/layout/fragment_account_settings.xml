@@ -68,7 +68,7 @@
                 app:cardElevation="@dimen/_10dp"
                 app:cardUseCompatPadding="true"
                 app:cardBackgroundColor="#bff6ff"
-                app:cardCornerRadius="@dimen/_15dp"
+                app:cardCornerRadius="@dimen/_10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginBottom="@dimen/_30dp"
                 app:layout_constraintBottom_toBottomOf="@id/tv_add_payment_method_account_setting"

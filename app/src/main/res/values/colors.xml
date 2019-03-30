@@ -17,6 +17,7 @@
     <color name="colorHeader">#0d3144</color>
     <color name="colorLogin_1">#f6fdff</color>
     <color name="dark_slate_blue">#7d1c3661</color>
+    <color name="dark_slate_blue2">#1c3661</color>
     <color name="ice_blue">#e4faff</color>
     <color name="bright_teal">#00ffc6</color>
     <color name="tab_layout_color">#00e1ff</color>

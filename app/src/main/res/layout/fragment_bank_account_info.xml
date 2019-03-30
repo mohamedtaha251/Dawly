@@ -32,7 +32,7 @@
             app:cardElevation="@dimen/_10dp"
             app:cardUseCompatPadding="true"
             app:cardBackgroundColor="#bff6ff"
-            app:cardCornerRadius="@dimen/_15dp"
+            app:cardCornerRadius="@dimen/_10dp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="30dp"
             app:layout_constraintTop_toTopOf="@id/tv_bank_account_info_withdraw"
