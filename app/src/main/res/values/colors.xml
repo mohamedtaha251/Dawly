@@ -17,6 +17,9 @@
     <color name="colorUserStatus">#2aa799</color>
 
     <color name="colorMessagesSeparator">#94979797</color>
+    <color name="colorMessages">#08daef</color>
+    <color name="colorMessagesMe">#0174be</color>
+    <!--#08daef-->
 
 
 
