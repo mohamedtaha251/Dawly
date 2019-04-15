@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Anas on 12/9/2017.
  */
@@ -16,34 +13,29 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseEntity<T> extends BaseEntity {
 
-    @JsonProperty("Status")
-    private
-    int status;
-    @JsonProperty("Errors")
-    private
-    List<String> errorList;
-    @JsonProperty("Data")
+    @JsonProperty("success")
+    private boolean status;
+    @JsonProperty("message")
+    private  String message;
+    @JsonProperty("data")
     private T Data;
 
+    public String getMessage() {
+        return message;
+    }
 
-    public int getStatus() {
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
-    public List<String> getErrorList() {
-        if (errorList!= null)
-            return errorList;
-        else
-            return  new ArrayList<>();
-    }
-
-    public void setErrorList(List<String> errorList) {
-        this.errorList = errorList;
-    }
 
     public T getData() {
         return Data;

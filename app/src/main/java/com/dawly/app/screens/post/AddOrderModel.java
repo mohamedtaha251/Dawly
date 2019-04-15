@@ -1,11 +1,10 @@
-package com.dawly.app.screens.auth.login;
+package com.dawly.app.screens.post;
 
 import com.dawly.app.application.DawlyApp;
 import com.dawly.app.base.BaseModel;
+import com.dawly.app.entities.Order;
 import com.dawly.app.entities.ResponseEntity;
-import com.dawly.app.entities.User;
 import com.dawly.app.network.AppService;
-import com.dawly.app.utils.Constants;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -14,14 +13,14 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Muhammad on 1/1/2018.
  */
 
-public class LoginModel extends BaseModel {
-    private LoginContract.LoginPresenter loginPresenter;
+public class AddOrderModel extends BaseModel {
+    private AddOrderContract.AddOrderPresenter addOrderPresenter;
 
     private final CompositeDisposable mDisposable = new CompositeDisposable();
     private AppService appService;
 
-    public LoginModel(LoginContract.LoginPresenter loginPresenter) {
-        this.loginPresenter = loginPresenter;
+    public AddOrderModel(AddOrderContract.AddOrderPresenter addOrderPresenter) {
+        this.addOrderPresenter = addOrderPresenter;
         initAPICall();
     }
 
@@ -31,7 +30,7 @@ public class LoginModel extends BaseModel {
 
     @Override
     protected void start(Object user) {
-        mDisposable.add(appService.login(Constants.LOGIN,(User) user)
+        mDisposable.add(appService.addOrder( "",(Order) user)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::onSuccess, this::onError, this::onComplete));
@@ -49,17 +48,14 @@ public class LoginModel extends BaseModel {
 
     @Override
     public void onSuccess(Object user) {
-        ResponseEntity<User> user1 = (ResponseEntity<User>) user;
-
-            loginPresenter.onLoginSucceed((User) user1.getData());
-
-
+        ResponseEntity<Order> user1 = (ResponseEntity<Order>) user;
+        addOrderPresenter.onAddOrderSuccess(user1);
 
 
     }
 
     @Override
     public void onError(Throwable throwable) {
-        loginPresenter.onLoginError(handleOnError(throwable));
+        addOrderPresenter.onAddOrderError(handleOnError(throwable));
     }
 }

@@ -1,11 +1,14 @@
 package com.dawly.app.network;
 
 
+import com.dawly.app.entities.Order;
 import com.dawly.app.entities.ResponseEntity;
 import com.dawly.app.entities.User;
 import com.dawly.app.utils.Constants;
 import io.reactivex.Observable;
 import retrofit2.http.*;
+
+import java.util.List;
 
 /**
  * Created by Muhammad on 10/1/2017.
@@ -27,6 +30,16 @@ public interface AppService {
 
     @POST
     Observable<ResponseEntity<User>> register(@Url String url, @Body User user);
+
+
+
+    @POST(Constants.ORDERS)
+    Observable<ResponseEntity<Order>> addOrder(@Header("Authorization") String authorization,@Body Order order);
+
+
+    @GET(Constants.ORDERS)
+    Observable<ResponseEntity<List<Order>>> getOrders(@Header("Authorization") String authorization);
+
 
 
 
