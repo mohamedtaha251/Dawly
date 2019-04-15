@@ -20,6 +20,7 @@ import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.document.DocumentScanResultListener;
 import io.anyline.plugin.document.DocumentScanViewPlugin;
 import io.anyline.view.ScanView;
+import org.opencv.core.Rect;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,7 +61,8 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 		}
 
 		// initialize Anyline with the license key and a Listener that is called if a result is found
-
+//		MrzConfig mrzConfig = new MrzConfig();
+//		mrzConfig.enableFaceDetection(true);
 		final DocumentScanViewPlugin scanViewPlugin = (DocumentScanViewPlugin) documentScanView.getScanViewPlugin();
 		scanViewPlugin.getScanViewPluginConfig().setCancelOnResult(true);
 		scanViewPlugin.cancelOnResult();
@@ -242,6 +244,11 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 
 	}
 
+
+	@Override
+	public Rect getCutoutRect() {
+		return null;
+	}
 
 	@Override
 	protected AnylineBaseModuleView getScanView() {

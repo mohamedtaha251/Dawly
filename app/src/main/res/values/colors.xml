@@ -19,6 +19,9 @@
     <color name="colorMessagesSeparator">#94979797</color>
     <color name="colorMessages">#08daef</color>
     <color name="colorMessagesMe">#0174be</color>
+
+    <color name="colorOrderInactive">#d4e5f2</color>
+    <color name="colorTextOrderInactive">#d4e5f2</color>
     <!--#08daef-->
 
 
@@ -73,8 +76,17 @@
 
 
 
+    <color name="colorStatusStart">#325af0</color>
+    <color name="colorStatusEnd">#2149ce</color>
+
     <color name="colorPick">#657b8e</color>
     <color name="colorDone">#f6fdff</color>
+
+
+    <color name="colorGreen">#218231</color>
+    <color name="colorDelivered">#258591</color>
+    <color name="colorInTransit">#7c161d</color>
+    <color name="colorStatusDescription">#6a859b</color>
 
 
 </resources>

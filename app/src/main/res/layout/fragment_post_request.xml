@@ -50,6 +50,7 @@
                 android:layout_above="@+id/pageIndicatorView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                app:cardElevation="@dimen/_20dp"
                 android:background="@color/colorPost"
                 app:cardBackgroundColor="@color/colorPost">
 

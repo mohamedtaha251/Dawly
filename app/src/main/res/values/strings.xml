@@ -152,4 +152,11 @@
     <string name="new_message_notification">New Message Notification</string>
     <string name="light_theme">Light Theme</string>
     <string name="logout">Logout</string>
+    <string name="next_step">Next Step</string>
+    <string name="in_transit">In Transit</string>
+    <string name="received">Received</string>
+    <string name="placed">PLaced</string>
+    <string name="delivered">Delivered</string>
+    <string name="add_tracking">Add Tracking</string>
+    <string name="waiting_for_travels">Waiting for Travels</string>
 </resources>

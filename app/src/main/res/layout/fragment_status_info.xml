@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data></data>
+
+    <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:fillViewport="true">
+
+        <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            <include
+                    android:id="@+id/headerCard"
+                    layout="@layout/item_card_back_request"/>
+
+
+            <LinearLayout
+                    android:id="@+id/progressStatusLayout"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_below="@+id/headerCard"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp">
+
+                <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+                            android:src="@drawable/ic_rectangle_status"
+                            android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:layout_height="match_parent"/>
+
+                    <com.dawly.app.views.DawlyTextView
+                            android:text="In Transit"
+                            android:textColor="@color/colorWhite"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="-7dp"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+                            android:id="@+id/statusReceivedImg"
+                            android:src="@drawable/ic_rectangle_status_end"
+                            android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:layout_weight="1"
+                            android:tint="@color/colorOrderInactive"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"/>
+
+                    <com.dawly.app.views.DawlyTextView
+                            android:text="@string/received"
+                            android:textColor="@color/colorWhite"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="-7dp"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+
+                            android:src="@drawable/ic_rectangle_status_end"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:tint="@color/colorOrderInactive"
+                            android:layout_height="@dimen/_50dp"/>
+
+                    <com.dawly.app.views.DawlyTextView
+                            android:text="@string/placed"
+                            android:textColor="@color/colorWhite"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="-7dp"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+
+                            android:src="@drawable/ic_rectangle_status_end"
+                            android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:tint="@color/colorOrderInactive"
+                            android:layout_height="@dimen/_50dp"/>
+
+                    <com.dawly.app.views.DawlyTextView
+                            android:text="@string/delivered"
+                            android:textColor="@color/colorWhite"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                    android:id="@+id/statusCard"
+                    android:background="@color/colorCard"
+                    android:layout_below="@+id/progressStatusLayout"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/_20dp"
+                    app:cardBackgroundColor="@color/colorCard"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+                            android:id="@+id/statusCircle"
+                            android:background="@drawable/in_tranist_circle_bg"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:layout_below="@+id/nextStep"
+                            android:layout_width="@dimen/_15dp"
+                            android:layout_height="@dimen/_15dp"/>
+
+
+                    <com.dawly.app.views.DawlyTextViewBold
+                            android:id="@+id/nextStep"
+                            android:textSize="12sp"
+                            android:layout_toEndOf="@+id/statusCircle"
+                            android:text="@string/next_step"
+                            android:layout_marginTop="@dimen/_20dp"
+                            android:layout_marginStart="@dimen/_10dp"
+                            android:textColor="#d8d8d8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <com.dawly.app.views.DawlyTextViewBold
+                            android:id="@+id/itemStatus"
+                            android:textSize="18sp"
+                            android:layout_below="@+id/nextStep"
+                            android:text="@string/in_transit"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_marginStart="@dimen/_10dp"
+                            android:layout_toEndOf="@+id/statusCircle"
+                            android:textColor="@color/colorEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <com.dawly.app.views.DawlyTextViewBold
+                            android:id="@+id/itemStatusDescription"
+                            android:textSize="16sp"
+                            android:layout_below="@+id/itemStatus"
+                            android:text="Your package is currently in transit to our  traveler please upload the tracking number you received from the vendor to make easier for us to receive your package"
+                            android:layout_marginTop="@dimen/_20dp"
+                            android:layout_marginStart="@dimen/_10dp"
+                            android:layout_toEndOf="@+id/statusCircle"
+                            android:layout_marginEnd="@dimen/_10dp"
+                            android:paddingBottom="@dimen/_30dp"
+                            android:textColor="@color/colorStatusDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <com.dawly.app.views.DawlyButtonBold
+                    android:id="@+id/waitingBtn"
+                    android:background="@drawable/status_gradient_bg"
+                    android:layout_below="@+id/statusCard"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:text="@string/waiting_for_travels"
+                    android:textColor="@color/colorWhite"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <View
+                    android:layout_below="@+id/waitingBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>

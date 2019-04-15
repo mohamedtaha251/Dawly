@@ -23,6 +23,7 @@ import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.id.*;
 import io.anyline.view.ScanView;
 import io.anyline.view.ScanViewPluginConfig;
+import org.opencv.core.Rect;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -74,6 +75,11 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 		});
 
 		drivingLicenseScanView.setScanViewPlugin(scanViewPlugin);
+	}
+
+	@Override
+	public Rect getCutoutRect() {
+		return null;
 	}
 
 	@Override
