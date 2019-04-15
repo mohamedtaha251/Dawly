@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.util.Patterns;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import app.dawly.com.dawly.R;
 import app.dawly.com.dawly.databinding.ActivityLoginBinding;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.dawly.app.base.BaseActivity;
 import com.dawly.app.base.BaseContract;
 import com.dawly.app.entities.User;
@@ -38,7 +38,12 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
 
     TextInputLayout signUpEmailInput, signUpPasswordInput, confirmPasswordInput, firstNameInput, lastNameInput;
 
+    Techniques in_animation = Techniques.ZoomIn;
+    Techniques out_animation = Techniques.ZoomOut;
+    private static final int duration = 1000;
+
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
 
         //init
@@ -208,32 +213,30 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
 
     private void animateToSignIn() {
 
-        loginBinding.signUpLayout.setVisibility(View.GONE);
-        loginBinding.signInFrame.setVisibility(View.VISIBLE);
-        loginBinding.signUpLayout.startAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_down_in));
+        YoYo.with(Techniques.ZoomOut)
+                .onEnd(animator -> loginBinding.signUpLayout.setVisibility(View.GONE))
+                .duration(500)
+                .playOn(loginBinding.signUpLayout);
+
+        YoYo.with(Techniques.ZoomInUp)
+                .duration(1000)
+                .onStart(animator -> loginBinding.signInFrame.setVisibility(View.VISIBLE))
+                .playOn(loginBinding.signInFrame);
 
     }
 
     private void animateToSignUp() {
-        loginBinding.signUpLayout.setVisibility(View.VISIBLE);
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.slide_up_in);
-        animation.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
 
-            }
+        YoYo.with(Techniques.ZoomOut)
+                .duration(500)
+                .onEnd(animator -> loginBinding.signInFrame.setVisibility(View.GONE))
+                .playOn(loginBinding.signInFrame);
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                loginBinding.signInFrame.setVisibility(View.GONE);
-            }
+        YoYo.with(Techniques.ZoomInUp)
+                .duration(duration)
+                .onStart(animator -> loginBinding.signUpLayout.setVisibility(View.VISIBLE))
+                .playOn(loginBinding.signUpLayout);
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-        loginBinding.signUpLayout.startAnimation(animation);
     }
 
     private void signUp() {
