@@ -20,7 +20,14 @@
                 android:background="@drawable/tab_gradient_bg"
                 app:tabIndicatorColor="@color/colorTabSelectedIndicator"
                 app:tabIndicatorHeight="@dimen/_5dp"
+                android:elevation="10dp"
+                app:tabGravity="fill"
+                app:tabTextAppearance="@style/MyCustomTextAppearance"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:tabIndicatorAnimationDuration="500"
+                app:tabIndicatorGravity="bottom"
                 app:tabTextColor="@color/colorTabTextUnSelectedIndicator"
 
                 android:layout_width="match_parent"
@@ -30,12 +37,12 @@
                     android:text="@string/orders"
 
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent"/>
 
             <android.support.design.widget.TabItem
                     android:text="@string/my_orders"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent"/>
         </com.dawly.app.views.DawlyTabLayout>
 
 
