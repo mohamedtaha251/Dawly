@@ -25,23 +25,35 @@
                 android:layout_height="wrap_content"/>
 
         <FrameLayout
-                android:background="@color/colorWhite"
+                android:background="@android:color/transparent"
                 android:id="@+id/container"
                 android:layout_below="@+id/appBar"
-                android:layout_above="@+id/navigation"
+                android:layout_above="@+id/navCard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
-        <com.dawly.app.views.BottomNavigation
-                android:id="@+id/navigation"
+        <android.support.v7.widget.CardView
+                android:id="@+id/navCard"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="0dp"
-                android:layout_marginStart="0dp"
-                android:visibility="gone"
-                android:background="?android:attr/windowBackground"
+                app:cardCornerRadius="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/colorNav"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
                 android:layout_alignParentBottom="true"
-                app:menu="@menu/navigation"/>
+                android:layout_height="wrap_content">
+
+            <com.dawly.app.views.BottomNavigation
+                    android:id="@+id/navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:itemIconTint="@color/colorWhite"
+                    app:itemTextColor="@color/colorWhite"
+                    android:visibility="visible"
+                    android:background="@color/colorNav"
+                    app:menu="@menu/navigation"/>
+        </android.support.v7.widget.CardView>
 
     </RelativeLayout>
 </layout>

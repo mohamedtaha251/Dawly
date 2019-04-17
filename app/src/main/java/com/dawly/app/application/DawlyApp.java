@@ -52,7 +52,7 @@ public class DawlyApp extends Application implements HasActivityInjector, HasFra
                 .build()
                 .inject(this);
 
-        changeLanguage();
+//        changeLanguage();
     }
 
     public void changeLanguage() {

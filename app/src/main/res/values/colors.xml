@@ -87,6 +87,7 @@
     <color name="colorDelivered">#258591</color>
     <color name="colorInTransit">#7c161d</color>
     <color name="colorStatusDescription">#6a859b</color>
+    <color name="colorNav">#67CCE0</color>
 
 
 </resources>

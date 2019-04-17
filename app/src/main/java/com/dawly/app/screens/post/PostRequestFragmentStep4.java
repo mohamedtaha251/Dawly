@@ -10,13 +10,21 @@ import android.view.ViewGroup;
 import app.dawly.com.dawly.R;
 import app.dawly.com.dawly.databinding.FragmentPostRequest4Binding;
 import com.dawly.app.base.BaseFragment;
+import com.dawly.app.entities.Order;
+import com.dawly.app.entities.ResponseEntity;
+import com.dawly.app.entities.ValidationError;
 import com.dawly.app.views.DawlyButtonBold;
 
-public class PostRequestFragmentStep4 extends BaseFragment implements View.OnClickListener {
+import javax.inject.Inject;
+import java.util.List;
+
+public class PostRequestFragmentStep4 extends BaseFragment implements View.OnClickListener,AddOrderContract.AddOrderInteractor {
 
     private FragmentPostRequest4Binding fragmentPostRequestBinding;
-
+    @Inject
+    AddOrderPresenterImpl addOrderPresenter;
     DawlyButtonBold doneBtn;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -33,5 +41,20 @@ public class PostRequestFragmentStep4 extends BaseFragment implements View.OnCli
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FlightProcessedFragment()).commit();
                 break;
         }
+    }
+
+    @Override
+    public void showValidationErrors(List<ValidationError> validationErrorList) {
+
+    }
+
+    @Override
+    public void onAddOrderError(String message) {
+
+    }
+
+    @Override
+    public void onAddOrderSuccess(ResponseEntity<Order> responseEntity) {
+
     }
 }

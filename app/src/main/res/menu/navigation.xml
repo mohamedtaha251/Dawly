@@ -4,23 +4,28 @@
     <item
             android:id="@+id/navigation_orders"
             android:icon="@drawable/ic_dashboard_black_24dp"
+            android:iconTint="@color/colorWhite"
             android:title="@string/orders"/>
 
     <item
             android:id="@+id/navigation_flights"
             android:icon="@drawable/ic_icon_flights"
+            android:iconTint="@color/colorWhite"
             android:title="@string/flights"/>
 
     <item
             android:id="@+id/navigation_add_orders"
+            android:iconTint="@color/colorWhite"
             android:icon="@drawable/ic_add_order"
             android:title="@string/add"/>
     <item
             android:id="@+id/navigation_messages"
+            android:iconTint="@color/colorWhite"
             android:icon="@drawable/ic_icon_message"
             android:title="@string/title_notifications"/>
     <item
             android:id="@+id/navigation_menu"
             android:icon="@drawable/ic_icon_menu"
+            android:iconTint="@color/colorWhite"
             android:title="@string/menu"/>
 </menu>
