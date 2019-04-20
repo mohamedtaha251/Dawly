@@ -70,7 +70,6 @@
     <string name="the_weight_available">The Weight Available</string>
     <string name="items_unable_to_carry">Items unable to carry</string>
     <string name="date">Date</string>
-    <string name="close">Close</string>
     <string name="send_request">Send Request</string>
     <string name="weight_available">Weight Available:</string>
     <string name="items_unable">Items Unable \n to carry</string>
@@ -159,4 +158,6 @@
     <string name="delivered">Delivered</string>
     <string name="add_tracking">Add Tracking</string>
     <string name="waiting_for_travels">Waiting for Travels</string>
+    <string name="close">Close</string>
+    <string name="add_to_your_luggage">Add to your luggage</string>
 </resources>
