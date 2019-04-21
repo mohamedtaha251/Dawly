@@ -189,9 +189,54 @@
         could be earning up to 4x your trip cost.
     </string>
     <string name="tutorial_2_header">Shop with Dawly and save money.</string>
-    <string name="tutorial_2_body">Shopping with Dawly doesnt only bring the world to you, It also allows you to save money on various fees like Shipping, Taxes, Customs, Duties, Brokerage fees, etc..</string>
+    <string name="tutorial_2_body">Shopping with Dawly doesnt only bring the world to you, It also allows you to save
+        money on various fees like Shipping, Taxes, Customs, Duties, Brokerage fees, etc..
+    </string>
     <string name="tutorial_3_header">Travel with Dawly and make money.</string>
-    <string name="tutorial_3_body">Traveling with Dawly gives you the opportunity of making money while traveling, By earning a flat fee for each pound of free weight in your luggage you not only could be traveling for FREE, You could be earning up to 4x your trip cost.</string>
+    <string name="tutorial_3_body">Traveling with Dawly gives you the opportunity of making money while traveling, By
+        earning a flat fee for each pound of free weight in your luggage you not only could be traveling for FREE, You
+        could be earning up to 4x your trip cost.
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="account_info">Account Info</string>
+    <string name="balance_info">Balance Info</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="my_account">My Account</string>
+    <string name="marco_rossini_vip">Marco Rossini \n VIP</string>
+    <string name="marco_rossini">Marco Rossini</string>
+    <string name="orders_completed">Orders Complated</string>
+    <string name="shipments_carried">Shipments Carried</string>
+    <string name="jan_10_hanbag_laptop">JAN 10 - Hanbag, Laptop</string>
+    <string name="shopping_with_dawly_doesn_apos_t_only_bring_the_world_to_you_it_also_allows_you_to_save_money_on_various_fees_like_shipping">
+        Shopping with Dawly doesn\'t only bring the world to you, It also allows you to save money on various fees like
+        Shipping
+    </string>
+    <string name="orders_in_progress">Orders in progress</string>
+    <string name="_50dolar">$50</string>
+    <string name="jan_10_hanbag_laptop_capital">JAN 10 - Hanbag, Laptop</string>
+    <string name="withdraw">WITHDRAW</string>
+    <string name="_withdraw">Withdraw</string>
+    <string name="total_balance">Total Balance</string>
+    <string name="view_more"><![CDATA[VIEW MORE >]]></string>
+    <string name="_125">+$125</string>
+    <string name="payment_history">Payment History</string>
+    <string name="pending_orders">Pending Orders</string>
+    <string name="withdraw_to_bank_account">Withdraw To Bank Account</string>
+    <string name="withdraw_to_paypal_account">Withdraw To PayPal Account</string>
+    <string name="amount_and_currency">Amount and currency</string>
+    <string name="bank_account_country">Bank Account Country</string>
+    <string name="bank_account_info">Bank Account Info</string>
+    <string name="enter_amount_what_you_want_to_withdraw">Enter Amount What You Want To Withdraw</string>
+    <string name="done">Done</string>
+    <string name="name_of_bank">Name of Bank</string>
+    <string name="beneficiary_name">Beneficiary Name</string>
+    <string name="iban_number">Account Number/ IBAN Number</string>
+    <string name="routing_number">Routing Number</string>
+    <string name="swift_code_bin">Swift Code / BIN</string>
+    <string name="paypal_account_info">PayPal Account Info</string>
+    <string name="add_payment_method">ADD PAYMENT METHOD</string>
 
 
 </resources>

@@ -1,6 +1,6 @@
 package com.dawly.app.screens.tutorial;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -8,9 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import app.dawly.com.dawly.R;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.dawly.app.screens.myaccount.activity.MyAccountActivity;
 
 public class TutorialActivity extends AppCompatActivity {
     ViewPager viewPager;
@@ -40,6 +38,8 @@ public class TutorialActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (viewPager.getCurrentItem() < 2)
                     viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
+                else
+                    startActivity(new Intent(TutorialActivity.this, MyAccountActivity.class));
 
             }
         });
@@ -47,7 +47,7 @@ public class TutorialActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(TutorialActivity.this, MyAccountActivity.class));
             }
         });
 

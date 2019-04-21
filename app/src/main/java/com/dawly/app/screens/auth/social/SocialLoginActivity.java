@@ -10,6 +10,7 @@ import com.dawly.app.entities.SocialUser;
 import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.screens.auth.login.LoginActivity;
+import com.dawly.app.screens.myaccount.activity.MyAccountActivity;
 import com.dawly.app.screens.tutorial.TutorialActivity;
 import com.dawly.app.utils.GoogleHelper;
 import com.dawly.app.utils.Toaster;
@@ -61,7 +62,9 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
         btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.loginWithFacebook(SocialLoginActivity.this, SocialLoginActivity.this, callbackManager);
+               // presenter.loginWithFacebook(SocialLoginActivity.this, SocialLoginActivity.this, callbackManager);
+                startActivity(new Intent(SocialLoginActivity.this, MyAccountActivity.class));
+
             }
         });
 

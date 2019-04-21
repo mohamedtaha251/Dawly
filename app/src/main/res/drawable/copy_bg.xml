@@ -6,7 +6,7 @@
     <!--android:width="156dp" />-->
     <solid android:color="@android:color/transparent" />
     <stroke android:color="@color/colorForget" android:width="1dp"/>
-    <corners android:radius="@dimen/_20dp" />
+    <corners android:radius="@dimen/_10dp" />
     <padding
         android:bottom="@dimen/_5dp"
         android:left="@dimen/_5dp"

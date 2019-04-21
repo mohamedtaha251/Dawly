@@ -51,9 +51,24 @@
     <color name="colorPost">#bff6ff</color>
     <color name="colorHeader">#0d3144</color>
     <color name="colorLogin_1">#f6fdff</color>
-    <color name="dark_slate_blue">#1c3661</color>
+    <color name="dark_slate_blue">#7d1c3661</color>
+    <color name="dark_slate_blue2">#1c3661</color>
     <color name="ice_blue">#e4faff</color>
     <color name="bright_teal">#00ffc6</color>
+    <color name="tab_layout_color">#00e1ff</color>
+    <color name="seperator_color">#d8d8d8</color>
+    <color name="header_black">#1d1e1f</color>
+    <color name="body_blue">#008491</color>
+    <color name="dark_blue_grey">#142747</color>
+    <color name="dark_mint">#5dcb6b</color>
+    <color name="very_light_blue">#d6f9ff</color>
+    <color name="ice_blue_two">#f6fdff</color>
+    <color name="bright_aqua_two">#00f3e2</color>
+    <color name="pale_sky_blue">#c2bff6ff</color>
+    <color name="lavender_blue">#7d899ff6</color>
+    <color name="black_50">#80000000</color>
+    <color name="dark_slate_blue_two">#16334e</color>
+    <color name="pine_green">#0d3144</color>
 
 
     <color name="colorInactive"> #9b9b9b</color>

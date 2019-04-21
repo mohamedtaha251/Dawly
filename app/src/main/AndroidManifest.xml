@@ -74,7 +74,9 @@
         </activity>
         <activity android:name="com.dawly.app.screens.tutorial.TutorialActivity">
         </activity>
-        <activity android:name="com.dawly.app.screens.scan.scanviewresult.ScanViewResultActivity"/>
+        <activity android:name="com.dawly.app.screens.myaccount.activity.MyAccountActivity"
+                  android:windowSoftInputMode="adjustPan">
+        </activity>
     </application>
 
 </manifest>

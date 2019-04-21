@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/withdraw_graph"
+            app:startDestination="@id/withdrawOptionFragment">
+
+    <fragment android:id="@+id/withdrawOptionFragment"
+              android:name="com.dawly.app.screens.withdraw.withdrawOption.WithdrawOptionFragment"
+              android:label="fragment_withdraw_option" tools:layout="@layout/fragment_withdraw_option"/>
+    <fragment android:id="@+id/withdrawBankFragment" android:name="com.dawly.app.screens.withdraw.withdrawBank.WithdrawBankFragment"
+              android:label="fragment_withdraw_bank" tools:layout="@layout/fragment_withdraw_bank"/>
+    <fragment android:id="@+id/withdrawPaypal" android:name="com.dawly.app.screens.withdraw.withdrawPaypal.WithdrawPaypal"
+              android:label="fragment_withdraw_paypal" tools:layout="@layout/fragment_withdraw_paypal"/>
+    <fragment android:id="@+id/bankAmountCurrencyFragment" android:name="com.dawly.app.screens.withdraw.BankAmountCurrency.BankAmountCurrencyFragment"
+              android:label="fragment_bank_amount_currency" tools:layout="@layout/fragment_bank_amount_currency"/>
+    <fragment android:id="@+id/bankAccountInfoFragment" android:name="com.dawly.app.screens.withdraw.BankAccountInfo.BankAccountInfoFragment"
+              android:label="fragment_bank_account_info" tools:layout="@layout/fragment_bank_account_info"/>
+    <fragment android:id="@+id/paypalAmountCurrencyFragment" android:name="com.dawly.app.screens.withdraw.paypalAmountCurrency.PaypalAmountCurrencyFragment"
+              android:label="fragment_paypal_amount_currency" tools:layout="@layout/fragment_paypal_amount_currency"/>
+    <fragment android:id="@+id/paypalAccuntInfoFragment" android:name="com.dawly.app.screens.withdraw.paypalAccountInfo.PaypalAccuntInfoFragment"
+              android:label="fragment_paypal_accunt_info" tools:layout="@layout/fragment_paypal_accunt_info"/>
+</navigation>

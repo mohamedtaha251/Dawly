@@ -66,7 +66,7 @@ public class Tutorial {
 
     public static List<Tutorial> getDawlyTutorials() {
         List<Tutorial> dawlyTutorials = new ArrayList<>();
-        dawlyTutorials.add(new Tutorial(1, R.mipmap.tutorial_1, R.string.tutorial_1_header, R.string.tutorial_1_body));
+        dawlyTutorials.add(new Tutorial(1, R.drawable.ic_illustration2, R.string.tutorial_1_header, R.string.tutorial_1_body));
         dawlyTutorials.add(new Tutorial(2, R.mipmap.tutorial_2, R.string.tutorial_2_header, R.string.tutorial_2_body));
         dawlyTutorials.add(new Tutorial(3, R.mipmap.tutorial_3, R.string.tutorial_3_header, R.string.tutorial_3_body));
 

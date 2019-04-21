@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f6fdff"
+>
+
+    <TextView
+            android:id="@+id/tv_bank_account_info_withdraw"
+            android:layout_width="match_parent"
+            android:text="@string/bank_account_info"
+            android:gravity="center"
+            android:paddingTop="@dimen/_15dp"
+            android:paddingBottom="@dimen/_20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginStart="@dimen/_60dp"
+            android:layout_marginEnd="@dimen/_60dp"
+            android:background="@drawable/withdraw_header_text_view"
+            android:textColor="@color/colorHeader"
+            android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/card_bank_account_info_wirhdraw"
+            android:layout_width="match_parent"
+            app:cardElevation="@dimen/_10dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#bff6ff"
+            app:cardCornerRadius="@dimen/_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="@id/tv_bank_account_info_withdraw"
+            android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+                android:background="@drawable/flag_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/iv_icon_bank_account_info_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:src="@drawable/ic_iconfinder_bank_1312825"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/tv_account_number_bank_account_info_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_50"
+                    app:layout_constraintTop_toTopOf="@id/iv_icon_bank_account_info_withdraw"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_icon_bank_account_info_withdraw"
+                    app:layout_constraintStart_toEndOf="@id/iv_icon_bank_account_info_withdraw"
+                    android:text="XXXX XXX XXXX XX48"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/tv_enter_amount_bank_account_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_50"
+                    android:text="@string/enter_amount_what_you_want_to_withdraw"
+                    app:layout_constraintStart_toStartOf="@id/iv_icon_bank_account_info_withdraw"
+                    app:layout_constraintTop_toBottomOf="@id/iv_icon_bank_account_info_withdraw"
+                    android:layout_marginTop="@dimen/_15dp"
+            />
+
+            <ImageView
+                    android:id="@+id/iv_arrow_dawn_bank_account_info"
+                    android:src="@drawable/ic_arrow_down"
+                    app:layout_constraintStart_toStartOf="@id/iv_icon_bank_account_info_withdraw"
+                    app:layout_constraintTop_toBottomOf="@id/tv_enter_amount_bank_account_info"
+                    android:layout_marginStart="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <View
+                    android:id="@+id/view_seperator_bank_account_info"
+                    android:layout_width="1.5dp"
+                    android:background="@color/dark_blue_grey"
+                    app:layout_constraintStart_toEndOf="@id/iv_arrow_dawn_bank_account_info"
+                    app:layout_constraintTop_toTopOf="@id/iv_arrow_dawn_bank_account_info"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_arrow_dawn_bank_account_info"
+                    android:layout_marginStart="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"/>
+
+            <TextView
+                    android:id="@+id/tv_withdraw_value_account_info_number"
+                    android:text="1, 893.45"
+                    android:textColor="@color/dark_blue_grey"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    app:layout_constraintStart_toEndOf="@id/view_seperator_bank_account_info"
+                    app:layout_constraintTop_toTopOf="@id/iv_arrow_dawn_bank_account_info"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_arrow_dawn_bank_account_info"
+                    android:layout_marginStart="@dimen/_30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:id="@+id/btn_done_bank_account_info"
+                    android:background="@drawable/flag_transparent"
+                    android:text="@string/done"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textColor="@color/dark_slate_blue_two"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="80dp"
+                    android:letterSpacing="0.02"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_arrow_dawn_bank_account_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

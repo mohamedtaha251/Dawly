@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_width="match_parent">
+
+    <TextView
+            android:id="@+id/tv_title_item_shipment_carried"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jan_10_hanbag_laptop_capital"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="@color/body_blue"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="10sp"
+    />
+
+    <TextView
+            android:id="@+id/tv_price_item_shipment_carried"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="@color/body_blue"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="-1sp"
+            tools:text="@string/_50dolar"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_flight_status_shipment_carried"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_item_shipment_carried"/>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -8,10 +8,12 @@ import android.util.Patterns;
 import android.view.View;
 import app.dawly.com.dawly.R;
 import app.dawly.com.dawly.databinding.ActivityLoginBinding;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.dawly.app.base.BaseActivity;
 import com.dawly.app.base.BaseContract;
-import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.User;
+import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.screens.tutorial.TutorialActivity;
 import com.dawly.app.utils.Toaster;
@@ -36,25 +38,29 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
 
     TextInputLayout signUpEmailInput, signUpPasswordInput, confirmPasswordInput, firstNameInput, lastNameInput;
 
+    Techniques in_animation = Techniques.ZoomIn;
+    Techniques out_animation = Techniques.ZoomOut;
+    private static final int duration = 1000;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
 
         //init
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
         loginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-        etSignUpFirstName = loginBinding.signUpFrame.signupFirstName;
-        etSignUpLastName = loginBinding.signUpFrame.etSignUpLastName;
-        etSignUpPassword = loginBinding.signUpFrame.signupPassword;
-        etPhoneNumber = loginBinding.signUpFrame.etPhoneNumber;
-        etSignUpConfirmPassword = loginBinding.signUpFrame.signupConfirmPassword;
-        etSignUpEmail = loginBinding.signUpFrame.signupEmail;
-        signUpEmailInput = loginBinding.signUpFrame.signupEmailInput;
-        signUpPasswordInput = loginBinding.signUpFrame.signupPasswordInput;
-        confirmPasswordInput = loginBinding.signUpFrame.signupConfirmPasswordInput;
-        firstNameInput = loginBinding.signUpFrame.signupFirstNameInput;
-        lastNameInput = loginBinding.signUpFrame.lastNameInput;
+        etSignUpFirstName = loginBinding.signupFirstName;
+        etSignUpLastName = loginBinding.etSignUpLastName;
+        etSignUpPassword = loginBinding.signupPassword;
+        etPhoneNumber = loginBinding.etPhoneNumber;
+        etSignUpConfirmPassword = loginBinding.signupConfirmPassword;
+        etSignUpEmail = loginBinding.signupEmail;
+        signUpEmailInput = loginBinding.signupEmailInput;
+        signUpPasswordInput = loginBinding.signupPasswordInput;
+        confirmPasswordInput = loginBinding.signupConfirmPasswordInput;
+        firstNameInput = loginBinding.signupFirstNameInput;
+        lastNameInput = loginBinding.lastNameInput;
 
 
         loginBinding.setClickListener(this);
@@ -62,7 +68,6 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
         getSupportActionBar().hide();
 
     }
-
 
     private boolean validateLogin() {
         if (loginBinding.loginEmail.getText().toString().equals("")) {
@@ -151,7 +156,6 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
         return true;
     }
 
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -195,18 +199,45 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
                 signUp();
                 break;
             case R.id.btn_switch_to_sign_up:
-                loginBinding.signInFrame.setVisibility(View.GONE);
-                loginBinding.signUpFrame.signUpLayout.setVisibility(View.VISIBLE);
+                animateToSignUp();
                 loginBinding.loginBtn.setText(R.string.sign_up);
+
                 break;
             case R.id.btn_switch_to_sign_in:
-                loginBinding.signInFrame.setVisibility(View.VISIBLE);
-                loginBinding.signUpFrame.signUpLayout.setVisibility(View.GONE);
+                animateToSignIn();
+
                 loginBinding.loginBtn.setText(R.string.sign_in);
                 break;
         }
     }
 
+    private void animateToSignIn() {
+
+        YoYo.with(Techniques.ZoomOut)
+                .onEnd(animator -> loginBinding.signUpLayout.setVisibility(View.GONE))
+                .duration(500)
+                .playOn(loginBinding.signUpLayout);
+
+        YoYo.with(Techniques.ZoomInUp)
+                .duration(1000)
+                .onStart(animator -> loginBinding.signInFrame.setVisibility(View.VISIBLE))
+                .playOn(loginBinding.signInFrame);
+
+    }
+
+    private void animateToSignUp() {
+
+        YoYo.with(Techniques.ZoomOut)
+                .duration(500)
+                .onEnd(animator -> loginBinding.signInFrame.setVisibility(View.GONE))
+                .playOn(loginBinding.signInFrame);
+
+        YoYo.with(Techniques.ZoomInUp)
+                .duration(duration)
+                .onStart(animator -> loginBinding.signUpLayout.setVisibility(View.VISIBLE))
+                .playOn(loginBinding.signUpLayout);
+
+    }
 
     private void signUp() {
 
@@ -223,7 +254,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
             }
         }
 
-        if (loginBinding.signUpFrame.signUpLayout.getVisibility() == View.VISIBLE) {
+        if (loginBinding.signUpLayout.getVisibility() == View.VISIBLE) {
             if (validateSignup()) {
                 //collect data from UI
                 String fname = etSignUpFirstName.getText().toString();
@@ -243,6 +274,5 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
             }
         }
     }
-
 
 }
