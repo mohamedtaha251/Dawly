@@ -1,10 +1,12 @@
-package com.dawly.app.screens.auth.login;
+package com.dawly.app.screens.auth.social;
 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import com.dawly.app.entities.SocialUser;
+import com.dawly.app.entities.response.LoginResponse;
+import com.dawly.app.entities.response.SignUpResponse;
 import com.facebook.*;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
@@ -13,23 +15,63 @@ import org.json.JSONObject;
 import java.util.Arrays;
 
 /**
- * Created by Muhammad on 12/8/2017.
+ * Created by Muhammad on 1/1/2018.
  */
 
-public class SocialMediaPresenter {
+public class SocialLoginPresenterImpl implements SocialLoginContract.SocialLoginPresenter {
+
+    private static final String EMAIL = "email", PUBLIC_PROFILE = "public_profile";
     CallbackManager callbackManager;
-    private FacebookLoginListener facebookLoginListener;
-
-    private Context context;
 
 
-    public SocialMediaPresenter(Context context, FacebookLoginListener facebookLoginListener, CallbackManager callbackManager) {
-        this.context = context;
-        this.callbackManager = callbackManager;
-        this.facebookLoginListener = facebookLoginListener;
+    private SocialLoginContract.SocialLoginInteractor interactor;
+    private SocialLoginModel model;
+
+    public SocialLoginPresenterImpl(SocialLoginContract.SocialLoginInteractor loginInteractor) {
+        this.interactor = loginInteractor;
+        model = new SocialLoginModel(this);
     }
 
-    public void registerFaceBookCallback() {
+
+    @Override
+    public void onLoginFacebookSucceed(LoginResponse loginResponse) {
+        interactor.loginFacebookSuccess(loginResponse);
+    }
+
+    @Override
+    public void onLoginGoogleSucceed(SignUpResponse signUpResponse) {
+        interactor.loginGoogleSuccess(signUpResponse);
+    }
+
+    @Override
+    public void onLoginFacebookError(String message) {
+        interactor.loginFacebookError(message);
+
+    }
+
+    @Override
+    public void onLoginGoogleError(String message) {
+        interactor.loginGoogleError(message);
+    }
+
+
+    @Override
+    public void loginWithGoogle() {
+    }
+
+
+    @Override
+    public void loginWithFacebook(Context context, FacebookLoginListener facebookLoginListener, CallbackManager callbackManager) {
+
+        this.callbackManager = callbackManager;
+
+        LoginManager.getInstance().logInWithReadPermissions((Activity) context, Arrays.asList(PUBLIC_PROFILE, EMAIL));
+
+        registerFaceBookCallback(facebookLoginListener, callbackManager);
+
+    }
+
+    public void registerFaceBookCallback(FacebookLoginListener facebookLoginListener, CallbackManager callbackManager) {
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
@@ -37,7 +79,9 @@ public class SocialMediaPresenter {
                         Log.e("Success facebook ", loginResult.getAccessToken().toString());
                         // App code
 
-                        requestData(loginResult);
+                        //requestData(loginResult, facebookLoginListener);
+                        interactor.loginFacebookSuccess(null);
+
                     }
 
                     @Override
@@ -53,16 +97,8 @@ public class SocialMediaPresenter {
                     }
                 });
     }
-    private static final String EMAIL = "email",PUBLIC_PROFILE = "public_profile";
 
-    public void loginWithFacebook() {
-        LoginManager.getInstance().logInWithReadPermissions((Activity) context, Arrays.asList(PUBLIC_PROFILE,EMAIL));
-    }
-
-
-
-
-    public void requestData(LoginResult loginResult) {
+    public void requestData(LoginResult loginResult, FacebookLoginListener facebookLoginListener) {
         Log.e("requesting", "data");
         final GraphRequest request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), (object, response) -> {
 
@@ -110,9 +146,12 @@ public class SocialMediaPresenter {
         request.executeAsync();
     }
 
+
     public interface FacebookLoginListener {
-        void  facebookLoginSuccess(SocialUser socialLogin, String email);
-        void  facebookLoginError(FacebookException exception);
+        void facebookLoginSuccess(SocialUser socialLogin, String email);
+
+        void facebookLoginError(FacebookException exception);
     }
+
 
 }

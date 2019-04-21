@@ -28,7 +28,7 @@ public class BaseActivity extends DaggerAppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-//        handleLanguage();
+        handleLanguage(Constants.ENGLISH);
     }
 
 

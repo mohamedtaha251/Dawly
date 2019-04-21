@@ -24,8 +24,8 @@ public class DawlyButtonMontserratBold extends android.support.v7.widget.AppComp
         initFontAndChange( context);
     }
 
-    private void initFontAndChange(Context context) {
+         private void initFontAndChange(Context context) {
 
-        this.setTypeface(Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM));
+             this.setTypeface(Typeface.createFromAsset(context.getAssets(), MONTSERRAT_MEDIUM));
     }
 }

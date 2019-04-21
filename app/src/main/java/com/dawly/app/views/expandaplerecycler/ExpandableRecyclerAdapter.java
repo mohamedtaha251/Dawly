@@ -339,7 +339,7 @@ public abstract class ExpandableRecyclerAdapter<PVH extends ParentViewHolder, CV
     /**
      * Expands all parents in a range of indices in the list of parents.
      *
-     * @param startParentIndex The index at which to to start expanding parents
+     * @param startParentIndex The index at which to to loginWithFacebook expanding parents
      * @param parentCount The number of parents to expand
      */
     public void expandParentRange(int startParentIndex, int parentCount) {
@@ -396,7 +396,7 @@ public abstract class ExpandableRecyclerAdapter<PVH extends ParentViewHolder, CV
     /**
      * Collapses all parents in a range of indices in the list of parents.
      *
-     * @param startParentIndex The index at which to to start collapsing parents
+     * @param startParentIndex The index at which to to loginWithFacebook collapsing parents
      * @param parentCount The number of parents to collapse
      */
     public void collapseParentRange(int startParentIndex, int parentCount) {

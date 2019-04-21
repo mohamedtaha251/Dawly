@@ -24,11 +24,11 @@ public class ChangeMobile extends BaseEntity {
 //    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 //
 //
-//    public Integer getStatus() {
+//    public Integer getMessage() {
 //        return status;
 //    }
 //
-//    public void setStatus(Integer status) {
+//    public void setMessage(Integer status) {
 //        this.status = status;
 //    }
 //

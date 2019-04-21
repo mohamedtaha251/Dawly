@@ -6,8 +6,7 @@ import java.io.Serializable;
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BaseEntity    implements Serializable {
-
+public class BaseEntity implements Serializable {
 
 
 }

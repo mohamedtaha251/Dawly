@@ -51,6 +51,11 @@
     <color name="colorPost">#bff6ff</color>
     <color name="colorHeader">#0d3144</color>
     <color name="colorLogin_1">#f6fdff</color>
+    <color name="dark_slate_blue">#1c3661</color>
+    <color name="ice_blue">#e4faff</color>
+    <color name="bright_teal">#00ffc6</color>
+
+
     <color name="colorInactive"> #9b9b9b</color>
     <color name="colorActive"> #34828c</color>
     <color name="colorActive1">#56c7c7</color>

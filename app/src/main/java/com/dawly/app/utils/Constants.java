@@ -8,6 +8,8 @@ public class Constants {
    //Production
     public static final String BASE_URL = "http://99.80.156.143/website/api/";
     public static final String BEARER ="bearer ";
+    public static final String LOGIN = "users/login.php";
+    public static final String CREATE_USER = "users/create_user.php";
 
     public static final String LOGIN = "Account/login";
     public static final String ORDERS = "orders";
@@ -29,6 +31,11 @@ public class Constants {
     public static final String ROBOTO_MEDIUM = "fonts/roboto_medium.ttf";
     public static final String ROBOTO_BOLD = "fonts/roboto_bold.ttf";
     public static final String MONTSERRAT_MEDIUM = "fonts/montserrat_alternates_medium.otf";
+
+
+
+
+
     public static final int ARABIC = 1;
  public static final String ARABIC_KEY = "ar";
  public static final int ENGLISH = 2;

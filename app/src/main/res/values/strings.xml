@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Dawly</string>
+    <string name="facebook_app_id">397168864377979</string>
+    <string name="fb_login_protocol_scheme">fb397168864377979</string>
+
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -18,9 +21,13 @@
     <string name="step_2">Step 2</string>
     <string name="login">Login</string>
     <string name="sign_in_small">Sign In</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="email">Email</string>
     <string name="forget_pass">Forget the password?</string>
+    <string name="phone_number">Phone Number</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="i_agree">I agree to Dawly\'s terms of \n Service and Privacy Policy</string>
@@ -160,4 +167,31 @@
     <string name="waiting_for_travels">Waiting for Travels</string>
     <string name="close">Close</string>
     <string name="add_to_your_luggage">Add to your luggage</string>
+    <string name="email_is_required">email is required</string>
+    <string name="invalid_email">invalid email</string>
+    <string name="password_is_required">password is required</string>
+    <string name="first_name_is_required">First name is required</string>
+    <string name="last_name_is_required">Last name is required</string>
+    <string name="first_name_is_too_short">First name is too short</string>
+    <string name="last_name_is_too_short">Last name is too short</string>
+    <string name="at_least_6_digit">at least 6 digit</string>
+    <string name="at_least_one_lower_case_letter">at least one lower case letter</string>
+    <string name="at_least_one_upper_case_letter">at least one uppear case letter</string>
+    <string name="password_is_not_matched">Password is not matched</string>
+    <string name="phone_is_required">phone is required</string>
+    <string name="invalid_phone">phone is required</string>
+    <string name="user_not_Found">User not Found</string>
+    <string name="loged_in_with_facebook_succefully">loged in with facebook successfully</string>
+    <string name="skip">Skip</string>
+    <string name="tutorial_1_header">What is Dawly?</string>
+    <string name="tutorial_1_body">Traveling with Dawly gives you the opportunity of making money while traveling, By
+        earning a flat fee for each pound of free weight in your luggage you not only could be traveling for FREE, You
+        could be earning up to 4x your trip cost.
+    </string>
+    <string name="tutorial_2_header">Shop with Dawly and save money.</string>
+    <string name="tutorial_2_body">Shopping with Dawly doesnt only bring the world to you, It also allows you to save money on various fees like Shipping, Taxes, Customs, Duties, Brokerage fees, etc..</string>
+    <string name="tutorial_3_header">Travel with Dawly and make money.</string>
+    <string name="tutorial_3_body">Traveling with Dawly gives you the opportunity of making money while traveling, By earning a flat fee for each pound of free weight in your luggage you not only could be traveling for FREE, You could be earning up to 4x your trip cost.</string>
+
+
 </resources>
