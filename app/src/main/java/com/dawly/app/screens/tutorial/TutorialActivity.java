@@ -2,26 +2,26 @@ package com.dawly.app.screens.tutorial;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import app.dawly.com.dawly.R;
-import com.dawly.app.screens.myaccount.activity.MyAccountActivity;
+import com.dawly.app.screens.auth.social.SocialLoginActivity;
+import com.dawly.app.views.DawlyButton;
+import com.rd.PageIndicatorView;
 
 public class TutorialActivity extends AppCompatActivity {
     ViewPager viewPager;
-    TabLayout indicator;
-    Button btnNext;
-    Button btnSkip;
+    PageIndicatorView indicator;
+    DawlyButton btnNext;
+    DawlyButton btnSkip;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
 
         viewPager = findViewById(R.id.viewPager);
@@ -31,7 +31,7 @@ public class TutorialActivity extends AppCompatActivity {
 
 
         viewPager.setAdapter(new SliderAdapter(this, Tutorial.getDawlyTutorials()));
-        indicator.setupWithViewPager(viewPager, true);
+        indicator.setViewPager(viewPager);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +39,7 @@ public class TutorialActivity extends AppCompatActivity {
                 if (viewPager.getCurrentItem() < 2)
                     viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
                 else
-                    startActivity(new Intent(TutorialActivity.this, MyAccountActivity.class));
+                    startActivity(new Intent(TutorialActivity.this, SocialLoginActivity.class));
 
             }
         });
@@ -47,7 +47,7 @@ public class TutorialActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TutorialActivity.this, MyAccountActivity.class));
+                startActivity(new Intent(TutorialActivity.this, SocialLoginActivity.class));
             }
         });
 

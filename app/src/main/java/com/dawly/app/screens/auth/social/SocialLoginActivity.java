@@ -10,7 +10,7 @@ import com.dawly.app.entities.SocialUser;
 import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.screens.auth.login.LoginActivity;
-import com.dawly.app.screens.myaccount.activity.MyAccountActivity;
+import com.dawly.app.screens.home.HomeActivity;
 import com.dawly.app.screens.tutorial.TutorialActivity;
 import com.dawly.app.utils.GoogleHelper;
 import com.dawly.app.utils.Toaster;
@@ -44,7 +44,7 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login_social);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
         //init
         btnFacebook = findViewById(R.id.btn_login_facebook);
@@ -63,7 +63,7 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
             @Override
             public void onClick(View v) {
                // presenter.loginWithFacebook(SocialLoginActivity.this, SocialLoginActivity.this, callbackManager);
-                startActivity(new Intent(SocialLoginActivity.this, MyAccountActivity.class));
+                startActivity(new Intent(SocialLoginActivity.this, HomeActivity.class));
 
             }
         });

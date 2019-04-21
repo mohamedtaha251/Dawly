@@ -6,5 +6,5 @@ package com.dawly.app.base;
 
 public interface BasePresenter<T> {
     void stop();
-    void loginWithFacebook(T Model);
+    void start(T Model);
 }

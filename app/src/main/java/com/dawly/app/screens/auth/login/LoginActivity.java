@@ -65,7 +65,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
 
         loginBinding.setClickListener(this);
         loginBinding.signCard.bringToFront();
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
     }
 
@@ -250,7 +250,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginIn
                 User user = new User();
                 user.setEmail(email);
                 user.setPassword(password);
-                loginPresenter.loginWithFacebook(user);
+//                loginPresenter.loginWithFacebook(user);
             }
         }
 

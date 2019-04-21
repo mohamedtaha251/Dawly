@@ -11,7 +11,6 @@ public class Constants {
     public static final String LOGIN = "users/login.php";
     public static final String CREATE_USER = "users/create_user.php";
 
-    public static final String LOGIN = "Account/login";
     public static final String ORDERS = "orders";
 
 

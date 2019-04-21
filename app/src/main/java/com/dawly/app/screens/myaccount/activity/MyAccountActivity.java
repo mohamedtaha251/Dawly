@@ -11,10 +11,10 @@ public class MyAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_account);
 
-        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.myaccount_background));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.my_account);
-        getSupportActionBar().setElevation(0);
+//        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.myaccount_background));
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setTitle(R.string.my_account);
+//        getSupportActionBar().setElevation(0);
 
     }
 }

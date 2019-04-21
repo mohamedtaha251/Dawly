@@ -109,6 +109,8 @@
     <color name="colorStatusDescription">#6a859b</color>
     <color name="colorNav">#67CCE0</color>
     <color name="colorOrdersHeader">#4F8384</color>
+    <color name="colorTutorial">#43668E</color>
+
 
 
     <color name="colorTransparentBlack">#B3000000</color>

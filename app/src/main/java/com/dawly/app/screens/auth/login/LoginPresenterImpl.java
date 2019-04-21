@@ -57,8 +57,8 @@ public class LoginPresenterImpl implements LoginContract.LoginPresenter {
     }
 
     @Override
-    public void loginWithFacebook(Object user) {
-        loginModel.start(user);
+    public void start(Object Model) {
+
     }
 
 

@@ -84,9 +84,8 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_enter_amount_bank_account_info"
                     android:layout_marginStart="@dimen/_30dp"
                     android:layout_marginTop="@dimen/_20dp"
-                    android:scaleType="fitXY"
-                    android:layout_width="@dimen/_30dp"
-                    android:layout_height="20dp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
             <View
                     android:id="@+id/view_seperator_bank_account_info"

@@ -1,54 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:attrs="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fillViewport="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-   >
-
-    <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
+        android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 
-    <android.support.design.widget.TabLayout
-            android:id="@+id/indicator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="@dimen/_80dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:tabBackground="@drawable/indicator_selector"
-            app:tabGravity="center"
-            app:tabIndicatorHeight="0dp"/>
+        <com.rd.PageIndicatorView
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="@dimen/_80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                app:piv_padding="@dimen/_10dp"
+                app:piv_animationType="worm"
+                app:piv_dynamicCount="true"
+                app:piv_select="0"
+                app:piv_interactiveAnimation="true"
+                app:piv_selectedColor="@color/colorWhite"
+                app:piv_unselectedColor="@color/colorTutorial"
+                attrs:piv_padding="5dp"
+                attrs:piv_radius="3dp"
+                app:piv_strokeWidth="5dp"
+        />
+        <!--<android.support.design.widget.TabLayout-->
+                <!--android:id="@+id/indicator"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--android:layout_marginBottom="@dimen/_80dp"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:tabBackground="@drawable/indicator_selector"-->
+                <!--app:tabGravity="center"-->
+                <!--app:tabIndicatorHeight="0dp"/>-->
 
-    <Button
-            android:id="@+id/btn_skip_tutorial"
-            android:text="@string/skip"
-            android:background="@drawable/flag_transparent"
-            android:textColor="@color/colorWhite"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="@dimen/_20dp"
-            android:layout_marginBottom="@dimen/_30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    <Button
-            android:id="@+id/btn_next_tutorial"
-            android:text="@string/next"
-            android:background="@drawable/flag_transparent"
-            android:textColor="@color/colorWhite"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="@dimen/_20dp"
-            android:layout_marginBottom="@dimen/_30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <com.dawly.app.views.DawlyButton
+                android:id="@+id/btn_skip_tutorial"
+                android:text="@string/skip"
+                android:background="@drawable/flag_transparent"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_30dp"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <com.dawly.app.views.DawlyButton
+                android:id="@+id/btn_next_tutorial"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:background="@drawable/flag_transparent"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
