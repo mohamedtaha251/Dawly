@@ -21,10 +21,7 @@
     <string name="step_2">Step 2</string>
     <string name="login">Login</string>
     <string name="sign_in_small">Sign In</string>
-    <string name="firstname">First Name</string>
-    <string name="lastname">Last Name</string>
     <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
     <string name="email">Email</string>
     <string name="forget_pass">Forget the password?</string>
     <string name="phone_number">Phone Number</string>
@@ -33,7 +30,6 @@
     <string name="i_agree">I agree to Dawly\'s terms of \n Service and Privacy Policy</string>
     <string name="firstname">First Name</string>
     <string name="lastname">Last name</string>
-    <string name="confirm_password">Confirm Password</string>
     <string name="country">Country</string>
     <string name="weight">Weight</string>
     <string name="item_name">Item Name</string>
@@ -61,11 +57,7 @@
     <string name="for_successfull_verification">For successful verification please place your documents in a dedicated area</string>
     <string name="scan_zone">Scan Zone</string>
     <string name="start_scanning">Start Scanning</string>
-    <string name="bank_account_country">Bank Account Country</string>
-    <string name="name_of_bank">Name of Bank</string>
-    <string name="beneficiary_name">Beneficiary Name</string>
     <string name="account_number_iban_number">Account Number/IBAN Number</string>
-    <string name="routing_number">Routing Number</string>
     <string name="swift_code">Swift Code/Bin</string>
     <string name="bank_account">Bank Account</string>
     <string name="submit">Submit</string>
@@ -80,15 +72,12 @@
     <string name="send_request">Send Request</string>
     <string name="weight_available">Weight Available:</string>
     <string name="items_unable">Items Unable \n to carry</string>
-    <string name="done">Done</string>
     <string name="congratulation">Congratulation.</string>
     <string name="payout_to">Payout to:</string>
     <string name="my_orders">My Orders</string>
     <string name="total_orders">Total Orders</string>
     <string name="active_orders">Active Orders</string>
-    <string name="pending_orders">Pending Orders</string>
     <string name="current_status">Current Status:</string>
-    <string name="my_account">My Account</string>
     <string name="terms">Terms of Service</string>
     <string name="help_center">Help Center</string>
     <string name="safety">Trust &amp; Safety</string>
@@ -237,6 +226,7 @@
     <string name="swift_code_bin">Swift Code / BIN</string>
     <string name="paypal_account_info">PayPal Account Info</string>
     <string name="add_payment_method">ADD PAYMENT METHOD</string>
+    <string name="confirm_password">Confirm Password</string>
 
 
 </resources>

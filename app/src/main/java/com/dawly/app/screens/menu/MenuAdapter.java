@@ -1,6 +1,7 @@
 package com.dawly.app.screens.menu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import app.dawly.com.dawly.R;
 import com.dawly.app.entities.Menu;
+import com.dawly.app.screens.myaccount.activity.MyAccountActivity;
 import com.dawly.app.views.DawlyTextViewBold;
 
 import java.util.ArrayList;
@@ -72,8 +74,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
                     if (menu.getItemName().equalsIgnoreCase("settings")) {
                         fragmentManager.beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
                     }
-                    if (menu.getItemName().equalsIgnoreCase("settings")) {
-//                        context.startActivity(new Intent(context, MyAccount.Class));
+                    if (menu.getItemName().equalsIgnoreCase("my account")) {
+                        context.startActivity(new Intent(context, MyAccountActivity.class));
                     }
                 }
             });
