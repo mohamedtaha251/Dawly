@@ -6,9 +6,9 @@
         android:endColor="@color/colorActive"
         android:angle="45"/>
     <corners android:radius="0dp"/>
-<padding
-        android:bottom="@dimen/_5dp"
-        android:left="@dimen/_5dp"
-        android:right="@dimen/_5dp"
-        android:top="@dimen/_5dp" />
+<!--<padding-->
+        <!--android:bottom="@dimen/_5dp"-->
+        <!--android:left="@dimen/_5dp"-->
+        <!--android:right="@dimen/_5dp"-->
+        <!--android:top="@dimen/_5dp" />-->
 </shape>

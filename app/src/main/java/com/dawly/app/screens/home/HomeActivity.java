@@ -13,7 +13,8 @@ import com.dawly.app.base.BaseContract;
 import com.dawly.app.screens.flights.AddFlightFragment;
 import com.dawly.app.screens.flights.FlightsFragment;
 import com.dawly.app.screens.menu.MenuFragment;
-import com.dawly.app.screens.orders.FlightOrdersFragment;
+import com.dawly.app.screens.messages.ThreadsFragment;
+import com.dawly.app.screens.orders.OrdersMainFragment;
 import com.dawly.app.screens.post.PostRequestFragment;
 import com.dawly.app.screens.status.StatusInfoFragment;
 import com.dawly.app.views.BottomNavigation;
@@ -36,7 +37,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         toolbar = findViewById(R.id.custom_toolbar);
         setSupportActionBar(toolbar);
         bottomNavigation = findViewById(R.id.navigation);
-//        getSupportActionBar().hide();
+        getSupportActionBar().setElevation(0);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new StatusInfoFragment()).commit();
         bottomNavigation.setOnNavigationItemSelectedListener(this);
     }
@@ -46,27 +47,27 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.navigation_orders:
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new FlightOrdersFragment()).commit();
-                bottomNavigation.setSelected(0);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new OrdersMainFragment()).commit();
+//                bottomNavigation.setSelected(0);
                 break;
             case R.id.navigation_flights:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new FlightsFragment()).commit();
                 bottomNavigation.setSelected(1);
                 break;
             case R.id.navigation_add_orders:
-                bottomNavigation.setSelected(2);
+//                bottomNavigation.setSelected(2);
                 AddFlightDialog addFlightDialog = new AddFlightDialog();
                 addFlightDialog.setAddClickListener(this);
                 addFlightDialog.show(getSupportFragmentManager(), "");
 
                 break;
             case R.id.navigation_messages:
-                bottomNavigation.setSelected(3);
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new FlightOrdersFragment()).commit();
+//                bottomNavigation.setSelected(3);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new ThreadsFragment()).commit();
 
                 break;
             case R.id.navigation_menu:
-                bottomNavigation.setSelected(4);
+//                bottomNavigation.setSelected(4);
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new MenuFragment()).commit();
 
                 break;

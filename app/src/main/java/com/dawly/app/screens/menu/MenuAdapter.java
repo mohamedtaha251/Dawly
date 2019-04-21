@@ -1,6 +1,9 @@
 package com.dawly.app.screens.menu;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +20,14 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
 
     ArrayList<Menu> menuArrayList;
 
+    FragmentManager fragmentManager;
+    private Context context;
+
+    public MenuAdapter(Context context, FragmentManager fragmentManager) {
+        this.fragmentManager = fragmentManager;
+        this.context = context;
+    }
+
     public void setItems(ArrayList<Menu> menuArrayList) {
         this.menuArrayList = menuArrayList;
     }
@@ -30,8 +41,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MenuViewHolder menuViewHolder, int position) {
-        menuViewHolder.itemName.setText(menuArrayList.get(position).getItemName());
-        menuViewHolder.itemImage.setImageResource(menuArrayList.get(position).getImageResourceID());
+        menuViewHolder.bind(menuArrayList.get(position));
     }
 
     @Override
@@ -43,11 +53,31 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
 
         DawlyTextViewBold itemName;
         ImageView itemImage;
+        CardView menuCard;
 
         public MenuViewHolder(@NonNull View itemView) {
             super(itemView);
             itemName = itemView.findViewById(R.id.itemName);
             itemImage = itemView.findViewById(R.id.itemImg);
+            menuCard = itemView.findViewById(R.id.menuCard);
+
+        }
+
+        public void bind(Menu menu) {
+            itemName.setText(menu.getItemName());
+            itemImage.setImageResource(menu.getImageResourceID());
+            menuCard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (menu.getItemName().equalsIgnoreCase("settings")) {
+                        fragmentManager.beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+                    }
+                    if (menu.getItemName().equalsIgnoreCase("settings")) {
+//                        context.startActivity(new Intent(context, MyAccount.Class));
+                    }
+                }
+            });
+
 
         }
     }

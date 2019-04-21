@@ -12,13 +12,13 @@ import android.view.ViewGroup;
 import app.dawly.com.dawly.R;
 import app.dawly.com.dawly.databinding.FragmentMessagesBinding;
 import com.dawly.app.base.BaseFragment;
-import com.dawly.app.entities.Message;
+import com.dawly.app.entities.Thread;
 import com.dawly.app.screens.flights.AddFlightPaymentFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessagesFragment extends BaseFragment implements View.OnClickListener {
+public class ThreadsFragment extends BaseFragment implements View.OnClickListener {
     private FragmentMessagesBinding fragmentMessagesBinding;
     RecyclerView  messagesRecycler;
 
@@ -33,11 +33,11 @@ public class MessagesFragment extends BaseFragment implements View.OnClickListen
     @Override
     public void onStart() {
         super.onStart();
-        Message message = new Message();
+        Thread message = new Thread();
         message.setId(0);
-        Message message1 = new Message();
+        Thread message1 = new Thread();
         message1.setId(1);
-        List<Message> messageList = new ArrayList<>();
+        List<Thread> messageList = new ArrayList<>();
         messageList.add(message);
         messageList.add(message);
         messageList.add(message1);
@@ -50,9 +50,9 @@ public class MessagesFragment extends BaseFragment implements View.OnClickListen
 
         messagesRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         messagesRecycler.setHasFixedSize(true);
-        MessagesAdapter messagesAdapter = new MessagesAdapter(getActivity(),getActivity().getSupportFragmentManager());
-        messagesAdapter.setItems(messageList);
-        messagesRecycler.setAdapter(messagesAdapter);
+        ThreadsAdapter threadsAdapter = new ThreadsAdapter(getActivity(),getActivity().getSupportFragmentManager());
+        threadsAdapter.setItems(messageList);
+        messagesRecycler.setAdapter(threadsAdapter);
 
 
 

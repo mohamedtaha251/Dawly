@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#4E8B98</color>
     <color name="colorBorder">#FFF8F8F8</color>
     <color name="colorWhite">#fcfcfc</color>
     <color name="colorForget">#FF6464</color>
@@ -89,6 +89,8 @@
     <color name="colorStatusDescription">#6a859b</color>
     <color name="colorNav">#67CCE0</color>
     <color name="colorOrdersHeader">#4F8384</color>
+
+
     <color name="colorTransparentBlack">#B3000000</color>
 
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+<data>
 
+
+</data>
     <RelativeLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -46,8 +49,6 @@
         <android.support.v7.widget.RecyclerView
                 android:layout_below="@+id/contactCard"
                 android:layout_marginTop="@dimen/_20dp"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginEnd="@dimen/_10dp"
                 android:layout_marginBottom="@dimen/_20dp"
                 android:id="@+id/menuRecycler"
                 android:layout_width="match_parent"

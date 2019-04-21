@@ -14,7 +14,7 @@
 
 
         <com.dawly.app.views.DawlyTabLayout
-                android:id="@+id/flightsTabLayout"
+                android:id="@+id/ordersTabLayout"
                 app:tabMode="fixed"
                 app:tabSelectedTextColor="@color/colorWhite"
                 android:background="@drawable/tab_gradient_bg"
@@ -40,7 +40,8 @@
 
         <android.support.v4.widget.SwipeRefreshLayout
                 android:id="@+id/flightsSwipeRefresh"
-                android:layout_below="@+id/flightsTabLayout"
+                android:layout_below="@+id/ordersTabLayout"
+                android:layout_marginBottom="@dimen/_20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 

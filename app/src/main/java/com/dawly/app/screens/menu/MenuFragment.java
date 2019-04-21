@@ -1,5 +1,6 @@
 package com.dawly.app.screens.menu;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import app.dawly.com.dawly.R;
+import app.dawly.com.dawly.databinding.FragmentMenuBinding;
 import com.dawly.app.base.BaseFragment;
 import com.dawly.app.entities.Menu;
 import com.dawly.app.screens.flights.AddFlightPaymentFragment;
@@ -16,17 +18,17 @@ import com.dawly.app.screens.flights.AddFlightPaymentFragment;
 import java.util.ArrayList;
 
 public class MenuFragment extends BaseFragment implements View.OnClickListener {
-//    private FragmentSettingsBinding fragmentSettingsBinding;
+    private FragmentMenuBinding fragmentSettingsBinding;
     RecyclerView menuRecycler;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        fragmentSettingsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu, container, false);
-//        menuRecycler = fragmentSettingsBinding.menuRecycler;
+        fragmentSettingsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu, container, false);
+        menuRecycler = fragmentSettingsBinding.menuRecycler;
 
-//        return fragmentSettingsBinding.getRoot();
-        return new View(getActivity());
+        return fragmentSettingsBinding.getRoot();
+//        return new View(getActivity());
     }
 
 
@@ -66,7 +68,7 @@ public class MenuFragment extends BaseFragment implements View.OnClickListener {
         menuArrayList.add(menu4);
         menuArrayList.add(menu5);
 
-        MenuAdapter menuAdapter = new MenuAdapter();
+        MenuAdapter menuAdapter = new MenuAdapter(getActivity(),getActivity().getSupportFragmentManager());
         menuAdapter.setItems(menuArrayList);
         menuRecycler.setHasFixedSize(true);
         menuRecycler.setLayoutManager(new GridLayoutManager(getActivity(),2));

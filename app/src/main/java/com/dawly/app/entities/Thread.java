@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "created_at",
         "updated_at"
 })
-public class Order extends BaseEntity {
+public class Thread extends BaseEntity {
 
 
     @JsonProperty("id")
@@ -184,7 +184,7 @@ public class Order extends BaseEntity {
 
     private long ids;
 
-    public Order() {
+    public Thread() {
         ids = ++increment;
     }
 
@@ -197,15 +197,15 @@ public class Order extends BaseEntity {
     public void setIds(long ids) {
         this.ids = ids;
     }
-    public static final DiffUtil.ItemCallback<Order> DIFF_CALLBACK = new DiffUtil.ItemCallback<Order>() {
+    public static final DiffUtil.ItemCallback<Thread> DIFF_CALLBACK = new DiffUtil.ItemCallback<Thread>() {
 
         @Override
-        public boolean areItemsTheSame(@NonNull Order oldOffer, @NonNull Order newOffer) {
+        public boolean areItemsTheSame(@NonNull Thread oldOffer, @NonNull Thread newOffer) {
             return oldOffer.getIds() == newOffer.getIds();
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull Order oldOffer, @NonNull Order newOffer) {
+        public boolean areContentsTheSame(@NonNull Thread oldOffer, @NonNull Thread newOffer) {
             return oldOffer.equals(newOffer);
         }
     };

@@ -15,7 +15,6 @@ public class Flight extends BaseEntity {
     }
 
 
-
     public long getIds() {
         return ids;
     }
@@ -23,6 +22,7 @@ public class Flight extends BaseEntity {
     public void setIds(long ids) {
         this.ids = ids;
     }
+
     public static final DiffUtil.ItemCallback<Flight> DIFF_CALLBACK = new DiffUtil.ItemCallback<Flight>() {
 
         @Override
@@ -36,8 +36,14 @@ public class Flight extends BaseEntity {
         }
     };
 
+    private boolean isExpanded;
 
 
+    public boolean isExpanded() {
+        return isExpanded;
+    }
 
-
+    public void setExpanded(boolean expanded) {
+        isExpanded = expanded;
+    }
 }

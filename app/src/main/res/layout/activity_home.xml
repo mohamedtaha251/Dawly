@@ -20,9 +20,8 @@
         <include
                 android:id="@+id/appBar"
                 layout="@layout/app_bar"
-                android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="?android:attr/actionBarSize"/>
 
         <FrameLayout
                 android:background="@android:color/transparent"

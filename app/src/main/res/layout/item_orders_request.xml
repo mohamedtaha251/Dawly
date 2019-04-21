@@ -8,15 +8,19 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_300dp"
         >
+
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
+
         <View
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_200dp"/>
+
         <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/itemImg"
                 android:layout_width="0dp"
                 android:layout_weight="1.5"
                 android:scaleType="fitXY"
@@ -25,12 +29,11 @@
                 android:layout_height="match_parent"/>
 
 
-
     </LinearLayout>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:orientation="horizontal">
 
@@ -41,39 +44,49 @@
                 android:layout_height="@dimen/_250dp"
                 android:background="@color/colorCard"
                 app:cardCornerRadius="@dimen/_10dp"
+                android:layout_gravity="center_vertical"
                 app:cardElevation="@dimen/_20dp"
-                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:layout_marginStart="@dimen/_20dp"
                 app:cardBackgroundColor="@color/colorCard"
                 >
+
             <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                 <com.dawly.app.views.DawlyTextView
                         android:id="@+id/fromTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_20dp"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginTop="@dimen/_20dp"
                         android:textColor="@color/colorSeparator"
                         android:textSize="@dimen/_12sp"
                         android:text="@string/from"
                         />
+
                 <ImageView
                         android:id="@+id/flagImg"
                         android:layout_below="@+id/fromTitle"
                         android:src="@drawable/egypt"
                         android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginTop="@dimen/_5dp"
                         android:layout_width="@dimen/_20dp"
                         android:layout_height="@dimen/_20dp"/>
-                    <com.dawly.app.views.DawlyTextViewBold
-                            android:layout_below="@+id/fromTitle"
-                            android:layout_toEndOf="@+id/flagImg"
-                            android:text="Egypt"
-                            android:id="@+id/country"
-                            android:textSize="@dimen/_14sp"
-                            android:textColor="@color/colorExpandedText"
-                            android:layout_marginStart="@dimen/_10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+
+                <com.dawly.app.views.DawlyTextViewBold
+                        android:layout_below="@+id/fromTitle"
+                        android:layout_toEndOf="@+id/flagImg"
+                        android:text="Egypt"
+                        android:id="@+id/country"
+                        android:textSize="@dimen/_14sp"
+                        android:textColor="@color/colorExpandedText"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
                 <com.dawly.app.views.DawlyTextView
                         android:id="@+id/itemTitle"
                         android:layout_width="wrap_content"
@@ -91,18 +104,19 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorExpandedText"
                         android:layout_marginStart="@dimen/_20dp"
-                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
                         android:textSize="@dimen/_14sp"
                         android:maxLines="2"
                         android:text="Macbook pro 2018"
                         android:layout_below="@+id/itemTitle"/>
+
                 <com.dawly.app.views.DawlyTextView
                         android:id="@+id/carriedBy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorSeparator"
                         android:layout_marginStart="@dimen/_20dp"
-                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
                         android:textSize="@dimen/_12sp"
                         android:text="By Muhammad Kamal"
                         android:layout_below="@+id/itemName"/>
@@ -118,6 +132,7 @@
                         android:textSize="@dimen/_12sp"
                         android:text="@string/weight"
                         android:layout_below="@+id/carriedBy"/>
+
                 <com.dawly.app.views.DawlyTextViewBold
                         android:id="@+id/weight"
                         android:layout_width="wrap_content"
@@ -129,6 +144,30 @@
                         android:text="30 lbs"
                         android:layout_below="@+id/weightTitle"/>
 
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/weight"
+                        android:layout_height="wrap_content">
+
+
+                    <View
+                            android:background="@drawable/dark_blue_circle"
+                            android:layout_width="@dimen/_5dp"
+                            android:layout_height="@dimen/_5dp"/>
+                    <View
+                            android:background="@drawable/dark_blue_circle"
+                            android:layout_width="@dimen/_5dp"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:layout_height="@dimen/_5dp"/>
+                    <View
+                            android:background="@drawable/dark_blue_circle"
+
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:layout_width="@dimen/_5dp"
+                            android:layout_height="@dimen/_5dp"/>
+                </LinearLayout>
 
             </RelativeLayout>
 

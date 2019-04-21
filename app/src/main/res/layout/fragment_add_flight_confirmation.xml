@@ -27,7 +27,7 @@
 
                 <com.dawly.app.views.DawlyTextView
                         android:text="@string/from_"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_marginTop="@dimen/_20dp"
                         android:textColor="@color/colorInactive"
                         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
                 <com.dawly.app.views.DawlyTextView
                         android:text="Egypt"
                         android:layout_marginTop="@dimen/_10dp"
-                        android:textSize="22sp"
+                        android:textSize="20sp"
                         android:textColor="@color/colorEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -46,7 +46,7 @@
                         android:text="@string/to_"
                         android:textColor="@color/colorInactive"
 
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_marginTop="@dimen/_10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -55,7 +55,7 @@
                         android:text="Ukranie"
                         android:textColor="@color/colorEmail"
                         android:layout_marginTop="@dimen/_10dp"
-                        android:textSize="22sp"
+                        android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -63,7 +63,7 @@
                         android:text="@string/weight_"
                         android:textColor="@color/colorInactive"
 
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_marginTop="@dimen/_10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -71,7 +71,7 @@
                 <com.dawly.app.views.DawlyTextView
                         android:text="100 lbs"
                         android:textColor="@color/colorEmail"
-                        android:textSize="22sp"
+                        android:textSize="20sp"
                         android:layout_marginTop="@dimen/_10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -80,14 +80,14 @@
                         android:text="@string/date_"
                         android:layout_marginTop="@dimen/_10dp"
 
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textColor="@color/colorInactive"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
                 <com.dawly.app.views.DawlyTextView
                         android:text="25.01.2019"
-                        android:textSize="22sp"
+                        android:textSize="20sp"
                         android:layout_marginTop="@dimen/_10dp"
                         android:textColor="@color/colorEmail"
                         android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                     >
 
                 <com.dawly.app.views.DawlyTextView
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:text="@string/unable_to_carry"
                         android:textColor="@color/colorInactive"
                         android:layout_marginTop="@dimen/_10dp"
@@ -115,7 +115,7 @@
                 <com.dawly.app.views.DawlyTextView
                         android:text="Item 1"
                         android:textColor="@color/colorEmail"
-                        android:textSize="22sp"
+                        android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -139,7 +139,7 @@
                 <com.dawly.app.views.DawlyTextView
                         android:text="@string/payout_to"
 
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_marginTop="@dimen/_10dp"
                         android:textColor="@color/colorInactive"
                         android:layout_width="wrap_content"

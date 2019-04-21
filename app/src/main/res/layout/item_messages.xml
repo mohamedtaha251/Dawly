@@ -2,13 +2,15 @@
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_150dp"
+        android:id="@+id/inboxLayout"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/profileImg"
-            android:layout_marginTop="@dimen/_20dp"
             android:layout_marginStart="@dimen/_20dp"
             android:src="@drawable/kamal"
             android:layout_centerVertical="true"
@@ -17,11 +19,12 @@
             android:layout_height="@dimen/_70dp"/>
 
 
-    <com.dawly.app.views.DawlyTextViewBold
+    <com.dawly.app.views.DawlyTextView
             android:id="@+id/userName"
             android:text="Muhammad"
             android:layout_toEndOf="@+id/profileImg"
             android:layout_marginStart="@dimen/_20dp"
+            android:textSize="19sp"
             android:textColor="@color/colorUserName"
             android:layout_alignTop="@+id/profileImg"
             android:layout_width="wrap_content"
@@ -35,22 +38,25 @@
             android:layout_marginStart="@dimen/_20dp"
             android:textColor="@color/colorUserStatus"
             android:layout_marginTop="@dimen/_5dp"
+            android:textSize="19sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-    <com.dawly.app.views.DawlyTextViewBold
+    <com.dawly.app.views.DawlyTextView
             android:id="@+id/message"
-            android:text="just u checking up on"
+            android:text="Just  checking up on u pal Just  checking up on u palJust  checking up on u palJust  checking up on u palJust  checking up on u palJust  checking up on u palJust  checking up on u pal"
+            android:maxLines="2"
             android:layout_below="@+id/status"
             android:layout_toEndOf="@+id/profileImg"
+            android:layout_toStartOf="@+id/countLayout"
             android:layout_marginStart="@dimen/_20dp"
-            android:textSize="12sp"
-            android:textColor="@color/colorEmail"
+            android:textSize="15sp"
             android:layout_marginTop="@dimen/_5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
     <RelativeLayout
+            android:id="@+id/countLayout"
             android:background="@drawable/circle_green_bg"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
@@ -60,7 +66,7 @@
 
         <com.dawly.app.views.DawlyTextViewBold
                 android:layout_centerInParent="true"
-                android:text="1"
+                android:text="2"
                 android:textColor="@color/colorWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -69,7 +75,7 @@
 
     <View
             android:layout_width="match_parent"
-            android:layout_below="@+id/profileImg"
+            android:layout_below="@+id/message"
             android:background="@color/colorMessagesSeparator"
             android:layout_marginTop="@dimen/_15dp"
             android:layout_marginStart="@dimen/_20dp"
