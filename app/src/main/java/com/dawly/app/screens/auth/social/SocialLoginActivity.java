@@ -58,7 +58,6 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
     }
 
     private void actions() {
-
         btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
