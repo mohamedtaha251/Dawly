@@ -3,6 +3,8 @@ package com.dawly.app.screens.home;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -13,11 +15,16 @@ import com.dawly.app.base.BaseContract;
 import com.dawly.app.screens.flights.AddFlightFragment;
 import com.dawly.app.screens.flights.FlightsFragment;
 import com.dawly.app.screens.menu.MenuFragment;
+import com.dawly.app.screens.menu.SettingsFragment;
+import com.dawly.app.screens.messages.MessagesFragment;
 import com.dawly.app.screens.messages.ThreadsFragment;
 import com.dawly.app.screens.orders.OrdersMainFragment;
 import com.dawly.app.screens.post.PostRequestFragment;
-import com.dawly.app.screens.status.StatusInfoFragment;
 import com.dawly.app.views.BottomNavigation;
+import eu.long1.spacetablayout.SpaceTabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, BaseContract.AddClickListener {
 
@@ -35,11 +42,28 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_home);
 
         toolbar = findViewById(R.id.custom_toolbar);
+        ViewPager viewPager =  findViewById(R.id.viewPager);
+        List<Fragment> fragmentList = new ArrayList<>();
+        fragmentList.add(new OrdersMainFragment());
+        fragmentList.add(new FlightsFragment());
+        fragmentList.add(new AddFlightDialog());
+        fragmentList.add(new MessagesFragment());
+        fragmentList.add(new SettingsFragment());
+        SpaceTabLayout tabLayout = (SpaceTabLayout) findViewById(R.id.spaceTabLayout);
+
+        tabLayout.initialize(viewPager, getSupportFragmentManager(), fragmentList,savedInstanceState);
+
+        tabLayout.setTabOneOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         setSupportActionBar(toolbar);
-        bottomNavigation = findViewById(R.id.navigation);
         getSupportActionBar().setElevation(0);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new StatusInfoFragment()).commit();
-        bottomNavigation.setOnNavigationItemSelectedListener(this);
+//        bottomNavigation = findViewById(R.id.navigation);
+//        getSupportFragmentManager().beginTransaction().replace(R.id.container, new StatusInfoFragment()).commit();
+//        bottomNavigation.setOnNavigationItemSelectedListener(this);
     }
 
 

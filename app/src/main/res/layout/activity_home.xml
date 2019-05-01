@@ -27,9 +27,39 @@
                 android:background="@android:color/transparent"
                 android:id="@+id/container"
                 android:layout_below="@+id/appBar"
-                android:layout_above="@+id/navCard"
+                android:layout_above="@+id/spaceTabLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+            </android.support.v4.view.ViewPager>
+
+        </FrameLayout>
+
+
+        <eu.long1.spacetablayout.SpaceTabLayout
+                android:id="@+id/spaceTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80dp"
+                app:number_of_tabs="five"
+                app:starting_position="one"
+                android:layout_alignParentBottom="true"
+                app:tab_color="@color/colorPrimary"
+                app:button_color="@color/colorAccent"
+                app:text_color="#61FFFFFF"
+                app:text_one="Action"
+                app:text_two="Action"
+                app:text_three="Action"
+                app:icon_one="@drawable/ic_dashboard_black_24dp"
+                app:icon_two="@drawable/ic_icon_flights"
+                app:icon_three="@drawable/ic_add"
+                app:icon_four="@drawable/ic_icon_message"
+                app:icon_five="@drawable/ic_icon_menu"/>
 
         <android.support.v7.widget.CardView
                 android:id="@+id/navCard"
@@ -37,6 +67,7 @@
                 app:cardCornerRadius="@dimen/_15dp"
                 android:layout_marginStart="@dimen/_10dp"
                 app:cardElevation="0dp"
+                android:visibility="gone"
                 app:cardBackgroundColor="@color/colorNav"
                 android:layout_marginEnd="@dimen/_10dp"
                 android:layout_marginBottom="@dimen/_10dp"
