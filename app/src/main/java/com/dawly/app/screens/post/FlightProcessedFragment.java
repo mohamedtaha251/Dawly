@@ -1,9 +1,9 @@
 package com.dawly.app.screens.post;
 
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +17,7 @@ FragmentPostRequestDoneBinding postRequestDoneBinding;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         postRequestDoneBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_post_request_done, container, false);
-        return postRequestDoneBinding.getRoot();
+        return  postRequestDoneBinding.getRoot();
     }
 
     @Override

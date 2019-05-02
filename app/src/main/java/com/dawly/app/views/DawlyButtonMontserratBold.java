@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 
 import static com.dawly.app.utils.Constants.MONTSERRAT_MEDIUM;
 
-public class DawlyButtonMontserratBold extends android.support.v7.widget.AppCompatButton {
+public class DawlyButtonMontserratBold extends androidx.appcompat.widget.AppCompatButton {
     public DawlyButtonMontserratBold(Context context) {
         super(context);
         initFontAndChange( context);

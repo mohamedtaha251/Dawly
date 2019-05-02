@@ -10,7 +10,7 @@ import com.dawly.app.utils.Font;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DawlyEditText extends android.support.v7.widget.AppCompatEditText {
+public class DawlyEditText extends androidx.appcompat.widget.AppCompatEditText {
     private Context context;
     Font font;
 

@@ -1,7 +1,7 @@
 package com.dawly.app.utils;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.text.InputType;
 import android.view.View;
 import app.dawly.com.dawly.R;

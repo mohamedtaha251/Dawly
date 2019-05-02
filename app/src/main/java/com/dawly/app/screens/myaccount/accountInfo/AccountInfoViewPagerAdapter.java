@@ -1,9 +1,9 @@
 package com.dawly.app.screens.myaccount.accountInfo;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import app.dawly.com.dawly.R;
 import com.dawly.app.screens.myaccount.ordersCompleted.OrdersCompletedFragments;
 import com.dawly.app.screens.myaccount.shipmentsCarried.shipmentsCarriedFragment;

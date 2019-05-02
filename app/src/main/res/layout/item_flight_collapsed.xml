@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -8,7 +8,7 @@
         app:cardCornerRadius="@dimen/_10dp"
         app:cardElevation="@dimen/_20dp"
         app:cardBackgroundColor="@color/colorCard"
-        android:layout_height="@dimen/_350dp">
+        android:layout_height="@dimen/_400dp">
 
 
     <LinearLayout
@@ -72,6 +72,7 @@
                 android:layout_height="match_parent">
 
             <View
+                    android:id="@+id/midVerticalSeparator"
                     android:layout_width="1dp"
                     android:layout_centerHorizontal="true"
                     android:layout_above="@+id/sendRequest"
@@ -224,17 +225,18 @@
                     android:layout_height="wrap_content"/>
 
             <com.dawly.app.views.DawlyTextViewBold
-                    android:id="@+id/flightUnableItems"
+                    android:id="@+id/flightUnableItems1"
                     android:layout_below="@+id/flightWeight"
-                    android:text="Item1  Item2"
+                    android:text="Item1  item2 "
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="@dimen/_20dp"
                     android:textSize="17sp"
+                    android:maxLines="3"
+                    android:layout_toStartOf="@+id/midVerticalSeparator"
                     android:layout_marginTop="@dimen/_10dp"
                     android:textColor="@color/colorExpandedText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
 
             <com.dawly.app.views.DawlyButtonBold
                     android:id="@+id/sendRequest"
@@ -314,4 +316,4 @@
     </RelativeLayout>
 
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

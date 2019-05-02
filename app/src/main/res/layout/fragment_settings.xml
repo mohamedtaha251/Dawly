@@ -13,7 +13,7 @@
             android:orientation="horizontal">
 
 
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/request_notification_switch"
                 android:layout_width="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -34,7 +34,7 @@
             android:orientation="horizontal">
 
 
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/order_notification_switch"
                 android:layout_width="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -55,7 +55,7 @@
             android:orientation="horizontal">
 
 
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/dawly_notification_switch"
                 android:layout_width="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -76,7 +76,7 @@
             android:orientation="horizontal">
 
 
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/new_messsage_notification_switch"
                 android:layout_width="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -97,7 +97,7 @@
             android:orientation="horizontal">
 
 
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/light_theme_switch"
                 android:layout_width="wrap_content"
                 android:layout_alignParentEnd="true"

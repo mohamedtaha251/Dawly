@@ -2,7 +2,7 @@ package com.dawly.app.screens.scan;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import at.nineyards.anyline.models.AnylineScanResult;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 

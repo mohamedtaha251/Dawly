@@ -1,9 +1,9 @@
 package com.dawly.app.screens.auth.login;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
+import com.google.android.material.textfield.TextInputLayout;
 import android.util.Patterns;
 import android.view.View;
 import app.dawly.com.dawly.R;

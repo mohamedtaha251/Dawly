@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import com.dawly.app.utils.Font;
 
-public class DawlyTextViewSemiBold extends android.support.v7.widget.AppCompatTextView {
+public class DawlyTextViewSemiBold extends androidx.appcompat.widget.AppCompatTextView {
     public DawlyTextViewSemiBold(Context context) {
         super(context);
 

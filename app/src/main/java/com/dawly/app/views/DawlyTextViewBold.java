@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import com.dawly.app.utils.Font;
 
-public class DawlyTextViewBold extends android.support.v7.widget.AppCompatTextView {
+public class DawlyTextViewBold extends androidx.appcompat.widget.AppCompatTextView {
     public DawlyTextViewBold(Context context) {
         super(context);
         initFontAndChange( context);

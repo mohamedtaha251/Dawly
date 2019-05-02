@@ -1,7 +1,7 @@
 package com.dawly.app.views;
 
 import android.content.Context;
-import android.support.design.widget.TabLayout;
+import com.google.android.material.tabs.TabLayout;
 import android.util.AttributeSet;
 
 public class DawlyTabLayout extends TabLayout {

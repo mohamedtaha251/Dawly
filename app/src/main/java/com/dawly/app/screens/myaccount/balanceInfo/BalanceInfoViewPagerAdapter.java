@@ -1,9 +1,9 @@
 package com.dawly.app.screens.myaccount.balanceInfo;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import app.dawly.com.dawly.R;
 import com.dawly.app.screens.myaccount.paymentHistory.PaymentHistoryFragment;
 import com.dawly.app.screens.myaccount.pendingsOrders.PendingsOrdersFragment;

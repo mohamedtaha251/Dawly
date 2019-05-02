@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import com.dawly.app.utils.Font;
 
-public class DawlyButtonBold extends android.support.v7.widget.AppCompatButton {
+public class DawlyButtonBold extends androidx.appcompat.widget.AppCompatButton {
     public DawlyButtonBold(Context context) {
         super(context);
         initFontAndChange( context);

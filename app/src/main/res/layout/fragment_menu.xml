@@ -17,7 +17,7 @@
                 layout="@layout/item_card_back_request"/>
 
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
                 android:layout_below="@+id/headerCard"
                 android:layout_width="match_parent"
                 android:id="@+id/contactCard"
@@ -43,10 +43,10 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
                 android:layout_below="@+id/contactCard"
                 android:layout_marginTop="@dimen/_20dp"
                 android:layout_marginBottom="@dimen/_20dp"
@@ -55,7 +55,7 @@
                 android:layout_height="match_parent">
 
 
-        </android.support.v7.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
 
 
     </RelativeLayout>

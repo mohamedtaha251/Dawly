@@ -9,7 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
                 android:id="@+id/step2Card"
                 app:cardCornerRadius="@dimen/_15dp"
                 android:layout_marginStart="@dimen/_40dp"
@@ -32,9 +32,9 @@
                         android:layout_width="@dimen/_60dp"
                         android:layout_height="@dimen/_60dp"/>
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
                 app:cardCornerRadius="@dimen/_15dp"
                 android:layout_marginStart="@dimen/_20dp"
                 android:layout_marginEnd="@dimen/_20dp"
@@ -186,7 +186,7 @@
             </RelativeLayout>
 
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <com.rd.PageIndicatorView
                 android:id="@+id/pageIndicatorView"

@@ -8,17 +8,17 @@
                 type="com.dawly.app.base.BaseContract.ClickListener" />
     </data>
 
-    <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                android:id="@+id/appBar"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="?android:attr/actionBarSize"
-                                                android:background="@color/colorBorder"
-                                                android:elevation="0dp"
-                                                android:theme="@style/MyAppTheme.NoShadow"
-                                                app:elevation="0dp">
+    <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     android:id="@+id/appBar"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="?android:attr/actionBarSize"
+                                                     android:background="@color/colorBorder"
+                                                     android:elevation="0dp"
+                                                     android:theme="@style/MyAppTheme.NoShadow"
+                                                     app:elevation="0dp">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
                 android:id="@+id/custom_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -65,6 +65,6 @@
 
 
             </RelativeLayout>
-        </android.support.v7.widget.Toolbar>
-    </android.support.design.widget.AppBarLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 </layout>

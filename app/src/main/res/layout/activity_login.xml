@@ -65,7 +65,7 @@
                         android:layout_marginBottom="@dimen/_20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
 
                             android:visibility="visible"
                             app:cardCornerRadius="@dimen/_10dp"
@@ -97,7 +97,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
                                     android:id="@+id/login_emailInput"
                                     android:layout_width="match_parent"
                                     android:layout_below="@+id/login_header"
@@ -115,9 +115,9 @@
                                         android:textColorHint="@color/colorHeader"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"/>
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
                                     android:id="@+id/login_passwordInput"
                                     android:layout_width="match_parent"
                                     android:layout_below="@+id/login_emailInput"
@@ -133,7 +133,7 @@
                                         android:hint="@string/password"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"/>
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
                             <com.dawly.app.views.DawlyButton
                                     style="@style/Base.Widget.AppCompat.Button.Borderless"
@@ -154,7 +154,7 @@
                         </RelativeLayout>
 
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
                     <com.dawly.app.views.DawlyButtonBold
                             android:id="@+id/btn_switch_to_sign_up"
                             android:text="@string/sign_up"
@@ -198,7 +198,7 @@
                             android:layout_marginStart="@dimen/_40dp"
                             android:layout_height="@dimen/_80dp"/>
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                             android:visibility="visible"
                             app:cardCornerRadius="@dimen/_10dp"
                             android:layout_below="@id/btn_switch_to_sign_in"
@@ -224,7 +224,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
                                     android:id="@+id/signup_first_name_Input"
                                     android:layout_width="match_parent"
                                     android:layout_below="@+id/signup_header"
@@ -243,9 +243,9 @@
                                         android:textColorHint="@color/colorHeader"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"/>
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
                                     android:id="@+id/last_name_Input"
                                     android:layout_width="match_parent"
                                     android:layout_below="@+id/signup_first_name_Input"
@@ -263,9 +263,9 @@
                                         android:hint="@string/lastname"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"/>
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
                                     android:id="@+id/signup_passwordInput"
                                     android:layout_width="match_parent"
                                     android:layout_below="@+id/last_name_Input"
@@ -281,9 +281,9 @@
                                         android:hint="@string/password"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"/>
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
                                     android:id="@+id/signup_confirm_passwordInput"
                                     android:layout_width="match_parent"
                                     android:layout_below="@+id/signup_passwordInput"
@@ -298,9 +298,9 @@
                                         android:hint="@string/confirm_password"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"/>
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
                                     android:id="@+id/signup_email_Input"
                                     android:layout_width="match_parent"
                                     android:layout_below="@+id/signup_confirm_passwordInput"
@@ -319,9 +319,9 @@
                                         android:hint="@string/email"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"/>
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                            <android.support.constraint.ConstraintLayout
+                            <androidx.constraintlayout.widget.ConstraintLayout
                                     android:id="@+id/constraintLayout"
                                     android:layout_marginBottom="@dimen/_20dp"
                                     android:layout_marginStart="@dimen/_20dp"
@@ -364,13 +364,13 @@
                                         app:layout_constraintTop_toTopOf="@+id/tvCountryCode"
                                 />
 
-                            </android.support.constraint.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                         </RelativeLayout>
 
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                 </RelativeLayout>
 

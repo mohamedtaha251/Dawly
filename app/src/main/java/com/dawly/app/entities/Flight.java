@@ -1,7 +1,7 @@
 package com.dawly.app.entities;
 
-import android.support.annotation.NonNull;
-import android.support.v7.util.DiffUtil;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import com.dawly.app.base.BaseEntity;
 
 public class Flight extends BaseEntity {

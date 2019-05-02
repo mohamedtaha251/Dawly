@@ -1,9 +1,9 @@
 package com.dawly.app.screens.withdraw.withdrawPaypal;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import com.dawly.app.screens.withdraw.paypalAccountInfo.PaypalAccuntInfoFragment;
 import com.dawly.app.screens.withdraw.paypalAmountCurrency.PaypalAmountCurrencyFragment;
 

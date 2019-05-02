@@ -1,9 +1,9 @@
 package com.dawly.app.screens.myaccount.myAccount;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import app.dawly.com.dawly.R;
 import com.dawly.app.screens.myaccount.accountSettings.AccountSettingsFragment;
 import com.dawly.app.screens.myaccount.balanceInfo.BalanceInfoFragment;

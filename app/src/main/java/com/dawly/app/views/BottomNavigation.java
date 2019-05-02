@@ -1,9 +1,9 @@
 package com.dawly.app.views;
 
 import android.content.Context;
-import android.support.design.internal.BottomNavigationMenuView;
-import android.support.design.widget.BottomNavigationView;
 import android.util.AttributeSet;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

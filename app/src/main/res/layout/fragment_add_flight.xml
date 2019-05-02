@@ -37,7 +37,7 @@
                     android:src="@mipmap/wave_reversed"
                     />
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                     app:cardCornerRadius="@dimen/_15dp"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
@@ -160,7 +160,7 @@
                 </RelativeLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <com.rd.PageIndicatorView
                     android:id="@+id/pageIndicatorView"

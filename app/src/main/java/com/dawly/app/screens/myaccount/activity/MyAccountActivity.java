@@ -1,7 +1,7 @@
 package com.dawly.app.screens.myaccount.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import app.dawly.com.dawly.R;
 
 public class MyAccountActivity extends AppCompatActivity {
