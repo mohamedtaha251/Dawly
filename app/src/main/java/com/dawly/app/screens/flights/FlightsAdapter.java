@@ -85,7 +85,6 @@ public class FlightsAdapter extends PagedListAdapter<Flight, FlightsAdapter.Flig
 
         }
 
-
         public void bind(Flight order) {
             foldingCell.setOnClickListener(new View.OnClickListener() {
                 @Override
