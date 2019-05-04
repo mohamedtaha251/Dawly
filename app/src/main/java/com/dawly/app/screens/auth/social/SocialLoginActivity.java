@@ -11,6 +11,7 @@ import com.dawly.app.entities.response.LoginResponse;
 import com.dawly.app.entities.response.SignUpResponse;
 import com.dawly.app.screens.auth.login.LoginActivity;
 import com.dawly.app.screens.home.HomeActivity;
+import com.dawly.app.screens.myaccount.activity.MyAccountActivity;
 import com.dawly.app.screens.tutorial.TutorialActivity;
 import com.dawly.app.utils.GoogleHelper;
 import com.dawly.app.utils.Toaster;
@@ -94,7 +95,7 @@ public class SocialLoginActivity extends BaseActivity implements SocialLoginCont
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                startActivity(new Intent(SocialLoginActivity.this, TutorialActivity.class));
+                startActivity(new Intent(SocialLoginActivity.this, MyAccountActivity.class));
             } catch (ApiException e) {
             }
         } else {
